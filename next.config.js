@@ -4,9 +4,9 @@ const allowedImageWordPressDomain = new URL(
 ).hostname;
 
 module.exports = {
-  experimental: {
-    runtime: "experimental-edge",
-  },
+  // experimental: {
+  //   runtime: "experimental-edge",
+  // },
 
   // async redirects(NEXT_PUBLIC_WORDPRESS_SITE_URL) {
   //   return [
@@ -60,7 +60,7 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    unoptimized: true,
+    // unoptimized: true,
     domains: [
       allowedImageWordPressDomain,
       "staging-petsmarketplace-staging.kinsta.cloud",
