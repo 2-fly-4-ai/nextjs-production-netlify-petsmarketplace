@@ -37,7 +37,7 @@ const Layout = ({ data, isPost, children }) => {
 
   return (
     <div>
-      {/* <Seo seo={seo} uri={uri} /> */}
+      <Seo seo={seo} uri={uri} />
       <Head>
         <link rel="shortcut icon" href={header?.favicon} />
       </Head>

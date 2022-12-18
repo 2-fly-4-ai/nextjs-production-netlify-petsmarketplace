@@ -7,7 +7,6 @@ import Link from "next/link";
 import { isEmpty } from "lodash";
 
 const Category = ({ data }) => {
-  console.log({ data });
   return (
     <Layout data={data}>
       <div className="py-8 bg-gray-100">

@@ -53,7 +53,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		  uri
 		  products(
 			after: $after
-			first: 10
+			first: 5
 			where: {taxQuery: {taxArray: {taxonomy: PRODUCTTAXONOMY}}}
 		  ) {
 			nodes {
@@ -88,7 +88,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 			  uri
 			  products(
 				after: $after
-				first: 10
+				first: 5
 				where: {taxQuery: {taxArray: {taxonomy: PRODUCTTAXONOMY}}}
 			  ) {
 				nodes {
@@ -122,7 +122,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 				  name
 				  uri
 				  products(
-					first: 10
+					first: 5
 					after: $after
 					where: {taxQuery: {taxArray: {taxonomy: PRODUCTTAXONOMY}}}
 				  ) {
