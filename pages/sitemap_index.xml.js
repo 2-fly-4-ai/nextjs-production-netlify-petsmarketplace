@@ -7,7 +7,6 @@ function generateSiteMap(posts) {
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      ${posts
        .map((test2) => {
-         console.log;
          return `
        <url>
            <loc>${`${test2}`}</loc>
@@ -44,8 +43,6 @@ export async function getServerSideProps({ res }) {
       url_list.push(test?.sitemapUrl);
     }
   });
-
-  console.log(url_list);
 
   const posts = url_list;
 

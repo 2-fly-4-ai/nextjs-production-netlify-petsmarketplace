@@ -13,7 +13,6 @@ const LoadMoreBrands = ({ brands, classes, graphQLQuery, searchQuery }) => {
    * it sever side posts can be fetched, and the new endcursor( contained in pageInfo )
    * can be sent to get the next set of posts.
    */
-  console.log("BRANDSTEST", brands);
   const [postsData, setPostsData] = useState(brands?.nodes ?? []);
   const [pageInfo, setPageInfo] = useState(brands?.pageInfo);
   const [error, setError] = useState(null);
@@ -52,7 +51,6 @@ const LoadMoreBrands = ({ brands, classes, graphQLQuery, searchQuery }) => {
   const [fetchPosts, { loading }] = useLazyQuery(graphQLQuery, {
     notifyOnNetworkStatusChange: true,
     onCompleted: (data) => {
-      console.log("THE ONE TRUE TEST FUCK", data);
       /**
        * Call setPosts to concat the new set of posts to existing one and update pageInfo
        * that contains the cursor and the information about whether we have the next page.

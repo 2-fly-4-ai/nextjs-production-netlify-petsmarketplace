@@ -4,19 +4,8 @@ import { sanitize } from "../../../utils/miscellaneous";
 import { isEmpty } from "lodash";
 
 const Post = ({ post }) => {
-  console.log({ post });
   return (
     <div className="mb-8 ">
-      {/* <div>
-        {!isEmpty(post?.single_product_acf?.productImageMainUrl) ? (
-          <Image
-            src={post?.single_product_acf?.productImageMainUrl}
-            height="256"
-            width="256"
-            objectFit="contain"
-          />
-        ) : null}
-      </div> */}
       <Link href={`blog/${post?.slug}`}>
         <a>
           <h2

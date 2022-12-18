@@ -42,13 +42,10 @@ export async function getServerSideProps({ res }) {
       test?.connectedContentNodes?.edges.map((test2) => {
         if (test2?.node?.seo?.robots[1] == "index") {
           url_list.push(test2?.node?.link);
-          console.warn(test2?.node?.link);
         }
       });
     }
   });
-
-  console.log(url_list);
 
   const posts = url_list;
 

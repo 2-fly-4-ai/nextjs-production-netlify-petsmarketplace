@@ -41,7 +41,6 @@ export default function Search({ data }) {
     {
       notifyOnNetworkStatusChange: true,
       onCompleted: (data) => {
-        console.warn(data);
         setQueryResultPosts(data?.posts ?? {});
         setShowResultInfo(true);
       },

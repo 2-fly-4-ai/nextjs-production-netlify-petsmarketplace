@@ -15,7 +15,6 @@ const LoadMoreTagProducts = ({
   searchQuery,
   slug,
 }) => {
-  console.log(product);
   /**
    * First set the posts data and pageInfo received from server side,
    * as initial postsData and pageInfo, so that
@@ -69,9 +68,6 @@ const LoadMoreTagProducts = ({
    * @param {String} endCursor Endcursor used to fetch the next set of posts.
    */
   const loadMoreItems = (slug, endCursor = null) => {
-    console.log(endCursor);
-    console.log(slug);
-
     let queryVariables = {
       first: PER_PAGE_FIRST, //first: PER_PAGE_FIRST,
       after: endCursor,
@@ -93,7 +89,7 @@ const LoadMoreTagProducts = ({
    * Please note that pageInfo gets updated with new endCursor and hasNextPage
    * values everytime a new client side request is made using setPageInfo()
    */
-  console.log(postsData);
+
   const { endCursor, hasNextPage } = pageInfo || {};
   const p = { nodes: postsData };
   const test2 = true;

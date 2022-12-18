@@ -15,7 +15,6 @@ import PropTypes from "prop-types";
  *
  */
 const Seo = ({ seo, uri }) => {
-  console.log("HELLO", seo);
   const {
     breadcrumbTitle,
     breadcrumbs,
