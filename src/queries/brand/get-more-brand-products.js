@@ -10,28 +10,6 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 	  name
 	  slug
 	  uri
-	  seo {
-		openGraph {
-		  description
-		  siteName
-		  title
-		  url
-		}
-		breadcrumbTitle
-		description
-		focusKeywords
-		breadcrumbs {
-		  text
-		  url
-		}
-		canonicalUrl
-		robots
-		title
-	  }
-	  brand_fields {
-		description
-		searchVolume
-	  }
 	  products(
 		first: $first
 		after: $after

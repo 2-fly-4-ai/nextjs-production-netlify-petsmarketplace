@@ -21,7 +21,6 @@ import BrandCategories from "../../../src/components/product_category/brand/bran
 import { PER_PAGE_FIRST } from "../../../src/utils/pagination";
 
 const Page = ({ data }) => {
-  console.warn("TESTING", { data });
   return (
     <Layout data={data}>
       <section className="bg-white dark:bg-gray-900">
@@ -59,7 +58,6 @@ const Page = ({ data }) => {
 export default Page;
 
 export async function getStaticProps({ params }) {
-  console.warn("xxxx", { params });
   const { data, errors } = await client.query({
     query: GET_PAGE,
     variables: {
