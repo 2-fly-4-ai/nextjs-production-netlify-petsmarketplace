@@ -31,33 +31,33 @@ export default function AuthorTitleShare({ data }) {
         aria-label="Share social media"
         className="gap-1 gap-y-3 flex flex-wrap"
       >
-        <div className="inline-flex items-center  mr-2 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
+        <div className="inline-flex items-center  mr-2 text-s text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 font-medium dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
           <FacebookShareButton
             url={`https://petsmarketplace.com${data?.page?.uri}`}
             quote={"Best Pets Products"}
             hashtag={`#${data?.page?.name.replace(" ", "")}`}
             description={"aiueo"}
-            className="inline-flex items-center  text-xs font-medium w-24 justify-center h-8 border"
+            className="inline-flex items-center font-bold w-24 justify-center h-8 border-4 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full"
           >
             <FacebookIcon
-              size={18}
+              size={24}
               iconFillColor="white"
               round
               className="mr-2 p-0 "
-              bgStyle={{ fill: "black" }}
+              bgStyle={{ fill: "orange" }}
             />{" "}
             Share
           </FacebookShareButton>
         </div>
-        <div className="inline-flex items-center  mr-2 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
+        <div className="inline-flex items-center  mr-2 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
           <TwitterShareButton
             title={"test"}
             url={`https://petsmarketplace.com${data?.page?.uri}`}
             hashtags={[`#${data?.page?.name.replace(" ", "")}`]}
-            className="inline-flex items-center  text-xs font-medium w-24 justify-center h-8 border"
+            className="inline-flex items-center  text-xs font-bold w-24 justify-center h-8 border-4 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full"
           >
             <TwitterIcon
-              size={18}
+              size={24}
               iconFillColor="white"
               round
               className="mr-2 p-0 "
@@ -66,6 +66,7 @@ export default function AuthorTitleShare({ data }) {
             Tweet
           </TwitterShareButton>
         </div>
+
         <button
           type="button"
           onClick={() =>
@@ -73,7 +74,7 @@ export default function AuthorTitleShare({ data }) {
               `https://petsmarketplace.com${data?.page?.uri}`
             )
           }
-          className="inline-flex items-center py-2 px-6 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-0 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          className="inline-flex items-center px-6 text-base font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
         >
           {" "}
           <svg

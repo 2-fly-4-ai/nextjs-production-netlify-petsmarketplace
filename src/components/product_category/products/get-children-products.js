@@ -94,7 +94,7 @@ const Products = ({ data }) => {
                   />
                   <div className="hidden md:flex bg-opacity-0 hover:bg-opacity-20 group bg-black w-full h-full absolute duration-500">
                     <a
-                      className="py-1 px-5 opacity-0 hover:bg-gray-300 border-gray-300 border-2 leading-tight font-semibold group-hover:opacity-80 text-black text-sm -mt-8 rounded-full p-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white"
+                      className="py-1 px-5 opacity-0 hover:bg-gray-300 border-gray-300 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-2 leading-tight font-semibold group-hover:opacity-80 text-black text-sm -mt-8 rounded-full p-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white"
                       href={product?.single_product_acf?.productUrl}
                     >
                       View On Amazon
@@ -108,7 +108,7 @@ const Products = ({ data }) => {
                         }}
                         className={`${
                           isActive(index) ? "..." : ""
-                        } block text-black bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-0.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+                        } block text-black bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium rounded-lg text-sm px-5 py-0.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
                         data-modal-toggle="readProductModal"
                         type="button"
                       >
@@ -206,11 +206,11 @@ const Products = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                <h5 className="py-3 text px-2 tracking-tight text-gray-900 font-semibold dark:text-white uppercase hover:text-blue-500">
+                <h3 className="py-3 text px-2 w-50 overflow-hidden tracking-tight text-gray-900 font-semibold dark:text-white uppercase hover:text-blue-500">
                   <Link href={product?.uri}>
                     {product?.title.split(" ").slice(0, 8).join(" ")}
                   </Link>
-                </h5>
+                </h3>
               </div>
             );
           })}

@@ -37,7 +37,7 @@ export default function Tags({ data }) {
             >
               <Link href={tag.uri}>
                 <a
-                  className="text-gray-600 border-2 border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 hover:bg-gray-200"
+                  className="text-gray-600 border-2 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 hover:bg-gray-200"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(tag?.name ?? {}),
                   }}

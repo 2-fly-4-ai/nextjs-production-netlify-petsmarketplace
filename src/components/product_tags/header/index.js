@@ -30,7 +30,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.parent?.node?.parent?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 border focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.parent?.node?.parent?.node?.uri
@@ -48,7 +48,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.parent?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 border focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.parent?.node?.uri
@@ -66,7 +66,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 border focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.uri
@@ -84,7 +84,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 border focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
               href={data?.page?.name}
             >
               {data?.page?.name}

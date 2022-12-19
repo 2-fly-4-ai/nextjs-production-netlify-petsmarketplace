@@ -21,7 +21,7 @@ export default function brandcategory({ data }) {
                   >
                     <Link href={child.uri}>
                       <a
-                        className="text-gray-600 border-2 border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 hover:bg-gray-200"
+                        className="text-gray-600 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 hover:bg-gray-200"
                         dangerouslySetInnerHTML={{
                           __html: sanitize(child.name ?? {}),
                         }}
