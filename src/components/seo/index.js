@@ -15,6 +15,7 @@ import PropTypes from "prop-types";
  *
  */
 const Seo = ({ seo, uri }) => {
+  console.warn("SEO DATA- FROM SEO COMPONENT", seo);
   const {
     breadcrumbTitle,
     breadcrumbs,
