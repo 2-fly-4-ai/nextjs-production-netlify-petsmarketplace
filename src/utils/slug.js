@@ -10,6 +10,7 @@ export const isCustomPageUri = (uri) => {
     "/best/",
     "/search/",
     "/loadmoreproducts/",
+    "shop/brand/zeny",
   ];
 
   return pagesToExclude.includes(uri);

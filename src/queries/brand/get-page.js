@@ -89,7 +89,8 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 	  }
 	}
   }
-${MenuFragment}
+  ${MenuFragment}
+
 
 `;
 
@@ -124,5 +125,5 @@ export const GET_PAGE_BY_ID = gql`
 	  }
 	}
 	${MenuFragment}
-	${SeoFragment}
+	
 `;

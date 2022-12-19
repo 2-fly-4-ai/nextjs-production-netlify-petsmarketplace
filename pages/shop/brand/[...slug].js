@@ -9,18 +9,21 @@ import {
   handleRedirectsAndReturnData,
   isCustomPageUri,
 } from "../../../src/utils/slug";
-import { sanitize } from "../../../src/utils/miscellaneous";
-import Link from "next/link";
 import React from "react";
-import { Button, Modal } from "flowbite-react";
-import { useState } from "react";
-import Image from "next/image";
 import LoadMoreProducts from "../../../src/components/product_brand";
 import Tags from "../../../src/components/product_category/tags";
 import BrandCategories from "../../../src/components/product_category/brand/brandcategory";
 import { PER_PAGE_FIRST } from "../../../src/utils/pagination";
 
 const Page = ({ data }) => {
+  const router = useRouter();
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+  console.log(data);
   return (
     <Layout data={data}>
       <section className="bg-white dark:bg-gray-900">
