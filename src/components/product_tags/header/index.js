@@ -26,7 +26,7 @@ export default function ProductTagsHeader({ data }) {
 
         <p className="text-gray-600 font-medium m-5 content-center  justify-center flex flex-wrap gap-2">
           {!isEmpty(
-            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0].parent
+            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.parent?.node?.parent?.node?.name
           ) ? (
             <a
@@ -44,7 +44,7 @@ export default function ProductTagsHeader({ data }) {
           ) : null}
 
           {!isEmpty(
-            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0].parent
+            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.parent?.node?.name
           ) ? (
             <a
@@ -62,7 +62,7 @@ export default function ProductTagsHeader({ data }) {
           ) : null}
 
           {!isEmpty(
-            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0].parent
+            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.name
           ) ? (
             <a
@@ -80,7 +80,7 @@ export default function ProductTagsHeader({ data }) {
           ) : null}
 
           {!isEmpty(
-            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0].parent
+            data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.name
           ) ? (
             <a
