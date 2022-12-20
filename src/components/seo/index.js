@@ -26,8 +26,8 @@ const Seo = ({ seo, uri }) => {
     title,
   } = seo;
 
-  const metaRobotsNofollow = robots[0];
-  const metaRobotsNoindex = robots[1];
+  const metaRobotsNofollow = robots[0] ?? null;
+  const metaRobotsNoindex = robots[1] ?? null;
   const opengraphImage = openGraph?.image ?? null;
   const opengraphDescription = openGraph?.description ?? null;
   const opengraphTitle = title ?? null;

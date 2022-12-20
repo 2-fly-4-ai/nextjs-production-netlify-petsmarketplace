@@ -17,7 +17,6 @@ import SideBar from "../../src/components/product_tags/sidebar";
 import LoadMoreTagProducts from "../../src/components/product_tags/load-more-tag-products";
 
 const Page = ({ data }) => {
-  console.log(data);
   // NOT USING THIS... Delete in next cleanup
   // function handleFocus() {
   //   searchInput.current.blur(); // removing focus
