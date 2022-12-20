@@ -73,7 +73,7 @@ const Post = ({ data }) => {
               </span>
 
               {/* BreadCrumb */}
-              <p className="text-gray-600 pt-2 font-medium hidden md:flex">
+              <p className="text-gray-600 pt-2 font-medium hidden md:flex md:flex-wrap gap-2">
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.parent?.node?.parent?.node?.name
@@ -84,7 +84,7 @@ const Post = ({ data }) => {
                         ?.parent?.node?.parent?.node?.parent?.node?.link
                     }
                   >
-                    <a className="mx-1 text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.parent?.node?.parent?.node?.parent?.node?.name
@@ -103,7 +103,7 @@ const Post = ({ data }) => {
                         ?.parent?.node?.parent?.node?.link
                     }
                   >
-                    <a className="mx-1 text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-00 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.parent?.node?.parent?.node?.name
@@ -122,7 +122,7 @@ const Post = ({ data }) => {
                         ?.parent?.node?.link
                     }
                   >
-                    <a className="mx-1 text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.parent?.node?.name
@@ -140,7 +140,7 @@ const Post = ({ data }) => {
                         ?.link
                     }
                   >
-                    <a className="mx-1 text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.name
@@ -151,7 +151,7 @@ const Post = ({ data }) => {
 
                 {!isEmpty(data?.post?.productTaxonomies?.nodes[0]?.name) ? (
                   <a
-                    className="mx-1 text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200"
+                    className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200"
                     href={data?.post?.productTaxonomies?.nodes[0]?.uri}
                   >
                     {data?.post?.productTaxonomies?.nodes[0]?.name}
@@ -320,7 +320,7 @@ const Post = ({ data }) => {
               {!isEmpty(data?.post?.productTaxonomies?.nodes) &&
               isArray(data?.post?.productTaxonomies?.nodes) ? (
                 <div>
-                  <ul className="flex gap-2">
+                  <ul className="flex flex-wrap gap-2">
                     {data?.post?.productTaxonomies?.nodes.map((category) => (
                       <li
                         key={category.name}
