@@ -77,11 +77,11 @@ export const HeaderFooter = `
   }
   
 
-`
+`;
 
 export const GET_MENUS = gql`
 query GET_MENUS {
   ${HeaderFooter}
 }
   ${MenuFragment}
-`
+`;

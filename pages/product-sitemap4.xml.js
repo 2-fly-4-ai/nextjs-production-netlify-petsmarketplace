@@ -1,4 +1,4 @@
-import { GET_URLS } from "../src/queries/sitemap";
+import { GET_URLS } from "../src/queries/sitemap/product4";
 import React from "react";
 import client from "../src/apollo/client";
 

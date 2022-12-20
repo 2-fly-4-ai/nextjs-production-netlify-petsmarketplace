@@ -8,7 +8,7 @@ export const GET_URLS = gql`
     rankMathSettings {
       sitemap {
         sitemapIndexUrl
-        taxonomies(include: PRODUCTTAG) {
+        taxonomies(include: PRODUCTTAXONOMY) {
           isInSitemap
           sitemapUrl
           connectedTerms(first: 50000) {

@@ -15,6 +15,7 @@ import PropTypes from "prop-types";
  *
  */
 const Seo = ({ seo, uri }) => {
+  console.log(seo);
   const {
     breadcrumbTitle,
     breadcrumbs,
@@ -25,8 +26,8 @@ const Seo = ({ seo, uri }) => {
     title,
   } = seo;
 
-  const metaRobotsNofollow = robots[0] ?? null;
-  const metaRobotsNoindex = robots[1] ?? null;
+  const metaRobotsNofollow = robots[0];
+  const metaRobotsNoindex = robots[1];
   const opengraphImage = openGraph?.image ?? null;
   const opengraphDescription = openGraph?.description ?? null;
   const opengraphTitle = title ?? null;
@@ -44,8 +45,8 @@ const Seo = ({ seo, uri }) => {
       title={title}
       description={opengraphDescription || metaDesc || title}
       canonical={opengraphUrl}
-      noindex={metaRobotsNoindex}
-      nofollow={metaRobotsNofollow}
+      index={metaRobotsNoindex}
+      follow={metaRobotsNofollow}
       openGraph={{
         type: "website",
         locale: "en_US",

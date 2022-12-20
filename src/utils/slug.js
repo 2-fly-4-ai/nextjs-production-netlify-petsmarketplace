@@ -10,7 +10,6 @@ export const isCustomPageUri = (uri) => {
     "/best/",
     "/search/",
     "/loadmoreproducts/",
-    "shop/brand/zeny",
   ];
 
   return pagesToExclude.includes(uri);
@@ -42,12 +41,12 @@ export const handleRedirectsAndReturnData = (
     };
   }
 
-  if (field && isEmpty(data?.[field])) {
-    return {
-      // returns the default 404 page with a status code of 404
-      notFound: true,
-    };
-  }
+  // if (field && isEmpty(data?.[field])) {
+  //   return {
+  //     // returns the default 404 page with a status code of 404
+  //     notFound: true,
+  //   };
+  // }
 
   if (data?.page?.seo?.robots[1] == "noindex") {
     return {

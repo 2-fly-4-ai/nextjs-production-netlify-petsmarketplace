@@ -1,4 +1,4 @@
-import { GET_URLS } from "../src/queries/sitemap/product_brand";
+import { GET_URLS } from "../src/queries/sitemap/product8";
 import React from "react";
 import client from "../src/apollo/client";
 
@@ -32,15 +32,15 @@ export async function getServerSideProps({ res }) {
 
   const url_list = [];
 
-  data?.rankMathSettings?.sitemap?.taxonomies.map((test) => {
+  data?.rankMathSettings?.sitemap?.contentTypes.map((test) => {
     if (
       test?.sitemapUrl != null &&
       test?.isInSitemap != false &&
-      test?.sitemapUrl === "https://petsmarketplc.com/product_brand-sitemap.xml"
+      test?.sitemapUrl === "https://petsmarketplc.com/product-sitemap.xml"
     ) {
-      test?.connectedTerms?.nodes.map((test2) => {
-        if (test2?.seo?.robots[1] == "index") {
-          url_list.push(test2?.link);
+      test?.connectedContentNodes?.edges.map((test2) => {
+        if (test2?.node?.seo?.robots[1] == "index") {
+          url_list.push(test2?.node?.link);
         }
       });
     }
@@ -48,11 +48,10 @@ export async function getServerSideProps({ res }) {
 
   const posts = url_list;
 
-  // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap(posts);
 
   res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
+
   res.write(sitemap);
   res.end();
 

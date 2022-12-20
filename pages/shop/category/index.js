@@ -1,14 +1,31 @@
 import client from "../../../src/apollo/client";
 import Layout from "../../../src/components/layout";
-import { PER_PAGE_FIRST } from "../../../src/utils/pagination";
+
 import { handleRedirectsAndReturnData } from "../../../src/utils/slug";
-import { GET_PAGE } from "../../../src/queries/category_index/index";
+import { GET_MENUS } from "../../../src/queries/category_index/index";
 import Link from "next/link";
 import { isEmpty } from "lodash";
+import Header from "../../../src/components/layout/header";
+import Footer from "../../../src/components/layout/footer";
 
 const Category = ({ data }) => {
+  const {
+    header,
+    footer,
+    headerMenus,
+    footerMenus1,
+    footerMenus2,
+    footerMenus3,
+    footerMenus4,
+    slug,
+  } = data || {};
   return (
-    <Layout data={data}>
+    <>
+      <Header
+        header={header}
+        headerMenus={headerMenus?.edges ?? []}
+        slug={slug}
+      />
       <div className="py-8 bg-gray-100">
         <div className="mx-auto max-w-screen-2xl text-center flex px-4 flex-col-reverse lg:flex-row ">
           {/* HEADER COMPONENT */}
@@ -95,7 +112,14 @@ const Category = ({ data }) => {
           })}
         </div>
       </div>
-    </Layout>
+      <Footer
+        footer={footer}
+        footerMenus1={footerMenus1?.edges}
+        footerMenus2={footerMenus2?.edges}
+        footerMenus3={footerMenus3?.edges}
+        footerMenus4={footerMenus3?.edges}
+      />
+    </>
   );
 };
 
@@ -103,7 +127,7 @@ export default Category;
 
 export async function getStaticProps() {
   const { data, errors } = await client.query({
-    query: GET_PAGE,
+    query: GET_MENUS,
   });
 
   const defaultProps = {
