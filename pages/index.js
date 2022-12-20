@@ -279,10 +279,10 @@ export default function Home({ data }) {
                           ) ? (
                             <div className="2xl:max-h-72 flex flex-col bg-white">
                               <Image
-                                src={
-                                  tag.products?.nodes[0]?.single_product_acf
-                                    ?.productImageMainUrl
-                                }
+                                src={tag.products?.nodes[0]?.single_product_acf?.productImageMainUrl.replace(
+                                  ".jpg",
+                                  "._AC_UL320.jpg"
+                                )}
                                 className="m-auto h-56 lg:h-44 2xl:max-h-72"
                                 width={250}
                                 height={250}
