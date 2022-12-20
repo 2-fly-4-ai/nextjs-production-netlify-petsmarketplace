@@ -70,7 +70,7 @@ export default function SideBar({ data }) {
                       >
                         <Link href={tag.uri}>
                           <a
-                            className="text-gray-600 border-2 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white hover:bg-gray-200"
+                            className="text-gray-600 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white hover:bg-gray-200"
                             dangerouslySetInnerHTML={{
                               __html: sanitize(tag?.name ?? {}),
                             }}
@@ -94,7 +94,7 @@ export default function SideBar({ data }) {
                       >
                         <Link href={brand?.nodes[0]?.uri}>
                           <a
-                            className="text-gray-600 border-2 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full bg-white border-gray-300 rounded-full px-2 overflow-hidden text-sm py-0.5 pb-1.5 hover:bg-gray-200"
+                            className="text-gray-600 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full bg-white border-gray-300 rounded-full px-2 overflow-hidden text-sm py-0.5 pb-1.5 hover:bg-gray-200"
                             dangerouslySetInnerHTML={{
                               __html: sanitize(brand?.nodes[0]?.name ?? {}),
                             }}

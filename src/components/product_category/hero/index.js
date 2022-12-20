@@ -18,7 +18,7 @@ export default function Hero({ data }) {
           data?.page?.parent?.node?.parent?.node?.parent?.node?.name
         ) ? (
           <a
-            className="text-sm text-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+            className="text-sm text-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
             href={data?.page?.parent?.node?.parent?.node?.uri}
           >
             {data?.page?.parent?.node?.parent?.node?.parent?.node?.name}
@@ -27,7 +27,7 @@ export default function Hero({ data }) {
 
         {!isEmpty(data?.page?.parent?.node?.parent?.node?.name) ? (
           <a
-            className="text-sm text-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+            className="text-sm text-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
             href={data?.page?.parent?.node?.parent?.node?.uri}
           >
             {data?.page?.parent?.node?.parent?.node?.name}
@@ -36,7 +36,7 @@ export default function Hero({ data }) {
 
         {!isEmpty(data?.page?.parent?.node?.name) ? (
           <a
-            className="text-sm text-gray-700 border border-gray-300 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+            className="text-sm text-gray-700 border border-gray-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
             href={data?.page?.parent?.node?.uri}
           >
             {data?.page?.parent?.node?.name}
@@ -45,7 +45,7 @@ export default function Hero({ data }) {
 
         {!isEmpty(data?.page?.name) ? (
           <a
-            className="text-sm text-gray-700 border border-gray-300 rounded-full px-4 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full py-1 pb-1.5 bg-white hover:bg-gray-200"
+            className="text-sm text-gray-700 border border-gray-300 rounded-full px-4 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full py-1 pb-1.5 bg-white hover:bg-gray-200"
             href={data?.page?.name}
           >
             {data?.page?.name}

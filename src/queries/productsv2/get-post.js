@@ -63,6 +63,7 @@ export const GET_POST = gql`
 				nodes {
 				  uri
 				  name
+				  link
 				  taxonomyName
 				  parent {
 					node {
@@ -80,6 +81,18 @@ export const GET_POST = gql`
 								node {
 								  name
 								  link
+								  parent {
+									node {
+									  name
+									  link
+									  parent {
+										node {
+										  name
+										  link
+										}
+									  }
+									}
+								  }
 								}
 							  }
 							}

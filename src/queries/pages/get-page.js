@@ -43,7 +43,7 @@ export const GET_PAGE = gql`
 		  count
 		}
 	  }
-	  productTaxonomies(first: 6, where: {orderby: COUNT, childless: true}) {
+	  productTaxonomies(first: 24, where: {orderby: COUNT, childless: true}) {
 		nodes {
 		  uri
 		  name

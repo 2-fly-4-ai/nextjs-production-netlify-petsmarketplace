@@ -46,7 +46,7 @@ const Products = ({ product }) => {
                   />
                   <div className="hidden md:flex bg-opacity-0 hover:bg-opacity-20 group bg-black w-full h-full absolute duration-500">
                     <a
-                      className="py-1 px-5 opacity-0 hover:bg-gray-300 border-gray-300 border-2 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full leading-tight font-semibold group-hover:opacity-80 text-black text-sm -mt-8 rounded-full p-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white"
+                      className="py-1 px-5 opacity-0 hover:bg-gray-300 border-gray-300 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full leading-tight font-semibold group-hover:opacity-80 text-black text-sm -mt-8 rounded-full p-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white"
                       href={product?.single_product_acf?.productUrl}
                     >
                       View On Amazon
@@ -60,7 +60,7 @@ const Products = ({ product }) => {
                         }}
                         className={`${
                           isActive(index) ? "..." : ""
-                        } block text-black bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium rounded-lg text-sm px-5 py-0.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+                        } block text-black bg-primary-700 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium rounded-lg text-sm px-5 py-0.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
                         data-modal-toggle="readProductModal"
                         type="button"
                       >
@@ -140,14 +140,14 @@ const Products = ({ product }) => {
                           <div className="mt-6 flex gap-3 border-b border-gray-200 pb-6 pt-0">
                             <a
                               href={product?.single_product_acf?.productUrl}
-                              className="text-sm border border-gray-500 bg-green-400 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              className="text-sm border border-gray-500 bg-green-400 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i> View On
                               Amazon
                             </a>
                             <a
                               href={product?.uri}
-                              className="text-sm border border-gray-500 bg-yellow-300 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              className="text-sm border border-gray-500 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 bg-yellow-300 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i>Product
                               Details

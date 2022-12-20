@@ -14,7 +14,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home({ data }) {
-  console.log({ data });
   return (
     <Layout data={data}>
       <div>
@@ -60,7 +59,7 @@ export default function Home({ data }) {
                 products.
               </p>
 
-              <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center text-gray-700 border-4 border-gray-300   focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
+              <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
                 <Link href="/shop/category/pet-supplies">Go To Shop</Link>
               </btn>
             </div>
