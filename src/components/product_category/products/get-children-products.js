@@ -86,7 +86,10 @@ const Products = ({ data }) => {
               >
                 <div className="flex flex-col relative bg-white">
                   <Image
-                    src={product?.single_product_acf?.productImageMainUrl}
+                    src={product?.single_product_acf?.productImageMainUrl.replace(
+                      ".jpg",
+                      "._AC_UL320.jpg"
+                    )}
                     height="256"
                     width="256"
                     objectFit="contain"

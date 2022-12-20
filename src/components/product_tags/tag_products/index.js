@@ -15,7 +15,10 @@ export default function TagProducts({ product }) {
             <div className=" flex justify-between rounded-t my-auto ">
               <div className="w-80 text-lg justify-center items-center flex text-gray-900 md:text-xl dark:text-white my-auto py-6">
                 <Image
-                  src={product?.single_product_acf?.productImageMainUrl}
+                  src={product?.single_product_acf?.productImageMainUrl.replace(
+                    ".jpg",
+                    "._AC_UL320.jpg"
+                  )}
                   height="256"
                   width="256"
                   objectFit="contain"

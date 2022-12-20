@@ -161,7 +161,10 @@ const Post = ({ data }) => {
             </div>
 
             <Image
-              src={data?.post?.single_product_acf?.productImageMainUrl}
+              src={data?.post?.single_product_acf?.productImageMainUrl.replace(
+                ".jpg",
+                "._AC_UL640.jpg"
+              )}
               alt="product"
               className="max-h-96"
               height="500"
@@ -180,7 +183,7 @@ const Post = ({ data }) => {
                             activeCategory(index);
                           }}
                           key={imageUrl}
-                          src={imageUrl}
+                          src={imageUrl.replace(".jpg", "._AC_UL320.jpg")}
                           alt="product2"
                           width="400"
                           height="400"
@@ -196,6 +199,8 @@ const Post = ({ data }) => {
                 ? data?.post?.single_product_acf?.productImageGalleryUrls
                     .split(", ")
                     .map((imageUrl) => {
+                      imageUrl = imageUrl.replace(".jpg", "._AC_UL640.jpg");
+
                       slides_list.push({ src: imageUrl });
                     })
                 : null}
@@ -931,7 +936,10 @@ const Post = ({ data }) => {
                   <div className="relative">
                     <div className="h-45 flex p-2 justify-center">
                       <Image
-                        src={product?.single_product_acf?.productImageMainUrl}
+                        src={product?.single_product_acf?.productImageMainUrl.replace(
+                          ".jpg",
+                          "._AC_UL320.jpg"
+                        )}
                         alt="product 1"
                         className="max-h-56  my-auto"
                         height="200"

@@ -8,24 +8,10 @@ export const GET_URLS = gql`
     rankMathSettings {
       sitemap {
         sitemapIndexUrl
-        contentTypes {
-          sitemapUrl
-          isInSitemap
-          connectedContentNodes(first: 50000) {
-            edges {
-              node {
-                link
-                seo {
-                  robots
-                }
-              }
-            }
-          }
-        }
-        taxonomies {
+        taxonomies(include: PRODUCTTAG) {
           isInSitemap
           sitemapUrl
-          connectedTerms(first: 50000) {
+          connectedTerms(first: 500) {
             nodes {
               link
               seo {
