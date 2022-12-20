@@ -190,7 +190,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		}
 	  }
 	}
-	productBrands(where: {orderby: COUNT, order: DESC}, first: 1000) {
+	productBrands(where: {orderby: COUNT, order: DESC}, first: 70) {
 	  nodes {
 		name
 		uri
