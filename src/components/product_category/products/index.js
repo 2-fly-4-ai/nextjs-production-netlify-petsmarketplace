@@ -37,7 +37,7 @@ const Products = ({ product }) => {
                 className="p-0 pb-3 h-68 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700"
               >
                 <div className="flex flex-col relative bg-white">
-                  <Image
+                  <image
                     src={product?.single_product_acf?.productImageMainUrl.replace(
                       ".jpg",
                       "._AC_UL640.jpg"
@@ -90,10 +90,11 @@ const Products = ({ product }) => {
                       <div className="flex overscroll-contain">
                         <div className="flex justify-between mb-4 rounded-t sm:mb-5">
                           <div className="text-lg w-80 justify-center items-center flex text-gray-900 md:text-xl dark:text-white">
-                            <Image
-                              src={
-                                product?.single_product_acf?.productImageMainUrl
-                              }
+                            <image
+                              src={product?.single_product_acf?.productImageMainUrl.replace(
+                                ".jpg",
+                                "._AC_UL640.jpg"
+                              )}
                               height="256"
                               width="256"
                               objectFit="cover"
