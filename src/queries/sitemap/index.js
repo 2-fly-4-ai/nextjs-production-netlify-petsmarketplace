@@ -11,7 +11,7 @@ export const GET_URLS = gql`
         contentTypes {
           sitemapUrl
           isInSitemap
-          connectedContentNodes(first: 100000) {
+          connectedContentNodes(first: 100) {
             edges {
               node {
                 link
@@ -25,7 +25,7 @@ export const GET_URLS = gql`
         taxonomies {
           isInSitemap
           sitemapUrl
-          connectedTerms(first: 100000) {
+          connectedTerms(first: 60000) {
             nodes {
               link
               seo {
