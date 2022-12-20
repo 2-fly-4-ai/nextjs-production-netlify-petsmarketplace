@@ -9,7 +9,6 @@ import {
 } from "../src/utils/slug";
 import { sanitize } from "../src/utils/miscellaneous";
 import Layout from "../src/components/layout";
-import { empty } from "@apollo/client";
 import Image from "next/image";
 import Link from "next/link";
 
