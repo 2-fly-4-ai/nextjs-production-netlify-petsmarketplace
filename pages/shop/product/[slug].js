@@ -167,8 +167,8 @@ const Post = ({ data }) => {
               )}
               alt="product"
               className="max-h-96"
-              height="500"
-              width="500"
+              height="640"
+              width="640"
               objectFit="contain"
             />
             <div className="grid grid-cols-5 gap-4 mt-4">
@@ -257,9 +257,7 @@ const Post = ({ data }) => {
                     {data?.post?.productBrands?.nodes[0]?.name}
                   </Link>
                 ) : (
-                  <Link className="text-gray-600 border text-sm border-gray-500 rounded-full px-4  py-1 pb-1.5">
-                    {data?.post?.productBrands?.nodes[0]?.name}
-                  </Link>
+                  <p>{data?.post?.productBrands?.nodes[0]?.name}</p>
                 )}
               </p>
 
@@ -946,6 +944,7 @@ const Post = ({ data }) => {
                         className="max-h-56  my-auto"
                         height="200"
                         width="200"
+                        objectFit="contain"
                       />
                     </div>
                   </div>

@@ -141,11 +141,11 @@ const Products = ({ data }) => {
                             <Image
                               src={product?.single_product_acf?.productImageMainUrl.replace(
                                 ".jpg",
-                                "._AC_UL640.jpg"
+                                "._AC_UL320.jpg"
                               )}
                               height="256"
                               width="256"
-                              objectFit="cover"
+                              objectFit="contain"
                               alt={product?.title}
                             />
                           </div>

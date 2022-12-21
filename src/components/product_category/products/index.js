@@ -40,7 +40,7 @@ const Products = ({ product }) => {
                   <Image
                     src={product?.single_product_acf?.productImageMainUrl.replace(
                       ".jpg",
-                      "._AC_UL640.jpg"
+                      "._AC_UL320.jpg"
                     )}
                     height="256"
                     width="256"
@@ -93,11 +93,11 @@ const Products = ({ product }) => {
                             <Image
                               src={product?.single_product_acf?.productImageMainUrl.replace(
                                 ".jpg",
-                                "._AC_UL640.jpg"
+                                "._AC_UL320.jpg"
                               )}
-                              height="256"
-                              width="256"
-                              objectFit="cover"
+                              height="400"
+                              width="400"
+                              objectFit="contain"
                               alt={product?.title}
                             />
                           </div>
