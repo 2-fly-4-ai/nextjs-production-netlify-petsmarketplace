@@ -25,12 +25,13 @@ export default function SideBar({ data }) {
     if (seo_check == "noindex") {
       return;
     }
-
-    let x = product?.productBrands?.nodes[0]?.name;
-    let y = x.split(" ").length;
-    let z = x.split("").length;
-    if (y > 3 || z > 18) {
-      return;
+    if (product?.productBrands?.nodes[0]?.name != null) {
+      let x = product?.productBrands?.nodes[0]?.name;
+      let y = x.split(" ").length;
+      let z = x.split("").length;
+      if (y > 3 || z > 18) {
+        return;
+      }
     }
     page_brands.push(product?.productBrands);
   });
@@ -92,14 +93,16 @@ export default function SideBar({ data }) {
                         key={brand?.nodes[0]?.name}
                         className="text-gray-500 dark:text-gray-400 mb-3"
                       >
-                        <Link href={brand?.nodes[0]?.uri}>
-                          <a
-                            className="text-gray-600 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full bg-white border-gray-300 rounded-full px-2 overflow-hidden text-sm py-0.5 pb-1.5 hover:bg-gray-200"
-                            dangerouslySetInnerHTML={{
-                              __html: sanitize(brand?.nodes[0]?.name ?? {}),
-                            }}
-                          />
-                        </Link>
+                        {!isEmpty(brand?.nodes[0]?.uri) ? (
+                          <Link href={brand?.nodes[0]?.uri}>
+                            <a
+                              className="text-gray-600 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full bg-white border-gray-300 rounded-full px-2 overflow-hidden text-sm py-0.5 pb-1.5 hover:bg-gray-200"
+                              dangerouslySetInnerHTML={{
+                                __html: sanitize(brand?.nodes[0]?.name ?? {}),
+                              }}
+                            />
+                          </Link>
+                        ) : null}
                       </li>
                     ))}
                   </ul>
