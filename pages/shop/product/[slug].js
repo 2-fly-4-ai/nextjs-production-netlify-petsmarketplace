@@ -169,6 +169,7 @@ const Post = ({ data }) => {
               className="max-h-96"
               height="500"
               width="500"
+              objectFit="contain"
             />
             <div className="grid grid-cols-5 gap-4 mt-4">
               {!isEmpty(data?.post?.single_product_acf?.productImageGalleryUrls)
@@ -187,6 +188,7 @@ const Post = ({ data }) => {
                           alt="product2"
                           width="400"
                           height="400"
+                          objectFit="contain"
                           className={`${
                             isActive(index) ? "..." : ""
                           } justify-center`}
