@@ -16,7 +16,9 @@ export default function AuthorTitleShare({ data }) {
           rel="author"
           className="font-bold text-gray-900 dark:text-gray-200 no-underline hover:underline"
         >
-          {data?.page?.roundupFields?.author}
+          {!isEmpty(data?.page?.roundupFields?.author)
+            ? data?.page?.roundupFields?.author
+            : PetsMarketPlace}
         </a>{" "}
         in{" "}
         <a
