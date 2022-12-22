@@ -19,7 +19,7 @@ const SearchForm = ({
           placeholder="Search..."
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.target.value)}
-          className="appearance-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+          className="appearance-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white dark:bg-gray-700 text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
         />
       </div>
       <input

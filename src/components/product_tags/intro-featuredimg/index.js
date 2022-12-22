@@ -18,7 +18,7 @@ export default function IntroFeaturedImage({ data }) {
       ) : null}
       {!isEmpty(data?.page?.roundupFields?.intro) ? (
         <div
-          className="prose max-w-none py-8"
+          className="prose text-gray-800 dark:text-gray-400 max-w-none py-8"
           dangerouslySetInnerHTML={{
             __html: sanitize(data?.page?.roundupFields?.intro ?? {}),
           }}

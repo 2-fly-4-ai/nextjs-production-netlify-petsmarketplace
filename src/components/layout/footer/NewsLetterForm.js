@@ -61,7 +61,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
   return (
     <div>
-      <h3 className="mb-1 uppercase text-black font-bold">
+      <h3 className="mb-1 uppercase text-black font-bold dark:text-white">
         Subscribe to newsletter
       </h3>
       <div className="flex newsletter-input-fields">
@@ -70,7 +70,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
             onChange={(event) => setEmail(event?.target?.value ?? "")}
             type="email"
             placeholder="Your email"
-            className="appearance-none border h-10 border-gray-400 block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 outline-none"
+            className="appearance-none border h-10 border-gray-400 block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 outline-none dark:bg-gray-700"
             onKeyUp={(event) => handleInputKeyEvent(event)}
           />
         </div>

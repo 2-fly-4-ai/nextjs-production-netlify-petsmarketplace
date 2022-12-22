@@ -60,7 +60,7 @@ export default function ContentAccordion({ data }) {
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-2xl sm:py-8 lg:px-4 ">
         {!isEmpty(What_to_consider_test) ? (
-          <h2 className="mb-6 lg:mb-4 text-3xl lg:text-3xl tracking-tight font-extrabold text-left text-gray-900 dark:text-white capitalize">
+          <h2 className="mb-6 lg:mb-4 text-3xl lg:text-3xl tracking-tight font-extrabold text-left text-gray-900  dark:text-gray-300 capitalize">
             {" "}
             {data?.page?.name} - Buyer&lsquo;s Guide
           </h2>
@@ -75,7 +75,7 @@ export default function ContentAccordion({ data }) {
           >
             {!isEmpty(What_to_consider_test) ? (
               <h2
-                id="accordion-flush-heading-1 "
+                id="accordion-flush-heading-1 dark:text-gray-200"
                 onClick={() => {
                   setMenuVisibility(!isMenuVisible);
                   activeCategory(1);
@@ -90,7 +90,7 @@ export default function ContentAccordion({ data }) {
                   aria-controls="accordion-flush-body-1"
                 >
                   <div
-                    className="text-2xl"
+                    className="text-2xl dark:prose-headings:text-gray-300"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         What_to_consider_test.replace(
@@ -129,7 +129,7 @@ export default function ContentAccordion({ data }) {
                 aria-labelledby="accordion-flush-heading-1"
               >
                 <div
-                  className=" border-gray-200 dark:border-gray-700 prose prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc"
+                  className=" border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       What_to_consider_test.replace(
@@ -153,10 +153,10 @@ export default function ContentAccordion({ data }) {
                   }}
                   className={`${
                     isActive(2) ? "..." : ""
-                  } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1"`}
+                  } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white`}
                 >
                   <div
-                    className="text-2xl"
+                    className="text-2xl dark:prose-headings:text-gray-300"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         types_of_test
@@ -192,7 +192,7 @@ export default function ContentAccordion({ data }) {
                 } py-8`}
               >
                 <div
-                  className="prose prose-headings:font-medium prose-h3:text-2xl max-w-none"
+                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       types_of_test
@@ -214,10 +214,10 @@ export default function ContentAccordion({ data }) {
                   }}
                   className={`${
                     isActive(3) ? "..." : ""
-                  } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1"`}
+                  } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white`}
                 >
                   <div
-                    className="text-2xl"
+                    className="text-2xl dark:prose-headings:text-gray-300"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         howWeChose_test
@@ -254,7 +254,7 @@ export default function ContentAccordion({ data }) {
                 aria-labelledby="accordion-flush-heading-3"
               >
                 <div
-                  className="prose prose-headings:font-medium prose-h3:text-2xl max-w-none"
+                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       howWeChose_test
@@ -276,10 +276,10 @@ export default function ContentAccordion({ data }) {
                   }}
                   className={`${
                     isActive(4) ? "..." : ""
-                  } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1"`}
+                  } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white`}
                 >
                   <div
-                    className="text-2xl"
+                    className="text-2xl dark:prose-headings:text-gray-300"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         faqs_main_test
@@ -316,7 +316,7 @@ export default function ContentAccordion({ data }) {
             >
               {!isEmpty(faqs_main_test) ? (
                 <div
-                  className="prose prose-headings:font-medium prose-h3:text-2xl max-w-none"
+                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       faqs_main_test

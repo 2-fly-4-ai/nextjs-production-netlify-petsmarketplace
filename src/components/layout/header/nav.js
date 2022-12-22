@@ -14,7 +14,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
 
   return (
     <div className="">
-      <nav className="flex items-center justify-between flex-wrap bg-gradient-to-r from-green-700 to-green-400 p-6 overflow-hidden">
+      <nav className="flex items-center justify-between dark:bg-gray-800 bg-green-400 flex-wrap dark:bg-gradient-to-r  p-6 overflow-hidden">
         <div className="max-w-screen-2xl w-full mx-auto flex flex-col sm:flex-row">
           <div className="flex flex-row items-center  flex-shrink-0 text-white mr-6">
             <Link href="/">
@@ -134,7 +134,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
             </div>
             <div className="flex-col-reverse flex lg:flex-row">
               {"search" !== slug ? <NavSearch /> : null}
-              <div className="lg:flex items-center lg:ml-2 inline-block text-sm font-medium px-4 py-3 leading-none border  text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+              <div className="lg:flex items-center lg:ml-2 inline-block text-sm font-medium px-4 py-3 leading-none border  text-white border-white dark:border-gray-400 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
                 <Link href="/shop/category/pet-supplies">Shop</Link>
               </div>
             </div>
@@ -149,7 +149,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
 
         {/* Bottom Slither */}
 
-        <nav className="bg-gray-100 dark:bg-gray-700 border-b hidden lg:flex">
+        <nav className="bg-gray-100 dark:bg-gray-700 hidden lg:flex">
           <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
             <div className="flex items-center">
               <ul className="flex flex-row mt-0 mr-6 space-x-20 text-sm font-medium">

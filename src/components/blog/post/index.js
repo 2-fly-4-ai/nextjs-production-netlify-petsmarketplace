@@ -20,13 +20,13 @@ const Post = ({ post }) => {
       <Link href={`${post?.uri}`}>
         <a>
           <h3
-            className="my-1 text-2xl w-80 text-center tracking-tight text-gray-900 dark:text-white hover:text-blue-700"
+            className="my-1 text-2xl text-center sm:text-left tracking-tight text-gray-900 dark:text-white hover:text-blue-700"
             dangerouslySetInnerHTML={{ __html: sanitize(post?.title ?? "") }}
           />
         </a>
       </Link>
       <div
-        className="mb-4  text-gray-700 dark:text-gray-400 prose "
+        className="mb-4  text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
         dangerouslySetInnerHTML={{ __html: sanitize(post?.excerpt ?? "") }}
       />
     </div>

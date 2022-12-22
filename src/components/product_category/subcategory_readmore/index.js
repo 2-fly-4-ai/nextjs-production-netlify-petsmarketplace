@@ -12,7 +12,7 @@ export default function subcategory({ data }) {
             Refine Your Search to See More Products :{" "}
           </span>
           <div>
-            <ul className="flex flex-wrap align  items-start gap-2 p-2">
+            <ul className="flex flex-wrap align  items-start gap-1 p-2">
               {data?.page?.children?.nodes.map((child) => (
                 <li
                   key={child.name}

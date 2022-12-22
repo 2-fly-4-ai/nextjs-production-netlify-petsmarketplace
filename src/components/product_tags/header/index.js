@@ -4,7 +4,7 @@ import { sanitize } from "../../../utils/miscellaneous";
 
 export default function ProductTagsHeader({ data }) {
   return (
-    <header className="py-12 bg-gradient-to-r from-gray-100 to-gray-300 mt-5">
+    <header className="py-12 dark:bg-gray-500 bg-gradient-to-r from-gray-100 dark:from-gray-900 to-gray-300 dark:to-gray-700 mt-5">
       <div className="px-4 mx-auto w-full max-w-screen-xl text-center">
         {!isEmpty(data?.page?.roundupFields?.datepublished) ? (
           <span className="block mb-4 font-semibold text-gray-900 dark:text-white">
@@ -17,7 +17,7 @@ export default function ProductTagsHeader({ data }) {
 
         {!isEmpty(data?.page?.roundupFields?.hero) ? (
           <div
-            className="mx-auto my-6 max-w-2xl text-2xl dark:text-white font-extrabold leading-none text-gray-900 sm:text-3xl lg:text-4xl"
+            className="mx-auto my-6 max-w-2xl text-2xl dark:text-gray-200 font-extrabold leading-none text-gray-900 sm:text-3xl lg:text-4xl"
             dangerouslySetInnerHTML={{
               __html: sanitize(data?.page?.roundupFields?.hero ?? {}),
             }}
@@ -30,7 +30,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.parent?.node?.parent?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.parent?.node?.parent?.node?.uri
@@ -48,7 +48,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.parent?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.parent?.node?.uri
@@ -66,7 +66,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.uri
@@ -84,7 +84,7 @@ export default function ProductTagsHeader({ data }) {
               ?.node?.name
           ) ? (
             <a
-              className="mx-1 text-sm text-gray-600 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200"
+              className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
               href={data?.page?.name}
             >
               {data?.page?.name}

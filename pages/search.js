@@ -100,7 +100,7 @@ export default function Search({ data }) {
         headerMenus={headerMenus?.edges ?? []}
         slug={slug}
       />
-      <div className="mx-auto min-h-almost-screen">
+      <div className="mx-auto min-h-almost-screen dark:bg-gray-900">
         <SearchBox
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}

@@ -25,7 +25,7 @@ export default function Home({ data }) {
                     <dt className="text-3xl font-bold text-gray-900 md:text-3xl">
                       1500+
                     </dt>
-                    <dd className="font-medium text-gray-900 dark:text-gray-400">
+                    <dd className="font-medium text-gray-900 dark:text-gray-800">
                       Products
                     </dd>
                   </div>
@@ -33,7 +33,7 @@ export default function Home({ data }) {
                     <dt className="text-3xl font-bold md:text-3xl text-gray-900">
                       250+
                     </dt>
-                    <dd className="font-medium  text-gray-900 dark:text-gray-400">
+                    <dd className="font-medium  text-gray-900 dark:text-gray-800">
                       Brands
                     </dd>
                   </div>
@@ -41,7 +41,7 @@ export default function Home({ data }) {
                     <dt className=" text-3xl font-bold md:text-3xl text-gray-900">
                       100+
                     </dt>
-                    <dd className="font-medium text-gray-900 dark:text-gray-400">
+                    <dd className="font-medium text-gray-900 dark:text-gray-800">
                       Pet Articles
                     </dd>
                   </div>
@@ -75,9 +75,7 @@ export default function Home({ data }) {
           </div>
         </section>
 
-        {/* The gaaaye animals box */}
-
-        <section className="bg-white bg-no-repeat bg-cover bg-center bg-blend-multiply max-w-screen-2xl mx-auto px-6">
+        <section className="bg-white dark:bg-gray-800 bg-no-repeat bg-cover bg-center bg-blend-multiply max-w-screen-2xl mx-auto px-6">
           <div className="relative py-4 2xl:px-0 lg:py-6  lg:px-6 mx-auto text-black  z-1 flex flex-col">
             <div className="grid gap-0 md:gap-2 lg:pt-6 2xl:mt-0 lg:mt-0 md:grid-cols-2 lg:grid-cols-7 ">
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-green-300 p-2 lg:hover:-translate-y-2 duration-500">
@@ -218,7 +216,7 @@ export default function Home({ data }) {
                     return (
                       <article
                         key={tag.name}
-                        className="border-2 p-3  justify-center content-center flex-col flex"
+                        className="border-1 p-3  justify-center content-center flex-col flex"
                       >
                         <h2 className="my-1 text-2xl  text-center tracking-tight text-gray-900 dark:text-white capitalize">
                           <Link href={tag?.uri}>{tag?.name}</Link>
@@ -255,7 +253,7 @@ export default function Home({ data }) {
           </div>
         </section>
         {/* Product box one */}
-        <section className="bg-gradient-to-tq  dark:bg-gray-900 max-w-screen-2xl 2xl:px-5 mx-auto">
+        <section className="bg-gradient-to-tq  dark:bg-gray-800 max-w-screen-2xl 2xl:px-5 mx-auto">
           <div className="py-8 px-4 mx-auto max-w-screen-2xl lg:py-6 lg:pb-2 lg:px-2">
             <div className="mx-auto max-w-screen-2xl text-left">
               <h2 className="mb-6 text-4xl tracking-tight text-gray-800 dark:text-white">
@@ -288,7 +286,7 @@ export default function Home({ data }) {
                                 objectFit="contain"
                                 alt={tag?.name}
                               />
-                              <h5 className=" py-3 px-2 font-medium tracking-tight text-gray-900 dark:text-white text-center   hover:text-blue-700">
+                              <h5 className=" py-3 px-2 font-medium  tracking-tight text-gray-900  text-center   hover:text-blue-700">
                                 {tag?.name}
                               </h5>
                             </div>
@@ -341,13 +339,13 @@ export default function Home({ data }) {
               <h2 className="mb-4 text-4xl tracking-tight  text-gray-900 dark:text-white">
                 We share your deep love for animals
               </h2>
-              <p className="mb-2 md:text-lg text-gray-700">
+              <p className="mb-2 md:text-lg text-gray-700 dark:text-gray-400">
                 Welcome to PetsMarket Place, the premier online destination for
                 all your pet-related needs. Whether you&apos;re a proud pet
                 owner or simply an animal lover, you&apos;ll find everything you
                 need right here in one convenient place.
               </p>
-              <p className=" md:text-lg mb-2  text-gray-700">
+              <p className=" md:text-lg mb-2  text-gray-700 dark:text-gray-400">
                 But PetsMarket Place is more than just a pet store. We&apos;re
                 also a trusted source of expert animal advice and information.
                 Our team of dedicated professionals is always on hand to provide
@@ -357,7 +355,7 @@ export default function Home({ data }) {
                 medical care, we&apos;re here to help.
               </p>
 
-              <p className=" md:text-lg mt-2 text-gray-700">
+              <p className=" md:text-lg mt-2 text-gray-700 dark:text-gray-400">
                 So whether you&apos;re shopping for your pets or seeking expert
                 advice, we invite you to explore the many resources and products
                 available at PetsMarket Place. We&apos;re confident you&apos;ll

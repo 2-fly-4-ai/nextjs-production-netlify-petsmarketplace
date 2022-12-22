@@ -6,7 +6,7 @@ import { FacebookIcon, TwitterIcon } from "react-share";
 export default function AuthorTitleShare({ data }) {
   return (
     <div className=" px-4 flex flex-col lg:flex-row justify-between lg:items-center py-6 border-t border-b border-gray-200 dark:border-gray-700">
-      <span className="text-base mb-4 lg:mb-0 font-normal text-gray-500 dark:text-gray-400">
+      <span className="text-base mb-4 lg:mb-0 font-normal text-gray-500 dark:text-gray-300">
         <h1 className="uppercase font-bold text-xl">
           The best {data?.page?.name}
         </h1>{" "}
@@ -14,7 +14,7 @@ export default function AuthorTitleShare({ data }) {
         <a
           href="#"
           rel="author"
-          className="font-bold text-gray-900 dark:text-white no-underline hover:underline"
+          className="font-bold text-gray-900 dark:text-gray-200 no-underline hover:underline"
         >
           {data?.page?.roundupFields?.author}
         </a>{" "}

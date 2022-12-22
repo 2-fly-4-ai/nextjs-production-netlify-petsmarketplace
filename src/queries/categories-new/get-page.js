@@ -47,7 +47,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		  }
 		}
 	  }
-	  children {
+	  children(first: 50) {
 		nodes {
 		  name
 		  uri

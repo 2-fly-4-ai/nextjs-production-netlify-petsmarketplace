@@ -84,7 +84,7 @@ const Post = ({ data }) => {
                         ?.parent?.node?.parent?.node?.parent?.node?.link
                     }
                   >
-                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.parent?.node?.parent?.node?.parent?.node?.name
@@ -103,7 +103,7 @@ const Post = ({ data }) => {
                         ?.parent?.node?.parent?.node?.link
                     }
                   >
-                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.parent?.node?.parent?.node?.name
@@ -122,7 +122,7 @@ const Post = ({ data }) => {
                         ?.parent?.node?.link
                     }
                   >
-                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.parent?.node?.name
@@ -140,7 +140,7 @@ const Post = ({ data }) => {
                         ?.link
                     }
                   >
-                    <a className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200">
+                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
                       {
                         data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                           ?.name
@@ -151,7 +151,7 @@ const Post = ({ data }) => {
 
                 {!isEmpty(data?.post?.productTaxonomies?.nodes[0]?.name) ? (
                   <a
-                    className=" text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5 hover:bg-gray-200"
+                    className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                     href={data?.post?.productTaxonomies?.nodes[0]?.uri}
                   >
                     {data?.post?.productTaxonomies?.nodes[0]?.name}
@@ -219,7 +219,9 @@ const Post = ({ data }) => {
 
           {/* Top-box-right */}
           <div className="flex-col w-full">
-            <h2 className="text-4xl mb-3 mt-4">{data?.post?.title}</h2>
+            <h2 className="text-4xl mb-3 mt-4 dark:text-gray-200">
+              {data?.post?.title}
+            </h2>
             <span className="items-center underline flex text-gray-500 border-b text  font-bold py-1 pb-1.5">
               <svg
                 className="w-4 h-4"
@@ -246,31 +248,38 @@ const Post = ({ data }) => {
 								<span className="text-green-600">In Stock</span>
 							</p> */}
               <p className="space-x-2 mt-4">
-                <span className="text-gray-800 font-semibold">Brand: </span>
+                <span className="text-gray-800 font-semibold dark:text-gray-200">
+                  Brand:{" "}
+                </span>
 
                 {data?.post?.productBrands?.nodes[0]?.seo?.robots[1] ==
                 "index" ? (
-                  <Link
-                    href={data?.post?.productBrands?.nodes[0]?.uri}
-                    className="text-gray-600 border text-sm border-gray-500 rounded-full px-4  py-1 pb-1.5"
-                  >
-                    {data?.post?.productBrands?.nodes[0]?.name}
+                  <Link href={data?.post?.productBrands?.nodes[0]?.uri}>
+                    <a className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium">
+                      {data?.post?.productBrands?.nodes[0]?.name}
+                    </a>
                   </Link>
                 ) : (
-                  <p>{data?.post?.productBrands?.nodes[0]?.name}</p>
+                  <p className="dark:text-gray-400">
+                    {data?.post?.productBrands?.nodes[0]?.name}
+                  </p>
                 )}
               </p>
 
               <p className="space-x-2">
-                <span className="text-gray-800 font-semibold">SKU: </span>
-                <span className="text-gray-600">BE45VGRT</span>
+                <span className="text-gray-800 font-semibold dark:text-gray-200">
+                  SKU:{" "}
+                </span>
+                <span className="text-gray-600 dark:text-gray-400">
+                  BE45VGRT
+                </span>
               </p>
             </div>
 
             {/* PRODUCT DESCRIPTION*/}
 
             <div
-              className="mt-4 text-gray-700 prose"
+              className="mt-4 text-gray-700 prose dark:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitize(
                   data?.post?.single_product_acf?.shortDescription ?? {}
@@ -294,7 +303,9 @@ const Post = ({ data }) => {
             </div>
 
             <div className="space-x-2 mt-5 flex">
-              <span className="text-gray-800 font-semibold">Tags: </span>
+              <span className="text-gray-800 dark:text-gray-200 font-semibold">
+                Tags:{" "}
+              </span>
 
               {!isEmpty(data?.post?.productTags?.nodes) &&
               isArray(data?.post?.productTags?.nodes) ? (
@@ -307,7 +318,7 @@ const Post = ({ data }) => {
                       >
                         <Link href={tag.uri}>
                           <a
-                            className="text-sm text-gray-600 border-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-gray-300 capitalize rounded-full px-4  py-1 pb-1.5"
+                            className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
                             dangerouslySetInnerHTML={{
                               __html: sanitize(tag?.name ?? {}),
                             }}
@@ -321,7 +332,9 @@ const Post = ({ data }) => {
             </div>
 
             <div className="space-x-2 mt-5 flex mb-5">
-              <span className="text-gray-800 font-semibold">Category: </span>
+              <span className="text-gray-800 font-semibold dark:text-gray-200">
+                Category:{" "}
+              </span>
               {!isEmpty(data?.post?.productTaxonomies?.nodes) &&
               isArray(data?.post?.productTaxonomies?.nodes) ? (
                 <div>
@@ -333,7 +346,7 @@ const Post = ({ data }) => {
                       >
                         <Link href={category.uri} key={category.name + 1}>
                           <a
-                            className="text-sm text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-2 border-gray-300 rounded-full px-4  py-1 pb-1.5"
+                            className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
                             dangerouslySetInnerHTML={{
                               __html: sanitize(category?.name ?? {}),
                             }}
@@ -346,7 +359,7 @@ const Post = ({ data }) => {
               ) : null}
             </div>
 
-            <div className="font-thin text-sm">
+            <div className="font-thin text-sm dark:text-gray-400">
               {data?.header?.siteTitle} is reader-supported, and a participant
               in the Amazon Associate program. When you buy through links on our
               site, we may earn an affiliate commission. Read more about our
@@ -360,7 +373,7 @@ const Post = ({ data }) => {
           <Tabs.Group aria-label="Default tabs" style="default">
             <Tabs.Item active={true} title="Features">
               <div
-                className="mt-4 text-gray-700 prose"
+                className="mt-4 text-gray-700 prose dark:text-gray-400"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
                     data?.post?.single_product_acf?.productFeatures ?? {}
@@ -370,7 +383,7 @@ const Post = ({ data }) => {
             </Tabs.Item>
             <Tabs.Item title="Pro's & con's">
               <div
-                className="mt-4 text-gray-700 prose"
+                className="mt-4 text-gray-700 prose dark:text-gray-400 dark:prose-headings:text-gray-200"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
                     data?.post?.single_product_acf?.productProsCons ?? {}
@@ -386,7 +399,7 @@ const Post = ({ data }) => {
             <Tabs.Item title="Specifications">
               <div className="max-w-2xl">
                 <div
-                  className="mt-4 text-gray-700 prose "
+                  className="mt-4 text-gray-700 prose dark:text-gray-400 "
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       data?.post?.single_product_acf?.productSpecs ?? {}
@@ -924,7 +937,9 @@ const Post = ({ data }) => {
         </div> */}
 
         <div className="container py-8 mx-auto">
-          <h2 className="text-3xl  text-gray-800  mb-6">Related products</h2>
+          <h2 className="text-3xl  text-gray-800  mb-6 dark:text-gray-200">
+            Related products
+          </h2>
 
           <div className="flex flex-wrap gap-3">
             {uniqueNames.map((product) => {

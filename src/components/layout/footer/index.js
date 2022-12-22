@@ -12,11 +12,11 @@ const Footer = ({
   footerMenus4,
 }) => {
   return (
-    <footer className="bg-gradient-to-r from-green-700 to-green-600 flex-wrap">
+    <footer className="bg-gradient-to-r dark:from-gray-800 dark:to-gray-700 from-green-700 to-green-600 flex-wrap">
       <div className="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:-10 flex-wrap">
         <div className=" grid-cols-2 gap-8 lg:grid-cols-4 margin-auto justify-center flex flex-wrap">
           <div className="lg:mx-auto">
-            <h2 className="mb-2 text-sm font-bold text-gray-100 uppercase dark:text-white">
+            <h2 className="mb-4 text-sm font-bold text-gray-100 uppercase dark:text-white">
               Pet-Store
             </h2>
             {!isEmpty(footerMenus1) && isArray(footerMenus1) ? (
@@ -24,7 +24,7 @@ const Footer = ({
                 {footerMenus1.map((footerMenu) => (
                   <li
                     key={footerMenu?.node?.id}
-                    className="text-gray-500 dark:text-gray-400"
+                    className="text-gray-500 dark:text-gray-400 mb-4"
                   >
                     <Link href={footerMenu?.node?.path}>
                       <a className="text-gray-100  ">
@@ -38,15 +38,15 @@ const Footer = ({
           </div>
 
           <div className="lg:mx-auto">
-            <h2 className="mb-2 text-sm font-bold text-gray-100 uppercase dark:text-white">
+            <h2 className="mb-4 text-sm font-bold text-gray-100 uppercase dark:text-white">
               Legal
             </h2>
             {!isEmpty(footerMenus2) && isArray(footerMenus2) ? (
-              <ul>
+              <ul className="">
                 {footerMenus2.map((footerMenu) => (
                   <li
                     key={footerMenu?.node?.id}
-                    className="text-gray-500 dark:text-gray-400"
+                    className="text-gray-500 dark:text-gray-400 mb-4"
                   >
                     <Link href={footerMenu?.node?.path}>
                       <a className="text-gray-100  ">
@@ -59,7 +59,7 @@ const Footer = ({
             ) : null}
           </div>
           <div className="lg:mx-auto">
-            <h2 className="mb-2 text-sm font-bold text-gray-100 uppercase dark:text-white">
+            <h2 className="mb-4 text-sm font-bold text-gray-100 uppercase dark:text-white">
               Archives
             </h2>
             {!isEmpty(footerMenus3) && isArray(footerMenus3) ? (
@@ -67,7 +67,7 @@ const Footer = ({
                 {footerMenus3.map((footerMenu) => (
                   <li
                     key={footerMenu?.node?.id}
-                    className="text-gray-500 dark:text-gray-400"
+                    className="text-gray-500 dark:text-gray-400 mb-4"
                   >
                     <Link href={footerMenu?.node?.path}>
                       <a className="text-gray-100  ">

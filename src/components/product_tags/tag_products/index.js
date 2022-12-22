@@ -2,6 +2,7 @@ import React from "react";
 import { sanitize } from "../../../utils/miscellaneous";
 import Link from "next/link";
 import Image from "next/image";
+import { isEmpty } from "lodash";
 
 export default function TagProducts({ product }) {
   return (
@@ -14,26 +15,28 @@ export default function TagProducts({ product }) {
           >
             <div className=" flex justify-between rounded-t my-auto ">
               <div className="w-80 text-lg justify-center items-center flex text-gray-900 md:text-xl dark:text-white my-auto py-6">
-                <Image
-                  src={product?.single_product_acf?.productImageMainUrl.replace(
-                    ".jpg",
-                    "._AC_UL320.jpg"
-                  )}
-                  height="256"
-                  width="256"
-                  objectFit="contain"
-                  alt={product?.title}
-                />
+                {!isEmpty(product?.single_product_acf?.productImageMainUrl) ? (
+                  <Image
+                    src={product?.single_product_acf?.productImageMainUrl.replace(
+                      ".jpg",
+                      "._AC_UL320.jpg"
+                    )}
+                    height="256"
+                    width="256"
+                    objectFit="contain"
+                    alt={product?.title}
+                  />
+                ) : null}
               </div>
             </div>
 
             <div className="flex flex-col p-4 leading-normal ">
-              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white px-4">
+              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-gray-300 px-4">
                 {product?.title}
               </h5>
 
               <div
-                className="text tracking-tight py-2 px-4 text-gray-600"
+                className="text tracking-tight py-2 px-4 text-gray-700 dark:text-gray-400"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
                     product?.single_product_acf?.productDescription ?? {}

@@ -24,10 +24,10 @@ const Page = ({ data }) => {
 
   return (
     <Layout data={data}>
-      <div className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-700 flex min-h-almost-screen max-w-screen-2xl m-auto">
+      <div className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 flex min-h-almost-screen max-w-screen-2xl m-auto">
         <div className="flex justify-between px-6 m-auto max-w-screen-xl  prose-headings:text-white prose-p:text-white prose-em:text-white prose-strong:text-white prose-li:text-white">
           <div
-            className="prose prose-p:text-black prose-a:text-black prose-strong:text-black prose-li:text-black prose-headings:text-black max-w-none"
+            className="prose dark:prose-p:text-gray-400 prose-p:text-black dark:prose-a:text-gray-400 prose-a:text-black dark:prose-strong:text-gray-400 prose-strong:text-black dark:prose-li:text-gray-400 prose-li:text-black prose-headings:text-black dark:prose-headings:text-gray-400 max-w-none dark:text-gray-400"
             dangerouslySetInnerHTML={{
               __html: sanitize(data?.page?.content ?? {}),
             }}
