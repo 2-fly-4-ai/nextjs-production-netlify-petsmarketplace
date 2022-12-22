@@ -14,7 +14,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
 
   return (
     <div className="">
-      <nav className="flex items-center justify-between dark:bg-gray-800 from-green-700 to-green-400 flex-wrap dark:bg-gradient-to-r  p-6 overflow-hidden">
+      <nav className="flex items-center justify-between dark:bg-gray-800 from-green-700 to-green-400 bg-gradient-to-r flex-wrap dark:bg-gradient-to-r  p-6 overflow-hidden">
         <div className="max-w-screen-2xl w-full mx-auto flex flex-col sm:flex-row">
           <div className="flex flex-row items-center  flex-shrink-0 text-white mr-6">
             <Link href="/">
