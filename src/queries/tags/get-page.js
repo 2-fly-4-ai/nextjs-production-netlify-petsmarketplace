@@ -28,7 +28,7 @@ query GET_PAGE($uri: ID!) {
 		robots
 		title
 	  }
-	  products {
+	  products(first: 30) {
 		nodes {
 		  title
 		  uri

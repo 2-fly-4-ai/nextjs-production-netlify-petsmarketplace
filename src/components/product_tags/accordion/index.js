@@ -90,7 +90,7 @@ export default function ContentAccordion({ data }) {
                   aria-controls="accordion-flush-body-1"
                 >
                   <div
-                    className="text-2xl dark:prose-headings:text-gray-300"
+                    className="text-2xl dark:prose-headings:text-gray-200"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         What_to_consider_test.replace(
@@ -129,7 +129,7 @@ export default function ContentAccordion({ data }) {
                 aria-labelledby="accordion-flush-heading-1"
               >
                 <div
-                  className=" border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
+                  className=" border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-200 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       What_to_consider_test.replace(
@@ -156,7 +156,7 @@ export default function ContentAccordion({ data }) {
                   } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white`}
                 >
                   <div
-                    className="text-2xl dark:prose-headings:text-gray-300"
+                    className="text-2xl dark:prose-headings:text-gray-200"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         types_of_test
@@ -192,7 +192,7 @@ export default function ContentAccordion({ data }) {
                 } py-8`}
               >
                 <div
-                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
+                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-200 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       types_of_test
@@ -217,7 +217,7 @@ export default function ContentAccordion({ data }) {
                   } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white`}
                 >
                   <div
-                    className="text-2xl dark:prose-headings:text-gray-300"
+                    className="text-2xl dark:prose-headings:text-gray-200"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         howWeChose_test
@@ -254,7 +254,7 @@ export default function ContentAccordion({ data }) {
                 aria-labelledby="accordion-flush-heading-3"
               >
                 <div
-                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
+                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-200 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       howWeChose_test
@@ -279,7 +279,7 @@ export default function ContentAccordion({ data }) {
                   } flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white`}
                 >
                   <div
-                    className="text-2xl dark:prose-headings:text-gray-300"
+                    className="text-2xl dark:prose-headings:text-gray-200"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         faqs_main_test
@@ -316,7 +316,7 @@ export default function ContentAccordion({ data }) {
             >
               {!isEmpty(faqs_main_test) ? (
                 <div
-                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-300 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
+                  className="border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-200 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       faqs_main_test

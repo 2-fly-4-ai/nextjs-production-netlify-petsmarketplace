@@ -30,7 +30,7 @@ const Post = ({ data }) => {
       <main className="pb-16 lg:pb-24 bg-white dark:bg-gray-900 px-4 ">
         <div className="flex relative z-20 gap-6 justify-between px-4 mx-auto max-w-screen-xl  bg-white dark:bg-gray-900 rounded">
           <article className="w-full max-w-none htmlFormat htmlFormat-sm sm:format-base lg:format-lg htmlFormat-blue dark:format-invert">
-            <header className="py-12 bg-gradient-to-r from-gray-100 to-gray-300 mt-4 h-max">
+            <header className="py-12 bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 from-gray-100 to-gray-300 mt-4 h-max">
               <div className="px-4 mx-auto w-full max-w-screen-xl text-center">
                 <span className="block mb-4 font-semibold text-gray-900 dark:text-white">
                   Published{" "}
@@ -61,7 +61,9 @@ const Post = ({ data }) => {
                   rel="author"
                   className="font-bold text-gray-900 dark:text-white no-underline hover:underline capitalize"
                 >
-                  {data?.post?.author?.node?.name}
+                  {!isEmpty(data?.post?.author?.node?.name)
+                    ? data?.post?.author?.node?.name
+                    : PetsMarketPlace}
                 </a>{" "}
                 in{" "}
                 <a
@@ -72,8 +74,8 @@ const Post = ({ data }) => {
                 </a>
               </span>
 
-              <aside aria-label="Share social media">
-                <div className="inline-flex items-center  mr-2 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
+              <aside aria-label="Share social media" className="flex">
+                <div className="inline-flex items-center gap-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full mr-2 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
                   <FacebookShareButton
                     url={`https://petsmarketplace.com${data?.post?.uri}`}
                     quote={"Best Pets Products"}
@@ -82,16 +84,16 @@ const Post = ({ data }) => {
                     className="inline-flex items-center  text-xs font-medium w-24 justify-center h-8 border"
                   >
                     <FacebookIcon
-                      size={18}
+                      size={24}
                       iconFillColor="white"
                       round
                       className="mr-2 p-0 "
-                      bgStyle={{ fill: "black" }}
+                      bgStyle={{ fill: "Orange" }}
                     />{" "}
                     Share
                   </FacebookShareButton>
                 </div>
-                <div className="inline-flex items-center  mr-2 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
+                <div className="inline-flex items-center gap-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full mr-2 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
                   <TwitterShareButton
                     title={"test"}
                     url={`https://petsmarketplace.com${data?.post?.uri}`}
@@ -101,7 +103,7 @@ const Post = ({ data }) => {
                     className="inline-flex items-center  text-xs font-medium w-24 justify-center h-8 border"
                   >
                     <TwitterIcon
-                      size={18}
+                      size={24}
                       iconFillColor="white"
                       round
                       className="mr-2 p-0 "
@@ -117,7 +119,7 @@ const Post = ({ data }) => {
                       `https://petsmarketplace.com${data?.post?.uri}`
                     )
                   }
-                  className="inline-flex items-center py-2 px-6 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-0 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className="inline-flex items-center py-1 px-6 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-0 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 >
                   {" "}
                   <svg
@@ -139,47 +141,60 @@ const Post = ({ data }) => {
             </div>
 
             <div
-              className="px-4 prose max-w-none my-8"
+              className="px-4 prose my-8 max-w-none dark:text-gray-400 dark:prose-headings:text-gray-200 dark:prose-p:text-gray-400  prose-headings:font-medium prose-h3:text-2xl prose-li:list-disc dark:prose-li:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitize(data?.post?.content ?? {}),
               }}
             />
             <div className="flex justify-between items-center py-6 border-t border-b border-gray-200 dark:border-gray-700">
-              <aside aria-label="Share social media">
-                <a
-                  href="#"
-                  className="inline-flex items-center py-2 px-6 mr-2 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                >
-                  <svg
-                    className="mr-2 w-4 h-4"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
+              <aside aria-label="Share social media" className="flex">
+                <div className="inline-flex items-center gap-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full mr-2 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
+                  <FacebookShareButton
+                    url={`https://petsmarketplace.com${data?.post?.uri}`}
+                    quote={"Best Pets Products"}
+                    hashtag={`#${data?.page?.nodes[0]?.name.replace(" ", "")}`}
+                    description={"aiueo"}
+                    className="inline-flex items-center  text-xs font-medium w-24 justify-center h-8 border"
                   >
-                    <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                  </svg>{" "}
-                  Share
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center py-2 px-6 mr-2 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                >
-                  <svg
-                    className="mr-2 w-4 h-4"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
+                    <FacebookIcon
+                      size={24}
+                      iconFillColor="white"
+                      round
+                      className="mr-2 p-0 "
+                      bgStyle={{ fill: "Orange" }}
+                    />{" "}
+                    Share
+                  </FacebookShareButton>
+                </div>
+                <div className="inline-flex items-center gap-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full mr-2 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600  dark:hover:text-white dark:hover:bg-gray-700">
+                  <TwitterShareButton
+                    title={"test"}
+                    url={`https://petsmarketplace.com${data?.post?.uri}`}
+                    hashtags={[
+                      `#${data?.page?.nodes[0]?.name.replace(" ", "")}`,
+                    ]}
+                    className="inline-flex items-center  text-xs font-medium w-24 justify-center h-8 border"
                   >
-                    <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-                  </svg>{" "}
-                  Tweet
-                </a>
+                    <TwitterIcon
+                      size={24}
+                      iconFillColor="white"
+                      round
+                      className="mr-2 p-0 "
+                      bgStyle={{ fill: "black" }}
+                    />
+                    Tweet
+                  </TwitterShareButton>
+                </div>
                 <button
                   type="button"
-                  className="inline-flex items-center py-2 px-6 text-xs font-medium text-gray-900 no-underline bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  onClick={() =>
+                    navigator.clipboard.writeText(
+                      `https://petsmarketplace.com${data?.post?.uri}`
+                    )
+                  }
+                  className="inline-flex items-center py-1 px-6 text-s font-medium text-gray-900 no-underline bg-white rounded-full border-4 border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-0 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                 >
+                  {" "}
                   <svg
                     className="mr-2 w-4 h-4"
                     aria-hidden="true"
@@ -278,20 +293,20 @@ const Post = ({ data }) => {
           >
             <div className="xl:w-[336px] sticky top-6">
               <div className="p-4 mb-6  border border-gray-200 dark:border-gray-700">
-                <h4 className="mb-2 text-sm font-bold text-gray-900 dark:text-white uppercase">
+                <h4 className="mb-2 text-sm font-bold text-gray-900 dark:text-gray-200 uppercase">
                   PETSMARKET PLACE LATEST NEWS
                 </h4>
 
                 <p className="mb-4 text-sm font-light text-gray-500 dark:text-gray-400">
                   Get all the stories you need-to-know from the most powerful
-                  name in news delivered first thing every morning to your inbox
+                  name in Animal news delivered to your inbox.
                 </p>
 
                 <NewsletterSubscribe />
               </div>
 
               <div className="p-4 mb-6 rounded-lg border border-gray-200 dark:border-gray-700">
-                <h4 className="mb-4 text-sm font-bold text-gray-900 dark:text-white uppercase">
+                <h4 className="mb-4 text-sm font-bold text-gray-900 dark:text-gray-200 uppercase">
                   Latest Posts
                 </h4>
 
@@ -299,7 +314,7 @@ const Post = ({ data }) => {
                   ? data?.posts?.nodes.map((post) => {
                       return (
                         <div className="mb-6" key={post?.title}>
-                          <h5 className="mb-2 text-lg font-bold leading-tight text-gray-800 dark:text-white">
+                          <h5 className="mb-2 text-base font-bold leading-tight text-gray-800 dark:text-gray-200">
                             {post?.title}
                           </h5>
                           <p className="mb-2 font-light text-gray-500 dark:text-gray-400">
@@ -307,7 +322,7 @@ const Post = ({ data }) => {
                           </p>
                           <a
                             href={post?.uri}
-                            className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+                            className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-gray-400 hover:no-underline"
                           >
                             Read Article
                           </a>
