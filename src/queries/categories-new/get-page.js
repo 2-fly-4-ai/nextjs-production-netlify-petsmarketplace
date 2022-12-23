@@ -82,7 +82,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 			  endCursor
 			}
 		  }
-		  children {
+		  children(first: 5) {
 			nodes {
 			  name
 			  uri
@@ -117,7 +117,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 				  endCursor
 				}
 			  }
-			  children {
+			  children(first: 5) {
 				nodes {
 				  name
 				  uri
@@ -190,7 +190,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		}
 	  }
 	}
-	productBrands(where: {orderby: COUNT, order: DESC}, first: 70) {
+	productBrands(where: {orderby: COUNT, order: DESC}, first: 30) {
 	  nodes {
 		name
 		uri

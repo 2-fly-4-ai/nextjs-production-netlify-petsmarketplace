@@ -31,9 +31,7 @@ const Page = ({ data }) => {
             {!isEmpty(data?.page?.children?.nodes) ? (
               <Subcategory data={data} />
             ) : null}
-            {!isEmpty(data?.page?.children?.nodes) ? (
-              <ChildTags data={data} />
-            ) : (
+            {!isEmpty(data?.page?.children?.nodes) ? null : (
               <Tags data={data} />
             )}
             <Brands data={data?.productBrands?.nodes} />
