@@ -26,51 +26,10 @@ function Error404({ data }) {
             <p className="mb-8 font-medium text-gray-500 sm:text-2xl dark:text-gray-400">
               Whoops! That page doesn’t exist.
             </p>
-            <form action="#" method="post">
-              <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-                <div className="relative mr-3 w-full">
-                  <label
-                    htmlFor="member_email"
-                    className="hidden mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
-                  >
-                    Email address
-                  </label>
-                  <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                    <svg
-                      className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  <input
-                    className="block p-3 pl-10 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="e.g. Flowbite, components"
-                    type="email"
-                    id="member_email"
-                    required=""
-                  />
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    className="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg cursor-pointer bg-primary-700 hover:bg-primary-800 focus:ring-2 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </form>
           </div>
           <div className="grid gap-6 mt-8 lg:mt-12 sm:grid-cols-2 lg:grid-cols-4">
             <a
-              href="#"
+              href="/"
               className="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
             >
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
@@ -88,7 +47,7 @@ function Error404({ data }) {
               </h3>
             </a>
             <a
-              href="#"
+              href="/shop/category/pet-supplies"
               className="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
             >
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-teal-100 rounded-lg dark:bg-teal-900 lg:h-12 lg:w-12">
@@ -102,11 +61,11 @@ function Error404({ data }) {
                 </svg>
               </div>
               <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-500 dark:text-gray-400">
-                Library
+                Shop
               </h3>
             </a>
             <a
-              href="#"
+              href="/affiliate-disclosure"
               className="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
             >
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-purple-100 rounded-lg dark:bg-purple-900 lg:h-12 lg:w-12">
@@ -120,11 +79,11 @@ function Error404({ data }) {
                 </svg>
               </div>
               <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-500 dark:text-gray-400">
-                Knowledge Center
+                Affiliate Disclosure
               </h3>
             </a>
             <a
-              href="#"
+              href="/blog"
               className="p-6 text-center bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700 hover:shadow-lg"
             >
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-green-100 rounded-lg dark:bg-green-900 lg:h-12 lg:w-12">
