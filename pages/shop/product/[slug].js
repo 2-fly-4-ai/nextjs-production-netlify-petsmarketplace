@@ -265,15 +265,6 @@ const Post = ({ data }) => {
                   </p>
                 )}
               </p>
-
-              <p className="space-x-2">
-                <span className="text-gray-800 font-semibold dark:text-gray-200">
-                  SKU:{" "}
-                </span>
-                <span className="text-gray-600 dark:text-gray-400">
-                  BE45VGRT
-                </span>
-              </p>
             </div>
 
             {/* PRODUCT DESCRIPTION*/}
@@ -392,9 +383,14 @@ const Post = ({ data }) => {
               />
             </Tabs.Item>
             <Tabs.Item title="Expert Opinion">
-              <div className="max-w-2xl">
-                <div className="prose  max-w-none"></div>
-              </div>
+              <div
+                className="mt-4 text-gray-700 prose dark:text-gray-400 dark:prose-headings:text-gray-200"
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(
+                    data?.post?.single_product_acf?.expertOpinion ?? {}
+                  ),
+                }}
+              />
             </Tabs.Item>
             <Tabs.Item title="Specifications">
               <div className="max-w-2xl">

@@ -50,6 +50,7 @@ export const GET_POST = gql`
 							shortDescription
 							productSpecs
 							productUrl
+							
 						  }
 					  }
 				  }
@@ -126,6 +127,7 @@ export const GET_POST = gql`
 			shortDescription
 			productSpecs
 			productUrl
+			expertOpinion
 		  }
 		  seo {
 			openGraph {

@@ -30,7 +30,7 @@ export default function Tags({ data }) {
       </span>
       <div>
         <ul className="flex flex-wrap align items-start gap-1 p-2">
-          {page_tags.map((tag) => (
+          {page_tags.slice(0, 20).map((tag) => (
             <li
               key={tag.name}
               className="text-gray-500 dark:text-gray-400 mb-3"
