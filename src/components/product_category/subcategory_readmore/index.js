@@ -8,7 +8,7 @@ export default function subcategory({ data }) {
     <div>
       {!isEmpty(data?.page?.children?.nodes) ? (
         <div className="space-x-2 mt-2 flex flex-col">
-          <span className="text-gray-800 mx-4 my-4 text-left font-semibold">
+          <span className="text-gray-800 dark:text-gray-200 mx-2 my-4 text-left font-semibold">
             Refine Your Search to See More Products :{" "}
           </span>
           <div>

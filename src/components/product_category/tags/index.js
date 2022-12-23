@@ -25,7 +25,7 @@ export default function Tags({ data }) {
 
   return (
     <div className="space-x-2 mt-2 flex flex-col ">
-      <span className="text-gray-800 mx-2 my-4 px-2 text-xl text-left font-semibold">
+      <span className="text-gray-800 dark:text-gray-200 mx-2 my-4 text-left font-semibold">
         Related Tags:{" "}
       </span>
       <div>
