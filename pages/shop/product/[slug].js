@@ -282,6 +282,7 @@ const Post = ({ data }) => {
               <a
                 href={data?.post?.single_product_acf?.productUrl}
                 target="_blank"
+                rel="nofollow"
                 className="border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 border-gray-500 bg-green-400 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
               >
                 <i className="fa-solid fa-heart"></i> View On Amazon
