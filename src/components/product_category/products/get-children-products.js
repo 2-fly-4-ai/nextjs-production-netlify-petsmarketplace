@@ -99,6 +99,8 @@ const Products = ({ data }) => {
                     <a
                       className="py-1 px-5 opacity-0 hover:bg-gray-300 border-gray-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-2 leading-tight font-semibold group-hover:opacity-80 text-black text-sm -mt-8 rounded-full p-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white"
                       href={product?.single_product_acf?.productUrl}
+                      target="_blank"
+                      rel="nofollow"
                     >
                       View On Amazon
                     </a>
@@ -192,6 +194,8 @@ const Products = ({ data }) => {
                           <div className="mt-6 flex gap-3 border-b border-gray-200 pb-6 pt-0">
                             <a
                               href={product?.single_product_acf?.productUrl}
+                              target="_blank"
+                              rel="nofollow"
                               className="text-sm border border-gray-500 bg-green-400 text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i> View On
