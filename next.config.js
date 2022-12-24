@@ -55,7 +55,7 @@ module.exports = {
   //     },
   //   ];
   // },
-  trailingSlash: false,
+  trailingSlash: true,
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
