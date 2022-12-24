@@ -47,7 +47,7 @@ export default function TagProducts({ product }) {
                 <Link
                   href={product?.single_product_acf?.productUrl}
                   target="_blank"
-                  rel="nofollow"
+                  rel="nofollow noreferrer"
                 >
                   <button
                     type="button"
