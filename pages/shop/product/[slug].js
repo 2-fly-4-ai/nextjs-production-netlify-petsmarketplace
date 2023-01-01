@@ -273,7 +273,7 @@ const Post = ({ data }) => {
               className="mt-4 text-gray-700 prose dark:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitize(
-                  data?.post?.single_product_acf?.shortDescription ?? {}
+                  data?.post?.single_product_acf?.productDescription ?? {}
                 ),
               }}
             />

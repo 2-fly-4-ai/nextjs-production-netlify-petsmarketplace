@@ -39,7 +39,7 @@ export default function TagProducts({ product }) {
                 className="text tracking-tight py-2 px-4 text-gray-700 dark:text-gray-400"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
-                    product?.single_product_acf?.productDescription ?? {}
+                    product?.single_product_acf?.shortDescription ?? {}
                   ),
                 }}
               />

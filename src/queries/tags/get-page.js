@@ -36,7 +36,7 @@ query GET_PAGE($uri: ID!) {
 			asin
 			brand
 			productAida
-			productDescription
+			shortDescription
 			productImageMainUrl
 			productUrl
 		  }

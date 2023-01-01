@@ -35,7 +35,7 @@ export const GET_PAGE = gql`
             asin
             brand
             productAida
-            productDescription
+            shortDescription
             productImageMainUrl
             productUrl
           }

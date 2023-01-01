@@ -47,7 +47,7 @@ export const GET_POST = gql`
 							modelNumber
 							keywordTerm
 							fieldGroupName
-							shortDescription
+							
 							productSpecs
 							productUrl
 							
