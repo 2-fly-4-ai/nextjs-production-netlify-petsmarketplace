@@ -369,7 +369,7 @@ const Post = ({ data }) => {
                 className="mt-4 text-gray-700 prose dark:text-gray-400"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
-                    data?.post?.single_product_acf?.productFeatures ?? {}
+                    data?.post?.single_product_acf?.productFeatures ?? ""
                   ),
                 }}
               />
@@ -379,7 +379,7 @@ const Post = ({ data }) => {
                 className="mt-4 text-gray-700 prose dark:text-gray-400 dark:prose-headings:text-gray-200"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
-                    data?.post?.single_product_acf?.productProsCons ?? {}
+                    data?.post?.single_product_acf?.productProsCons ?? ""
                   ),
                 }}
               />
@@ -389,7 +389,7 @@ const Post = ({ data }) => {
                 className="mt-4 text-gray-700 prose dark:text-gray-400 dark:prose-headings:text-gray-200"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(
-                    data?.post?.single_product_acf?.expertOpinion ?? {}
+                    data?.post?.single_product_acf?.expertOpinion ?? ""
                   ),
                 }}
               />
@@ -400,7 +400,7 @@ const Post = ({ data }) => {
                   className="mt-4 text-gray-700 prose dark:text-gray-400 "
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
-                      data?.post?.single_product_acf?.productSpecs ?? {}
+                      data?.post?.single_product_acf?.productSpecs ?? ""
                     ),
                   }}
                 />
