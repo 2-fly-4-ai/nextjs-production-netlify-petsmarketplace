@@ -25,15 +25,15 @@ const Seo = ({ seo, uri }) => {
     title,
   } = seo;
 
-  const metaRobotsNofollow = robots[0] ?? null;
-  const metaRobotsNoindex = robots[1] ?? null;
-  const opengraphImage = openGraph?.image ?? null;
-  const opengraphDescription = openGraph?.description ?? null;
-  const opengraphTitle = title ?? null;
-  const opengraphSiteName = openGraph?.siteName ?? null;
-  const metaDesc = description ?? null;
+  const metaRobotsNofollow = robots[0] ?? "";
+  const metaRobotsNoindex = robots[1] ?? "";
+  const opengraphImage = openGraph?.image ?? "";
+  const opengraphDescription = openGraph?.description ?? "";
+  const opengraphTitle = title ?? "";
+  const opengraphSiteName = openGraph?.siteName ?? "";
+  const metaDesc = description ?? "";
 
-  const currentLocation = process.browser ? window.location.origin : null;
+  const currentLocation = process.browser ? window.location.origin : "";
   const opengraphUrl =
     (process.env.NEXT_PUBLIC_NEXTJS_SITE_URL
       ? process.env.NEXT_PUBLIC_NEXTJS_SITE_URL
