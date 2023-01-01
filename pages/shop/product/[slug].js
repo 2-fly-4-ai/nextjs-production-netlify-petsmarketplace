@@ -222,7 +222,7 @@ const Post = ({ data }) => {
             <h2 className="text-4xl mb-3 mt-4 dark:text-gray-200">
               {data?.post?.title}
             </h2>
-            <span className="items-center underline flex text-gray-500 border-b text  font-bold py-1 pb-1.5">
+            <span className="items-center underline flex text-gray-500 border-b text cursor-pointer font-bold py-1 pb-1.5">
               <svg
                 className="w-4 h-4"
                 fill="currentColor"
