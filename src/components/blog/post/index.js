@@ -12,7 +12,7 @@ const Post = ({ post }) => {
           <img
             src={post?.single_product_acf?.productImageMainUrl.replace(
               ".jpg",
-              "._AC_UL640.jpg"
+              "._AC_UL320.jpg"
             )}
             className="h-60"
           />
