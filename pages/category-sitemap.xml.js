@@ -46,8 +46,6 @@ export async function getServerSideProps({ res }) {
     }
   });
 
-  console.log(url_list);
-
   const posts = url_list;
 
   // We generate the XML sitemap with the posts data

@@ -21,7 +21,6 @@ import Image from "next/image";
 //FUTURE FEATURE REQUEST. ADD LOAD MORE FOR COMMENTS COMPONENT.
 
 const Post = ({ data }) => {
-  console.log(data);
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [activeId, setActiveId] = useState();

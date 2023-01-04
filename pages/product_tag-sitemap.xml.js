@@ -2,7 +2,6 @@ import { GET_URLS } from "../src/queries/sitemap/product_tag";
 import client from "../src/apollo/client";
 
 function generateSiteMap(posts) {
-  console.log(posts);
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      ${posts
