@@ -50,7 +50,7 @@ const Seo = ({ seo, uri }) => {
       openGraph={{
         type: "website",
         locale: "en_US",
-        url: opengraphUrl || canonicalUrl,
+        url: opengraphUrl,
         title: opengraphTitle,
         description: opengraphDescription,
         images: [
