@@ -948,11 +948,9 @@ const Post = ({ data }) => {
                   href={product?.single_product_acf?.productUrl}
                   target="_blank"
                   rel="nofollow noreferrer"
+                  key={product?.title}
                 >
-                  <div
-                    className="bg-white shadow overflow-hidden group md:w-60"
-                    key={product?.title}
-                  >
+                  <div className="bg-white shadow overflow-hidden group md:w-60">
                     <div className="relative">
                       <div className="h-45 flex p-2 justify-center">
                         <Image
