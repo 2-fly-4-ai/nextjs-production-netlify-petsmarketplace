@@ -36,7 +36,7 @@ export async function getServerSideProps({ res }) {
     if (
       test?.sitemapUrl != null &&
       test?.isInSitemap != false &&
-      test?.sitemapUrl === "https://petsmarketplc.com/product-sitemap.xml"
+      test?.sitemapUrl === "https://www.petsmarketplc.com/product-sitemap.xml"
     ) {
       test?.connectedContentNodes?.edges.map((test2) => {
         if (test2?.node?.seo?.robots[1] == "index") {

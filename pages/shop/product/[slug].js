@@ -21,6 +21,7 @@ import Image from "next/image";
 //FUTURE FEATURE REQUEST. ADD LOAD MORE FOR COMMENTS COMPONENT.
 
 const Post = ({ data }) => {
+  console.log(data);
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [activeId, setActiveId] = useState();
@@ -174,7 +175,8 @@ const Post = ({ data }) => {
             <div className="grid grid-cols-5 gap-4 mt-4">
               {!isEmpty(data?.post?.single_product_acf?.productImageGalleryUrls)
                 ? data?.post?.single_product_acf?.productImageGalleryUrls
-                    .split(", ")
+                    .replace(", ", ",")
+                    .split(",")
                     .slice(0, 5)
                     .map((imageUrl, index) => {
                       return (
@@ -942,34 +944,38 @@ const Post = ({ data }) => {
           <div className="flex flex-wrap gap-3">
             {uniqueNames.map((product) => {
               return (
-                <div
-                  className="bg-white shadow rounded overflow-hidden group md:w-60"
-                  key={product?.title}
+                <a
+                  href={product?.single_product_acf?.productUrl}
+                  target="_blank"
+                  rel="nofollow noreferrer"
                 >
-                  <div className="relative">
-                    <div className="h-45 flex p-2 justify-center">
-                      <Image
-                        src={product?.single_product_acf?.productImageMainUrl.replace(
-                          ".jpg",
-                          "._AC_UL320.jpg"
-                        )}
-                        alt="product 1"
-                        className="max-h-56  my-auto"
-                        height="200"
-                        width="200"
-                        objectFit="contain"
-                      />
+                  <div
+                    className="bg-white shadow overflow-hidden group md:w-60"
+                    key={product?.title}
+                  >
+                    <div className="relative">
+                      <div className="h-45 flex p-2 justify-center">
+                        <Image
+                          src={product?.single_product_acf?.productImageMainUrl.replace(
+                            ".jpg",
+                            "._AC_UL320.jpg"
+                          )}
+                          alt="product 1"
+                          className="max-h-56  my-auto"
+                          height="200"
+                          width="200"
+                          objectFit="contain"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="pt-4 pb-3 px-4">
-                    <a href={product?.single_product_acf?.productUrl}>
+                    <div className="pt-4 pb-3 px-4">
                       <h4 className="mt-3 uppercase font-medium text-sm mb-2 text-gray-800 hover:text-primary transition">
                         Bed
                         {product?.title}
                       </h4>
-                    </a>
+                    </div>
                   </div>
-                </div>
+                </a>
               );
             })}
 

@@ -15,6 +15,7 @@ import PropTypes from "prop-types";
  *
  */
 const Seo = ({ seo, uri }) => {
+  console.log(seo);
   const {
     breadcrumbTitle,
     breadcrumbs,
@@ -28,7 +29,8 @@ const Seo = ({ seo, uri }) => {
   const metaRobotsNofollow = robots[0] ?? "";
   const metaRobotsNoindex = robots[1] ?? "";
   const opengraphImage = openGraph?.image ?? "";
-  const opengraphDescription = openGraph?.description ?? "";
+  let opengraphDescription = openGraph?.description ?? "";
+
   const opengraphTitle = title ?? "";
   const opengraphSiteName = openGraph?.siteName ?? "";
   const metaDesc = description ?? "";

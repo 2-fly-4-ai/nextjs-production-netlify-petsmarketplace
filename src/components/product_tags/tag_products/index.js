@@ -44,7 +44,7 @@ export default function TagProducts({ product }) {
                 }}
               />
               <div className="flex  flex-col my-3 px-4 items-center  xs:flex-row">
-                <Link
+                <a
                   href={product?.single_product_acf?.productUrl}
                   target="_blank"
                   rel="nofollow noreferrer"
@@ -55,7 +55,7 @@ export default function TagProducts({ product }) {
                   >
                     View On Amazon
                   </button>
-                </Link>
+                </a>
 
                 <Link href={product?.uri}>
                   <button
