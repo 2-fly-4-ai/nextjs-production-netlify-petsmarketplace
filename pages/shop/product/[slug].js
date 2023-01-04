@@ -201,7 +201,8 @@ const Post = ({ data }) => {
 
               {!isEmpty(data?.post?.single_product_acf?.productImageGalleryUrls)
                 ? data?.post?.single_product_acf?.productImageGalleryUrls
-                    .split(", ")
+                    .replace(", ", ",")
+                    .split(",")
                     .map((imageUrl) => {
                       imageUrl = imageUrl.replace(".jpg", "._AC_UL640.jpg");
 
