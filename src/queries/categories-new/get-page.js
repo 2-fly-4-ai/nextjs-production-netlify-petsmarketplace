@@ -117,7 +117,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 				  endCursor
 				}
 			  }
-			  children(first: 1) {
+			  children(first: 3) {
 				nodes {
 				  name
 				  uri
