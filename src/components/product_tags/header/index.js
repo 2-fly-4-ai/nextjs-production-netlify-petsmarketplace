@@ -85,7 +85,7 @@ export default function ProductTagsHeader({ data }) {
           ) ? (
             <a
               className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
-              href={data?.page?.name}
+              href={data?.page?.uri}
             >
               {data?.page?.name}
             </a>
