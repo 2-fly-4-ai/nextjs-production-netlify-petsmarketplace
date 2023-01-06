@@ -186,7 +186,7 @@ const Post = ({ data }) => {
                             activeCategory(index);
                           }}
                           key={imageUrl}
-                          src={imageUrl.replace(".jpg", "._AC_UL320.jpg")}
+                          src={imageUrl?.replace(".jpg", "._AC_UL320.jpg")}
                           alt="product2"
                           width="400"
                           height="400"
@@ -201,10 +201,10 @@ const Post = ({ data }) => {
 
               {!isEmpty(data?.post?.single_product_acf?.productImageGalleryUrls)
                 ? data?.post?.single_product_acf?.productImageGalleryUrls
-                    .replace(", ", ",")
-                    .split(",")
-                    .map((imageUrl) => {
-                      imageUrl = imageUrl.replace(".jpg", "._AC_UL640.jpg");
+                    ?.replace(", ", ",")
+                    ?.split(",")
+                    ?.map((imageUrl) => {
+                      imageUrl = imageUrl?.replace(".jpg", "._AC_UL640.jpg");
 
                       slides_list.push({ src: imageUrl });
                     })
