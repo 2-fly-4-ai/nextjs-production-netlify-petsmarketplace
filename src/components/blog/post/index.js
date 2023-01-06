@@ -4,7 +4,6 @@ import { sanitize } from "../../../utils/miscellaneous";
 import { isEmpty } from "lodash";
 
 const Post = ({ post }) => {
-  let excerpt = post?.excerpt.replace("backend.", "");
   return (
     <div className="mb-8 flex flex-col justify-center items-center">
       <div>
@@ -29,7 +28,7 @@ const Post = ({ post }) => {
       <div
         className="mb-4  text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
         dangerouslySetInnerHTML={{
-          __html: sanitize(excerpt ?? ""),
+          __html: sanitize(post?.excerpt?.replace("backend.", "www.") ?? ""),
         }}
       />
     </div>
