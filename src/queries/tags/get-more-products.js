@@ -8,76 +8,15 @@ export const GET_PAGE = gql`
     page: productTag(id: $uri, idType: SLUG) {
       name
       slug
-      seo {
-        openGraph {
-          description
-          locale
-          siteName
-          title
-          type
-          updatedTime
-          url
-        }
-        breadcrumbTitle
-        description
-        focusKeywords
-        breadcrumbs {
-          text
-          url
-        }
-        canonicalUrl
-      }
       products(first: $first, after: $after) {
         nodes {
           title
           uri
           single_product_acf {
-            asin
-            brand
             productAida
             shortDescription
             productImageMainUrl
             productUrl
-          }
-          productTags {
-            nodes {
-              name
-              uri
-              roundupFields {
-                hero
-                roundupFeatureImage
-              }
-            }
-          }
-          productBrands {
-            nodes {
-              name
-              uri
-            }
-          }
-          productTaxonomies {
-            nodes {
-              uri
-              name
-              parent {
-                node {
-                  name
-                  uri
-                  parent {
-                    node {
-                      name
-                      uri
-                      parent {
-                        node {
-                          name
-                          uri
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
         pageInfo {
