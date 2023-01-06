@@ -33,31 +33,11 @@ export const GET_PAGE_BY_ID = gql`
 		${HeaderFooter}
 	  page(idType: DATABASE_ID, id: $id) {
 	    id
-	    title
+	    titles
 	    content
 	    slug
 	    uri
 		status
-    seo {
-      openGraph {
-        description
-        locale
-        siteName
-        title
-        type
-        updatedTime
-        url
-      }
-      breadcrumbTitle
-      description
-      focusKeywords
-      breadcrumbs {
-        text
-        url
-      }
-      canonicalUrl
-      }
-	  }
 	}
 	${MenuFragment}
 	${SeoFragment}
