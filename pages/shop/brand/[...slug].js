@@ -35,14 +35,7 @@ const Page = ({ data }) => {
 
           <div className="flex-1 flex-col px-3 pb-8">
             <div className="flex flex-col md:items-start rounded-lg my-2 py-4 pb-8 justify-center content-center px-8 ">
-              <h1>
-                <a
-                  className=" text-gray-600 text-5xl px-2  py-1 pb-1.5 border-b-4 border-gray-400"
-                  href={data?.page?.name}
-                >
-                  {data?.page?.name}
-                </a>
-              </h1>
+              <h1>{data?.page?.name}</h1>
             </div>
             <LoadMoreProducts
               product={data?.page?.products}
