@@ -33,11 +33,12 @@ export const GET_PAGE_BY_ID = gql`
 		${HeaderFooter}
 	  page(idType: DATABASE_ID, id: $id) {
 	    id
-	    titles
+	    title
 	    content
 	    slug
 	    uri
 		status
+	  }
 	}
 	${MenuFragment}
 	${SeoFragment}
