@@ -19,45 +19,9 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		  title
 		  uri
 		  single_product_acf {
-			asin
-			brand
 			productAida
 			productImageMainUrl
-			upc
-			modelNumber
-			keywordTerm
-			fieldGroupName
 			productUrl
-		  }
-		  productTags {
-			nodes {
-			  name
-			  uri
-			}
-		  }
-		  productTaxonomies {
-			nodes {
-			  uri
-			  name
-			  parent {
-				node {
-				  name
-				  uri
-				  parent {
-					node {
-					  name
-					  uri
-					  parent {
-						node {
-						  name
-						  uri
-						}
-					  }
-					}
-				  }
-				}
-			  }
-			}
 		  }
 		}
 		pageInfo {

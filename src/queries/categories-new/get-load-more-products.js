@@ -18,33 +18,15 @@ export const GET_PAGE = gql`
           title
           uri
           single_product_acf {
-            asin
-            brand
             productAida
             productImageMainUrl
-            upc
-            modelNumber
-            keywordTerm
-            fieldGroupName
             productUrl
-          }
-          productTags {
-            nodes {
-              name
-              uri
-            }
           }
         }
         pageInfo {
           hasNextPage
           endCursor
         }
-      }
-    }
-    productBrands(where: { orderby: COUNT, order: DESC }, first: 100) {
-      nodes {
-        name
-        uri
       }
     }
   }
