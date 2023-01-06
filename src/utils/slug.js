@@ -48,13 +48,6 @@ export const handleRedirectsAndReturnData = (
     };
   }
 
-  if (data?.page?.seo?.robots[1] == "noindex") {
-    return {
-      // returns the default 404 page with a status code of 404
-      notFound: true,
-    };
-  }
-
   // if (isEmpty(data?.page?.nodes) && isEmpty(data?.page?.seo) && isEmpty(data?.post?.seo)) {
   // 	return {
   // 		// returns the default 404 page with a status code of 404
