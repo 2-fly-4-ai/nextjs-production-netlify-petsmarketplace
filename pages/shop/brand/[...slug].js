@@ -28,7 +28,7 @@ const Page = ({ data }) => {
       <section className="bg-white dark:bg-gray-900">
         <div className=" mx-auto max-w-screen-2xl text-center  lg:px-0 flex flex-col-reverse lg:flex-row ">
           {/* Tags + Brand Component */}
-          <div className=" lg:flex-col lg:flex border-r dark:border-gray-700 lg:w-xs px-8 2xl:px-2 xl:w-xs 2xl:w-sm my-5">
+          <div className=" lg:flex-col lg:flex border-r dark:border-gray-700 lg:max-w-xs px-8 2xl:px-2 xl:w-xs 2xl:max-w-sm my-5">
             <BrandCategories data={data} />
             <Tags data={data} />
           </div>
