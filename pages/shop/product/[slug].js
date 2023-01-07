@@ -171,7 +171,7 @@ const Post = ({ data }) => {
               width="640"
               objectFit="contain"
             />
-            <div className="grid grid-cols-5 gap-4 mt-4">
+            <div className="grid grid-cols-5 gap-4 mt-4 cursor-pointer">
               {!isEmpty(data?.post?.single_product_acf?.productImageGalleryUrls)
                 ? data?.post?.single_product_acf?.productImageGalleryUrls
                     ?.replace(", ", ",")
