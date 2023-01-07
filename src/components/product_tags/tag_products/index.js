@@ -31,18 +31,22 @@ export default function TagProducts({ product }) {
             </div>
 
             <div className="flex flex-col p-4 leading-normal ">
-              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-gray-300 px-4">
-                {product?.title}
-              </h5>
+              <Link href={product?.uri}>
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-gray-300 px-4 cursor-pointer">
+                  {product?.title}
+                </h5>
+              </Link>
 
-              <div
-                className="text tracking-tight py-2 px-4 text-gray-700 dark:text-gray-400"
-                dangerouslySetInnerHTML={{
-                  __html: sanitize(
-                    product?.single_product_acf?.shortDescription ?? {}
-                  ),
-                }}
-              />
+              <Link href={product?.uri}>
+                <div
+                  className="text tracking-tight py-2 px-4 text-gray-700 dark:text-gray-400 cursor-pointer"
+                  dangerouslySetInnerHTML={{
+                    __html: sanitize(
+                      product?.single_product_acf?.shortDescription ?? {}
+                    ),
+                  }}
+                />
+              </Link>
               <div className="flex  flex-col my-3 px-4 items-center  xs:flex-row">
                 <a
                   href={product?.single_product_acf?.productUrl}

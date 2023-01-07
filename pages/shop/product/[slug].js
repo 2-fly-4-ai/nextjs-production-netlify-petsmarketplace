@@ -250,12 +250,13 @@ const Post = ({ data }) => {
 								<span className="text-green-600">In Stock</span>
 							</p> */}
               <p className="space-x-2 mt-4">
-                <span className="text-gray-800 font-semibold dark:text-gray-200">
-                  Brand:{" "}
-                </span>
+                {!isEmpty(data?.post?.productBrands?.nodes[0]?.name) ? (
+                  <span className="text-gray-800 font-semibold dark:text-gray-200">
+                    Brand:{" "}
+                  </span>
+                ) : null}
 
-                {data?.post?.productBrands?.nodes[0]?.seo?.robots[1] ==
-                "index" ? (
+                {!isEmpty(data?.post?.productBrands?.nodes[0]?.name) ? (
                   <Link href={data?.post?.productBrands?.nodes[0]?.uri}>
                     <a className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium">
                       {data?.post?.productBrands?.nodes[0]?.name}
