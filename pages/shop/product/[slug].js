@@ -21,7 +21,6 @@ import Image from "next/image";
 //FUTURE FEATURE REQUEST. ADD LOAD MORE FOR COMMENTS COMPONENT.
 
 const Post = ({ data }) => {
-  console.log(data);
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [activeId, setActiveId] = useState();
@@ -162,7 +161,7 @@ const Post = ({ data }) => {
             </div>
 
             <Image
-              src={data?.post?.single_product_acf?.productImageMainUrl.replace(
+              src={data?.post?.single_product_acf?.productImageMainUrl?.replace(
                 ".jpg",
                 "._AC_UL640.jpg"
               )}
@@ -175,7 +174,7 @@ const Post = ({ data }) => {
             <div className="grid grid-cols-5 gap-4 mt-4">
               {!isEmpty(data?.post?.single_product_acf?.productImageGalleryUrls)
                 ? data?.post?.single_product_acf?.productImageGalleryUrls
-                    .replace(", ", ",")
+                    ?.replace(", ", ",")
                     .split(",")
                     .slice(0, 5)
                     .map((imageUrl, index) => {
@@ -955,7 +954,7 @@ const Post = ({ data }) => {
                     <div className="relative">
                       <div className="h-45 flex p-2 justify-center">
                         <Image
-                          src={product?.single_product_acf?.productImageMainUrl.replace(
+                          src={product?.single_product_acf?.productImageMainUrl?.replace(
                             ".jpg",
                             "._AC_UL320.jpg"
                           )}

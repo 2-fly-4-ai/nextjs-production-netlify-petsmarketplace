@@ -28,14 +28,14 @@ const Page = ({ data }) => {
       <section className="bg-white dark:bg-gray-900">
         <div className=" mx-auto max-w-screen-2xl text-center  lg:px-0 flex flex-col-reverse lg:flex-row ">
           {/* Tags + Brand Component */}
-          <div className=" lg:flex-col lg:flex border-r lg:max-w-xs px-8 2xl:px-0 my-4 xl:max-w-xs 2xl:max-w-sm">
+          <div className=" lg:flex-col lg:flex border-r dark:border-gray-700 lg:w-xs px-8 2xl:px-2 xl:w-xs 2xl:w-sm my-5">
             <BrandCategories data={data} />
             <Tags data={data} />
           </div>
 
           <div className="flex-1 flex-col px-3 pb-8">
             <div className="flex flex-col md:items-start rounded-lg my-2 py-4 pb-8 justify-center content-center px-8 ">
-              <h1 className="px-2 pt-2 m-5 text-gray-500 dark:text-gray-400 text-5xl">
+              <h1 className="px-2 pt-2 m-5 text-gray-500 dark:text-gray-400 text-5xl cursor-none">
                 {data?.page?.name}
               </h1>
             </div>

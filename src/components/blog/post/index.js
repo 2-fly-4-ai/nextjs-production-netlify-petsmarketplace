@@ -9,7 +9,7 @@ const Post = ({ post }) => {
       <div>
         {!isEmpty(post?.single_product_acf?.productImageMainUrl) ? (
           <img
-            src={post?.single_product_acf?.productImageMainUrl.replace(
+            src={post?.single_product_acf?.productImageMainUrl?.replace(
               ".jpg",
               "._AC_UL320.jpg"
             )}

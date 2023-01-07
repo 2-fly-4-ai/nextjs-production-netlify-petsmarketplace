@@ -7,7 +7,7 @@ export default function Hero({ data }) {
       className="flex flex-col lg:items-start  my-5 pt-2 content-center bg-gradient-to-r  from-gray-100 dark:from-gray-900 to-gray-300 dark:to-gray-700
     "
     >
-      <h1 className="px-2 pt-2 m-5 text-gray-500 dark:text-gray-400 text-5xl">
+      <h1 className="px-2 pt-2 m-5 text-gray-500 dark:text-gray-400 text-5xl cursor-none">
         {data?.page?.name}
       </h1>
       {/* <p className="text-gray-400 p-1 ml-1 text-lg font-medium">RESULTS</p> */}

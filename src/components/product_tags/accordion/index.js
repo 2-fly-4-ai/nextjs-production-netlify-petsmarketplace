@@ -19,40 +19,40 @@ export default function ContentAccordion({ data }) {
 
   if (What_to_consider_test != null) {
     const What_to_consider_heading = data?.page?.roundupFields?.whatToConsider
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
     const What_to_consider_body = data?.page?.roundupFields?.whatToConsider
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
   }
 
   const types_of_test = data?.page?.roundupFields?.typesOf;
   if (types_of_test != null) {
     const types_of_heading = data?.page?.roundupFields?.typesOf
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
     const types_of_body = data?.page?.roundupFields?.typesOf
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
   }
 
   const howWeChose_test = data?.page?.roundupFields?.howWeChose;
   if (howWeChose_test != null) {
     const howWeChose_heading = data?.page?.roundupFields?.howWeChose
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
     const howWeChose_body = data?.page?.roundupFields?.howWeChose
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
   }
 
   const faqs_main_test = data?.page?.roundupFields?.faqs;
   if (faqs_main_test != null) {
     const faqs_main_heading = data?.page?.roundupFields?.faqs
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
     const faqs_main_body = data?.page?.roundupFields?.faqs
-      .replace("</h2>", "</h2>[split_here]")
+      ?.replace("</h2>", "</h2>[split_here]")
       .split("[split_here]")[0];
   }
 
@@ -93,7 +93,7 @@ export default function ContentAccordion({ data }) {
                     className="text-2xl dark:prose-headings:text-gray-200"
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
-                        What_to_consider_test.replace(
+                        What_to_consider_test?.replace(
                           "</h2>",
                           "</h2>[split_here]"
                         ).split("[split_here]")[0] ?? {}
@@ -132,7 +132,7 @@ export default function ContentAccordion({ data }) {
                   className=" border-gray-200 dark:border-gray-700 prose dark:prose-p:text-gray-400 dark:prose-headings:text-gray-200 prose-headings:font-medium prose-h3:text-2xl max-w-none prose-li:list-disc dark:prose-li:text-gray-400"
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
-                      What_to_consider_test.replace(
+                      What_to_consider_test?.replace(
                         "</h2>",
                         "</h2>[split_here]"
                       ).split("[split_here]")[1] ?? {}
@@ -160,7 +160,7 @@ export default function ContentAccordion({ data }) {
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         types_of_test
-                          .replace("</h2>", "</h2>[split_here]")
+                          ?.replace("</h2>", "</h2>[split_here]")
                           .split("[split_here]")[0] ?? {}
                       ),
                     }}
@@ -196,7 +196,7 @@ export default function ContentAccordion({ data }) {
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       types_of_test
-                        .replace("</h2>", "</h2>[split_here]")
+                        ?.replace("</h2>", "</h2>[split_here]")
                         .split("[split_here]")[1] ?? {}
                     ),
                   }}
@@ -221,7 +221,7 @@ export default function ContentAccordion({ data }) {
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         howWeChose_test
-                          .replace("</h2>", "</h2>[split_here]")
+                          ?.replace("</h2>", "</h2>[split_here]")
                           .split("[split_here]")[0] ?? {}
                       ),
                     }}
@@ -258,7 +258,7 @@ export default function ContentAccordion({ data }) {
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       howWeChose_test
-                        .replace("</h2>", "</h2>[split_here]")
+                        ?.replace("</h2>", "</h2>[split_here]")
                         .split("[split_here]")[1] ?? {}
                     ),
                   }}
@@ -283,7 +283,7 @@ export default function ContentAccordion({ data }) {
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         faqs_main_test
-                          .replace("</h2>", "</h2>[split_here]")
+                          ?.replace("</h2>", "</h2>[split_here]")
                           .split("[split_here]")[0] ?? {}
                       ),
                     }}
@@ -320,7 +320,7 @@ export default function ContentAccordion({ data }) {
                   dangerouslySetInnerHTML={{
                     __html: sanitize(
                       faqs_main_test
-                        .replace("</h2>", "</h2>[split_here]")
+                        ?.replace("</h2>", "</h2>[split_here]")
                         .split("[split_here]")[1] ?? {}
                     ),
                   }}
