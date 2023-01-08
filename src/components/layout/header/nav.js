@@ -155,7 +155,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
               <ul className="flex flex-row mt-0 mr-6 space-x-20 text-sm font-medium">
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <Link
-                    href="/shop/category/pet-supplies"
+                    href="/shop/category/dog-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                     aria-current="page"
                   >
@@ -164,7 +164,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <Link
-                    href="/shop/category/pet-supplies"
+                    href="/shop/category/cat-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Cats
@@ -172,7 +172,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <Link
-                    href="/shop/category/pet-supplies"
+                    href="/shop/category/bird-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Birds
@@ -180,7 +180,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <Link
-                    href="/shop/category/pet-supplies"
+                    href="/shop/category/small-animal-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Small Pets
@@ -188,7 +188,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <Link
-                    href="/shop/category/pet-supplies"
+                    href="/shop/category/fish-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Fish & Aquatic Pets
@@ -196,14 +196,14 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <Link
-                    href="/shop/category/pet-supplies"
+                    href="/shop/category/reptile-amphibian-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Reptiles & Amphibians
                   </Link>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link href="/shop/category/pet-supplies">Horses</Link>
+                  <Link href="/shop/category/horse-supplies">Horses</Link>
                 </li>
               </ul>
             </div>

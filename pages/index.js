@@ -88,7 +88,7 @@ export default function Home({ data }) {
                 />
 
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/dog-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-green-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -105,7 +105,7 @@ export default function Home({ data }) {
                   alt="cat"
                 />
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/cat-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-yellow-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -122,7 +122,7 @@ export default function Home({ data }) {
                   alt="dog"
                 />
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/fish-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-red-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -139,7 +139,7 @@ export default function Home({ data }) {
                   alt="bird"
                 />
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/bird-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-blue-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -156,7 +156,7 @@ export default function Home({ data }) {
                   alt="reptile"
                 />
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/reptile-amphibian-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 items-center bg-orange-600 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -173,7 +173,7 @@ export default function Home({ data }) {
                   alt="horse"
                 />
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/horse-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 items-center bg-amber-400 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -190,7 +190,7 @@ export default function Home({ data }) {
                   alt="small pets"
                 />
                 <Link
-                  href="/shop/category/pet-supplies"
+                  href="/shop/category/small-animal-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 items-center bg-purple-600 rounded-2xl text-sm border font-semibold text-primary-500 hover:underline "
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
