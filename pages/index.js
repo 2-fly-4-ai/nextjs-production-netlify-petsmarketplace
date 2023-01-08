@@ -23,7 +23,7 @@ export default function Home({ data }) {
                 <dl className="grid max-w-screen-md gap-2 sm:gap-4 mx-auto text-gray-900 grid-cols-3 dark:text-white">
                   <div className="rounded-lg lg:hover:-translate-y-2 duration-500 flex flex-col items-center justify-center bg-green-400 xl:p-3 p-1 shadow-lg">
                     <dt className="text-3xl font-bold text-gray-900 md:text-3xl">
-                      1500+
+                      57K+
                     </dt>
                     <dd className="font-medium text-gray-900 dark:text-gray-800">
                       Products
@@ -31,7 +31,7 @@ export default function Home({ data }) {
                   </div>
                   <div className="rounded-lg lg:hover:-translate-y-2 duration-500 flex flex-col items-center justify-center bg-yellow-300 xl:p-3 p-1 shadow-lg">
                     <dt className="text-3xl font-bold md:text-3xl text-gray-900">
-                      250+
+                      4500+
                     </dt>
                     <dd className="font-medium  text-gray-900 dark:text-gray-800">
                       Brands
@@ -39,12 +39,20 @@ export default function Home({ data }) {
                   </div>
                   <div className="rounded-lg lg:hover:-translate-y-2 duration-500 flex flex-col items-center justify-center bg-red-400 xl:p-3 p-1 shadow-lg">
                     <dt className=" text-3xl font-bold md:text-3xl text-gray-900">
-                      100+
+                      11K+
                     </dt>
                     <dd className="font-medium text-gray-900 dark:text-gray-800">
-                      Pet Articles
+                      Best Picks
                     </dd>
                   </div>
+                  {/* <div className="rounded-lg lg:hover:-translate-y-2 duration-500 flex flex-col items-center justify-center bg-red-400 xl:p-3 p-1 shadow-lg">
+                    <dt className=" text-3xl font-bold md:text-3xl text-gray-900">
+                      4K+
+                    </dt>
+                    <dd className="font-medium text-gray-900 dark:text-gray-800">
+                      Best Picks
+                    </dd>
+                  </div> */}
                 </dl>
               </div>
               <h1 className="w-full mb-4 text-4xl  tracking-tight leading-none md:text-5xl lg:text-4xl 2xl:text-6xl dark:text-white">
@@ -58,7 +66,7 @@ export default function Home({ data }) {
                 products.
               </p>
 
-              <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
+              <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center mb-4 text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
                 <Link href="/shop/category/pet-supplies">Go To Shop</Link>
               </btn>
             </div>
