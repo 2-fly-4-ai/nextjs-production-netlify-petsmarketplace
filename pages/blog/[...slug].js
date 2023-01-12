@@ -13,6 +13,7 @@ import { sanitize } from "../../src/utils/miscellaneous";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { FacebookIcon, TwitterIcon } from "react-share";
 import NewsletterSubscribe from "../../src/components/layout/footer/NewsletterSubscribe";
+import Link from "next/link";
 
 // THis is just an example, we wont be using pagination in this way. (Just LOAD MORE Everything)
 
@@ -388,13 +389,13 @@ export async function getStaticPaths() {
 
   const pathsData = [];
 
-  // data?.posts?.nodes &&
-  //   data?.posts?.nodes.map((post) => {
-  //     if (!isEmpty(post?.uri)) {
-  //       const slugs = post?.uri?.split("/").filter((pageSlug) => pageSlug);
-  //       pathsData.push({ params: { slug: slugs } });
-  //     }
-  //   });
+  data?.posts?.nodes &&
+    data?.posts?.nodes.map((post) => {
+      if (!isEmpty(post?.uri)) {
+        const slugs = post?.uri?.split("/").filter((pageSlug) => pageSlug);
+        pathsData.push({ params: { slug: slugs } });
+      }
+    });
 
   return {
     paths: pathsData,
