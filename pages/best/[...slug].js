@@ -53,7 +53,7 @@ const Page = ({ data }) => {
 
 export default Page;
 
-export async function getStaticProps({ params }) {
+export async function serverSideProps({ params }) {
   const { data, errors } = await client.query({
     query: GET_PAGE,
     variables: {
