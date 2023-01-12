@@ -988,7 +988,7 @@ const Post = ({ data }) => {
 
 export default Post;
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   const { data, errors } = await client.query({
     query: GET_POST,
     variables: {
