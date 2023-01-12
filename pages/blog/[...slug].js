@@ -388,13 +388,13 @@ export async function getStaticPaths() {
 
   const pathsData = [];
 
-  data?.posts?.nodes &&
-    data?.posts?.nodes.map((post) => {
-      if (!isEmpty(post?.uri)) {
-        const slugs = post?.uri?.split("/").filter((pageSlug) => pageSlug);
-        pathsData.push({ params: { slug: slugs } });
-      }
-    });
+  // data?.posts?.nodes &&
+  //   data?.posts?.nodes.map((post) => {
+  //     if (!isEmpty(post?.uri)) {
+  //       const slugs = post?.uri?.split("/").filter((pageSlug) => pageSlug);
+  //       pathsData.push({ params: { slug: slugs } });
+  //     }
+  //   });
 
   return {
     paths: pathsData,

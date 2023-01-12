@@ -106,13 +106,13 @@ export async function getStaticPaths() {
 
   const pathsData = [];
 
-  data?.pages?.nodes &&
-    data?.pages?.nodes.map((page) => {
-      if (!isEmpty(page?.uri) && !isCustomPageUri(page?.uri)) {
-        const slugs = page?.uri?.split("/").filter((pageSlug) => pageSlug);
-        pathsData.push({ params: { slug: slugs } });
-      }
-    });
+  // data?.pages?.nodes &&
+  //   data?.pages?.nodes.map((page) => {
+  //     if (!isEmpty(page?.uri) && !isCustomPageUri(page?.uri)) {
+  //       const slugs = page?.uri?.split("/").filter((pageSlug) => pageSlug);
+  //       pathsData.push({ params: { slug: slugs } });
+  //     }
+  //   });
 
   return {
     paths: pathsData,

@@ -1035,12 +1035,12 @@ export async function getStaticPaths() {
 
   const pathsData = [];
 
-  data?.posts?.nodes &&
-    data?.posts?.nodes.map((post) => {
-      if (!isEmpty(post?.slug)) {
-        pathsData.push({ params: { slug: post?.slug } });
-      }
-    });
+  // data?.posts?.nodes &&
+  //   data?.posts?.nodes.map((post) => {
+  //     if (!isEmpty(post?.slug)) {
+  //       pathsData.push({ params: { slug: post?.slug } });
+  //     }
+  //   });
 
   return {
     paths: pathsData,
