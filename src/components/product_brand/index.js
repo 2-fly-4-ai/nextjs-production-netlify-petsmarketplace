@@ -33,6 +33,7 @@ const LoadMoreProducts = ({
     if (!product || !product?.nodes || !product?.pageInfo) {
       return;
     }
+    //start
     /**
      * Concat the newly received post from client request to the existing posts, using setPostsData()
      * and also set the new pageInfo that contains the new endcursor, so that
