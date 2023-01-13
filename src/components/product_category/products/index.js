@@ -33,7 +33,7 @@ const Products = ({ product }) => {
           {product?.nodes?.map((product, index) => {
             return (
               <div
-                key={product?.title}
+                key={index}
                 className="p-0 pb-3 h-68 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700"
               >
                 <div className="flex flex-col relative bg-white">
@@ -168,7 +168,7 @@ const Products = ({ product }) => {
                 </div>
 
                 <h3 className="py-3 text px-2 w-50 overflow-hidden tracking-tight text-gray-900 font-semibold dark:text-white uppercase hover:text-blue-500">
-                  <Link href={product?.uri}>
+                  <Link href={product?.single_product_acf?.productUrl}>
                     {product?.title.split(" ").slice(0, 8).join(" ")}
                   </Link>
                 </h3>
