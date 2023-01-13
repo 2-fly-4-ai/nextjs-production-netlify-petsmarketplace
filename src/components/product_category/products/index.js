@@ -168,9 +168,13 @@ const Products = ({ product }) => {
                 </div>
 
                 <h3 className="py-3 text px-2 w-50 overflow-hidden tracking-tight text-gray-900 font-semibold dark:text-white uppercase hover:text-blue-500">
-                  <Link href={product?.single_product_acf?.productUrl}>
+                  <a
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    href={product?.single_product_acf?.productUrl}
+                  >
                     {product?.title.split(" ").slice(0, 8).join(" ")}
-                  </Link>
+                  </a>
                 </h3>
               </div>
             );
