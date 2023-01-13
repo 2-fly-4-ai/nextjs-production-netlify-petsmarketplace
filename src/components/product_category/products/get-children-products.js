@@ -225,6 +225,7 @@ const Products = ({ data }) => {
         </div>
       </div>
     </section>
+    // end
   );
 };
 
