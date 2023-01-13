@@ -78,7 +78,6 @@ export default function TagProducts({ product }) {
               </div>
             </div>
           </div>
-          //end
         );
       })}
     </div>
