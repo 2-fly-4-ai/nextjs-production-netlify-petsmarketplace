@@ -262,11 +262,7 @@ const Post = ({ data }) => {
                       {data?.post?.productBrands?.nodes[0]?.name}
                     </a>
                   </Link>
-                ) : (
-                  <p className="dark:text-gray-400">
-                    {data?.post?.productBrands?.nodes[0]?.name}
-                  </p>
-                )}
+                ) : null}
               </p>
             </div>
 
