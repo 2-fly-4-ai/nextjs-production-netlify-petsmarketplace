@@ -10,10 +10,10 @@ const Posts = ({ posts }) => {
   return (
     <section className="bg-white dark:bg-gray-900 max-w-screen-2xl mx-auto px-6 ">
       <div className="py-4 px-0  mx-auto max-w-screen-2xl sm:py-16 lg:px-0">
-        <div className="grid gap-10   lg:grid-cols-3">
+        <div className="grid gap-10  lg:grid-cols-3">
           {posts.map((post, index) => {
             return (
-              <div key={index} className="w-96">
+              <div key={index} className="">
                 <Post post={post?.node} />
               </div>
             );

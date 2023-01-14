@@ -13,19 +13,19 @@ const Post = ({ post }, index) => {
               ".jpg",
               "._AC_UL320.jpg"
             )}
-            className="h-60"
+            className=""
             alt="post?.title"
           />
         ) : null}
       </div>
-      <a href={`${post?.uri}`}>
+      <a href={`${post?.uri}`} className="p-6">
         <h3
-          className="my-1 text-2xl text-center sm:text-left tracking-tight text-gray-900 dark:text-white hover:text-blue-700"
+          className="my-1 text-xl text-center sm:text-left tracking-tight text-gray-900 dark:text-white hover:text-blue-700"
           dangerouslySetInnerHTML={{ __html: sanitize(post?.title ?? "") }}
         />
       </a>
       <div
-        className="mb-4  text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
+        className="mb-4 w-40 text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
         dangerouslySetInnerHTML={{
           __html: sanitize(post?.excerpt?.replace("backend.", "www.") ?? ""),
         }}

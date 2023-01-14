@@ -15,6 +15,7 @@ import "yet-another-react-lightbox/styles.css";
 import * as React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import { useEffect } from "react";
 
 //FUTURE FEATURE REQUEST. ADD LOAD MORE FOR COMMENTS COMPONENT.
 
@@ -27,7 +28,9 @@ const Post = ({ data }) => {
 
   useEffect(() => {
     // 👇️ scroll to top on page load
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.scroll({
+      top: 1,
+    });
   }, []);
 
   function activeCategory(id) {
