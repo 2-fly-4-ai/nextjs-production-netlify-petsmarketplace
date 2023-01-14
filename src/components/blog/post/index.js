@@ -25,7 +25,7 @@ const Post = ({ post }, index) => {
         />
       </a>
       <div
-        className="mb-4 w-40 text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
+        className="mb-4 text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
         dangerouslySetInnerHTML={{
           __html: sanitize(post?.excerpt?.replace("backend.", "www.") ?? ""),
         }}
