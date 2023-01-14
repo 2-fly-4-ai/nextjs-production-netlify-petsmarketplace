@@ -11,7 +11,7 @@ export default function subcategory({ data }) {
           <span className="text-gray-800 dark:text-gray-200 mx-2 my-4 text-left font-semibold">
             Refine Your Search to See More Products :{" "}
           </span>
-          <div>
+          <div className="overflow-hidden">
             <ul className="flex flex-wrap align  items-start gap-1 p-2">
               {data?.page?.children?.nodes.map((child) => (
                 <li
