@@ -6,6 +6,7 @@ import { isEmpty } from "lodash";
 import { sanitize } from "../../utils/miscellaneous";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import Script from "next/script";
 
 const Layout = ({ data, isPost, children }) => {
   const {
@@ -32,16 +33,18 @@ const Layout = ({ data, isPost, children }) => {
   // if (isEmpty(page) && isEmpty(post) && isEmpty(posts) && isEmpty(product)) {
   //     return null;
   // }
-
+  const GTM_ID = process.env.GM_IDT;
   const seo = isPost ? post?.seo ?? {} : page?.seo ?? {};
   const uri = isPost ? post?.uri ?? {} : page?.uri ?? {};
 
   return (
     <div>
       <Seo seo={seo} uri={uri} />
+
       <Head>
         <link rel="shortcut icon" href={header?.favicon} />
       </Head>
+
       <Header header={header} headerMenus={headerMenus?.edges} />
       <div className="min-h-almost-screen dark:bg-gray-900">{children}</div>
       <Footer
