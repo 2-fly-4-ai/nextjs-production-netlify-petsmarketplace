@@ -12,7 +12,7 @@ import Script from "next/script";
 // Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
-  GTM_ID = "GTM-WQLRZPZ";
+  const GTM_ID = "GTM-WQLRZPZ";
 
   return (
     <ApolloProvider client={client}>
