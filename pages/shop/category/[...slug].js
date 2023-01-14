@@ -20,6 +20,13 @@ import ChildTags from "../../../src/components/product_category/children-tags";
 import Hero from "../../../src/components/product_category/hero";
 
 const Page = ({ data }) => {
+  const router = useRouter();
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   //Router FallBack Loading
 
   return (
@@ -40,6 +47,9 @@ const Page = ({ data }) => {
           <div className="flex-1 flex-col px-3">
             {/* Right-Top Hero Section */}
             <Hero data={data} />
+            {!isEmpty(data?.page?.children?.nodes) ? (
+              <SubcategoryReadmore data={data} />
+            ) : null}
             {/* Product Grid */}
             <div className="flex-1 pb-6">
               {/* Number 1 */}
@@ -51,9 +61,6 @@ const Page = ({ data }) => {
                   slug={data?.page?.slug}
                 />
               )}
-              {!isEmpty(data?.page?.children?.nodes) ? (
-                <SubcategoryReadmore data={data} />
-              ) : null}
             </div>
           </div>
         </div>
