@@ -82,7 +82,7 @@ const Products = ({ data }) => {
             return (
               <div
                 key={product?.title}
-                className="p-0 pb-3 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700"
+                className="p-0 pb-3 max-w-sm w-max-content bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700"
               >
                 <div className="flex flex-col relative bg-white">
                   <Image
@@ -184,7 +184,7 @@ const Products = ({ data }) => {
                             {product?.title}
                           </h3>
 
-                          <div className="mt-6 flex gap-3 border-b border-gray-200 pb-6 pt-0">
+                          <div className="mt-6 flex  border-b border-gray-200 pb-6 pt-0">
                             <a
                               href={product?.single_product_acf?.productUrl}
                               target="_blank"
