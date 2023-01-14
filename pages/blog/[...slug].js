@@ -294,11 +294,13 @@ const Post = ({ data }) => {
                           <p className="mb-2 font-light text-gray-500 dark:text-gray-400">
                             {post?.excert}
                           </p>
-                          <Link prefetch={false} href={post?.uri}>
-                            <a className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-gray-400 hover:no-underline">
-                              Read Article
-                            </a>
-                          </Link>
+
+                          <a
+                            href={post?.uri}
+                            className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-gray-400 hover:no-underline"
+                          >
+                            Read Article
+                          </a>
                         </div>
                       );
                     })

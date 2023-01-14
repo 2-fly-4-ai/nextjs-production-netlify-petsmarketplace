@@ -10,7 +10,6 @@ import {
 import { sanitize } from "../src/utils/miscellaneous";
 import Layout from "../src/components/layout";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home({ data }) {
   return (
@@ -67,9 +66,7 @@ export default function Home({ data }) {
               </p>
 
               <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center mb-4 text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
-                <Link prefetch={false} href="/shop/category/pet-supplies">
-                  Go To Shop
-                </Link>
+                <a href="/shop/category/pet-supplies">Go To Shop</a>
               </btn>
             </div>
 
@@ -97,14 +94,14 @@ export default function Home({ data }) {
                   alt="dog"
                 />
 
-                <Link
+                <a
                   href="/shop/category/dog-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-green-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Dogs
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-yellow-300 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -114,14 +111,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="cat"
                 />
-                <Link
+                <a
                   href="/shop/category/cat-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-yellow-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Cats
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-red-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -131,14 +128,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="dog"
                 />
-                <Link
+                <a
                   href="/shop/category/fish-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-red-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Fish
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-blue-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -148,14 +145,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="bird"
                 />
-                <Link
+                <a
                   href="/shop/category/bird-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 bg-blue-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Birds
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-orange-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -165,14 +162,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="reptile"
                 />
-                <Link
+                <a
                   href="/shop/category/reptile-amphibian-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 items-center bg-orange-600 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Reptiles
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full  bg-amber-300 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -182,14 +179,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="horse"
                 />
-                <Link
+                <a
                   href="/shop/category/horse-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 items-center bg-amber-400 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Horses
                   </button>
-                </Link>
+                </a>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-purple-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -199,14 +196,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="small pets"
                 />
-                <Link
+                <a
                   href="/shop/category/small-animal-supplies"
                   className="mt-2 mb-4 inline-flex  p-2 items-center bg-purple-600 rounded-2xl text-sm border font-semibold text-primary-500 hover:underline "
                 >
                   <button className="y-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Small Animals
                   </button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -229,9 +226,7 @@ export default function Home({ data }) {
                         className="border-1 p-3  justify-center content-center flex-col flex"
                       >
                         <h2 className="my-1 text-2xl  text-center tracking-tight text-gray-900 dark:text-white capitalize">
-                          <Link prefetch={false} href={tag?.uri}>
-                            {tag?.name}
-                          </Link>
+                          <a href={tag?.uri}>{tag?.name}</a>
                         </h2>
                         <div
                           className="prose-headings:font-normal text-center prose-h3:text-sm text-gray-500 my-2 mb-4 max-w-none select-none"
@@ -240,23 +235,21 @@ export default function Home({ data }) {
                           }}
                         />
 
-                        <Link prefetch={false} href={tag?.uri}>
-                          <div className="py-2 cursor-pointer mt-auto my-1 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
-                            <a className="select-none ">Read more</a>
-                            <svg
-                              className="ml-2 w-4 h-4"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                              ></path>
-                            </svg>
-                          </div>
-                        </Link>
+                        <div className="py-2 cursor-pointer mt-auto my-1 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
+                          <a className="select-none ">Read more</a>
+                          <svg
+                            className="ml-2 w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                              clipRule="evenodd"
+                            ></path>
+                          </svg>
+                        </div>
                       </article>
                     );
                   })
@@ -276,35 +269,31 @@ export default function Home({ data }) {
               {!isEmpty(data?.productTaxonomies?.nodes)
                 ? data?.productTaxonomies?.nodes.map((tag) => {
                     return (
-                      <Link
-                        href={tag.uri}
-                        className="cursor-pointer"
-                        key={tag.name}
-                      >
-                        <div className="p-3 pb-3 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700 cursor-pointer">
-                          {!isEmpty(
-                            tag.products?.nodes[0]?.single_product_acf
-                              ?.productImageMainUrl
-                          ) ? (
-                            <div className="2xl:max-h-72 flex flex-col bg-white">
-                              <Image
-                                src={tag.products?.nodes[0]?.single_product_acf?.productImageMainUrl?.replace(
-                                  ".jpg",
-                                  "._AC_UL320.jpg"
-                                )}
-                                className="m-auto h-56 lg:h-44 2xl:max-h-72"
-                                width={250}
-                                height={250}
-                                objectFit="contain"
-                                alt={tag?.name}
-                              />
+                      <div className="p-3 pb-3 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700 cursor-pointer">
+                        {!isEmpty(
+                          tag.products?.nodes[0]?.single_product_acf
+                            ?.productImageMainUrl
+                        ) ? (
+                          <div className="2xl:max-h-72 flex flex-col bg-white">
+                            <Image
+                              src={tag.products?.nodes[0]?.single_product_acf?.productImageMainUrl?.replace(
+                                ".jpg",
+                                "._AC_UL320.jpg"
+                              )}
+                              className="m-auto h-56 lg:h-44 2xl:max-h-72"
+                              width={250}
+                              height={250}
+                              objectFit="contain"
+                              alt={tag?.name}
+                            />
+                            <a href={post?.uri}>
                               <h5 className=" py-3 px-2 font-medium  tracking-tight text-gray-900  text-center   hover:text-blue-700">
                                 {tag?.name}
                               </h5>
-                            </div>
-                          ) : null}
-                        </div>
-                      </Link>
+                            </a>
+                          </div>
+                        ) : null}
+                      </div>
                     );
                   })
                 : null}

@@ -26,11 +26,12 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <Link prefetch={false} href={footerMenu?.node?.path}>
-                      <a className="text-gray-100  ">
-                        {footerMenu?.node?.label}
-                      </a>
-                    </Link>
+                    <a
+                      className="text-gray-100  "
+                      href={footerMenu?.node?.path}
+                    >
+                      {footerMenu?.node?.label}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -48,11 +49,12 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <Link prefetch={false} href={footerMenu?.node?.path}>
-                      <a className="text-gray-100  ">
-                        {footerMenu?.node?.label}
-                      </a>
-                    </Link>
+                    <a
+                      className="text-gray-100  "
+                      href={footerMenu?.node?.path}
+                    >
+                      {footerMenu?.node?.label}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -69,11 +71,12 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <Link prefetch={false} href={footerMenu?.node?.path}>
-                      <a className="text-gray-100  ">
-                        {footerMenu?.node?.label}
-                      </a>
-                    </Link>
+                    <a
+                      className="text-gray-100  "
+                      href={footerMenu?.node?.path}
+                    >
+                      {footerMenu?.node?.label}
+                    </a>
                   </li>
                 ))}
               </ul>

@@ -10,8 +10,6 @@ import { GET_POST } from "../../../src/queries/productsv2/get-post";
 import { GET_POST_SLUGS } from "../../../src/queries/productsv2/get-posts";
 import { sanitize } from "../../../src/utils/miscellaneous";
 import { Tabs } from "flowbite-react";
-import { Table } from "flowbite-react";
-import Link from "next/link";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import * as React from "react";
@@ -78,75 +76,71 @@ const Post = ({ data }) => {
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.parent?.node?.parent?.node?.name
                 ) ? (
-                  <Link
+                  <a
+                    className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.parent?.node?.parent?.node?.link
                     }
                   >
-                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
-                      {
-                        data?.post?.productTaxonomies?.nodes[0]?.parent?.node
-                          ?.parent?.node?.parent?.node?.parent?.node?.name
-                      }
-                    </a>
-                  </Link>
+                    {
+                      data?.post?.productTaxonomies?.nodes[0]?.parent?.node
+                        ?.parent?.node?.parent?.node?.parent?.node?.name
+                    }
+                  </a>
                 ) : null}
 
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.parent?.node?.name
                 ) ? (
-                  <Link
+                  <a
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.parent?.node?.link
                     }
+                    className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                   >
-                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
-                      {
-                        data?.post?.productTaxonomies?.nodes[0]?.parent?.node
-                          ?.parent?.node?.parent?.node?.name
-                      }
-                    </a>
-                  </Link>
+                    {
+                      data?.post?.productTaxonomies?.nodes[0]?.parent?.node
+                        ?.parent?.node?.parent?.node?.name
+                    }
+                  </a>
                 ) : null}
 
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.name
                 ) ? (
-                  <Link
+                  <a
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.link
                     }
+                    className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                   >
-                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
-                      {
-                        data?.post?.productTaxonomies?.nodes[0]?.parent?.node
-                          ?.parent?.node?.name
-                      }
-                    </a>
-                  </Link>
+                    {
+                      data?.post?.productTaxonomies?.nodes[0]?.parent?.node
+                        ?.parent?.node?.name
+                    }
+                  </a>
                 ) : null}
 
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.name
                 ) ? (
-                  <Link
+                  <a
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.link
                     }
+                    className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                   >
-                    <a className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200">
-                      {
-                        data?.post?.productTaxonomies?.nodes[0]?.parent?.node
-                          ?.name
-                      }
-                    </a>
-                  </Link>
+                    {
+                      data?.post?.productTaxonomies?.nodes[0]?.parent?.node
+                        ?.name
+                    }
+                  </a>
                 ) : null}
 
                 {!isEmpty(data?.post?.productTaxonomies?.nodes[0]?.name) ? (
@@ -257,14 +251,12 @@ const Post = ({ data }) => {
                 ) : null}
 
                 {!isEmpty(data?.post?.productBrands?.nodes[0]?.name) ? (
-                  <Link
-                    prefetch={false}
+                  <a
                     href={data?.post?.productBrands?.nodes[0]?.uri}
+                    className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
                   >
-                    <a className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium">
-                      {data?.post?.productBrands?.nodes[0]?.name}
-                    </a>
-                  </Link>
+                    {data?.post?.productBrands?.nodes[0]?.name}
+                  </a>
                 ) : null}
               </p>
             </div>
@@ -311,14 +303,13 @@ const Post = ({ data }) => {
                         key={tag.name}
                         className="text-gray-500  dark:text-gray-400 mb-3"
                       >
-                        <Link prefetch={false} href={tag.uri}>
-                          <a
-                            className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
-                            dangerouslySetInnerHTML={{
-                              __html: sanitize(tag?.name ?? {}),
-                            }}
-                          />
-                        </Link>
+                        <a
+                          href={tag.uri}
+                          className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
+                          dangerouslySetInnerHTML={{
+                            __html: sanitize(tag?.name ?? {}),
+                          }}
+                        />
                       </li>
                     ))}
                   </ul>
@@ -339,18 +330,13 @@ const Post = ({ data }) => {
                         key={category.name}
                         className="text-gray-500 dark:text-gray-400"
                       >
-                        <Link
-                          prefetch={false}
+                        <a
                           href={category.uri}
-                          key={category.name + 1}
-                        >
-                          <a
-                            className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
-                            dangerouslySetInnerHTML={{
-                              __html: sanitize(category?.name ?? {}),
-                            }}
-                          />
-                        </Link>
+                          className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
+                          dangerouslySetInnerHTML={{
+                            __html: sanitize(category?.name ?? {}),
+                          }}
+                        />
                       </li>
                     ))}
                   </ul>

@@ -17,7 +17,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
       <nav className="flex items-center justify-between dark:from-gray-800 dark:to-gray-800 dark:bg  from-green-700 to-green-400 bg-gradient-to-r flex-wrap dark:bg-gradient-to-r  p-6 overflow-hidden">
         <div className="max-w-screen-2xl w-full mx-auto flex flex-col sm:flex-row">
           <div className="flex flex-row items-center  flex-shrink-0 text-white mr-6">
-            <Link prefetch={false} href="/">
+            <a href="/">
               <div className="flex cursor-pointer">
                 <div className="mr-2 ">
                   <Image
@@ -34,7 +34,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                   <span>{header?.siteTagLine}</span>
                 </div>
               </div>
-            </Link>
+            </a>
             <div className="block ml-auto mr-2 lg:hidden">
               <button
                 onClick={() => setMenuVisibility(!isMenuVisible)}
@@ -60,21 +60,17 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
           >
             {headerMenus?.length ? (
               <div className="text-sm lg:flex-grow justify-center items-center">
-                {headerMenus?.map((menu) => {
+                {headerMenus?.map((menu, index) => {
                   if (!isCustomPageUri(menu?.node?.path)) {
                     return (
-                      <Link
-                        prefetch={false}
-                        key={menu?.node.id}
+                      <a
+                        key={index}
                         href={menu?.node?.path}
+                        className="block mt-4 text-base font-medium lg:inline-block lg:mt-0 text-white hover:text-blue-400 mr-4"
+                        data-cy="nav-item"
                       >
-                        <a
-                          className="block mt-4 text-base font-medium lg:inline-block lg:mt-0 text-white hover:text-blue-400 mr-4"
-                          data-cy="nav-item"
-                        >
-                          {menu?.node?.label}
-                        </a>
-                      </Link>
+                        {menu?.node?.label}
+                      </a>
                     );
                   }
                 })}
@@ -139,9 +135,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
             <div className="flex-col-reverse flex lg:flex-row">
               {"search" !== slug ? <NavSearch /> : null}
               <div className="lg:flex items-center lg:ml-2 inline-block text-sm font-medium px-4 py-3 leading-none border  text-white border-white dark:border-gray-400 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                <Link prefetch={false} href="/shop/category/pet-supplies">
-                  Shop
-                </Link>
+                <a href="/shop/category/pet-supplies">Shop</a>
               </div>
             </div>
           </div>
@@ -160,58 +154,56 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
             <div className="flex items-center">
               <ul className="flex flex-row mt-0 mr-6 space-x-20 text-sm font-medium">
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link
+                  <a
                     href="/shop/category/dog-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                     aria-current="page"
                   >
                     Dogs
-                  </Link>
+                  </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link
+                  <a
                     href="/shop/category/cat-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Cats
-                  </Link>
+                  </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link
+                  <a
                     href="/shop/category/bird-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Birds
-                  </Link>
+                  </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link
+                  <a
                     href="/shop/category/small-animal-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Small Pets
-                  </Link>
+                  </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link
+                  <a
                     href="/shop/category/fish-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Fish & Aquatic Pets
-                  </Link>
+                  </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link
+                  <a
                     href="/shop/category/reptile-amphibian-supplies"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Reptiles & Amphibians
-                  </Link>
+                  </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link prefetch={false} href="/shop/category/horse-supplies">
-                    Horses
-                  </Link>
+                  <a href="/shop/category/horse-supplies">Horses</a>
                 </li>
               </ul>
             </div>

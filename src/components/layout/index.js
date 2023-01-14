@@ -5,6 +5,7 @@ import Seo from "../seo";
 import { isEmpty } from "lodash";
 import { sanitize } from "../../utils/miscellaneous";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 const Layout = ({ data, isPost, children }) => {
   const {
@@ -39,7 +40,7 @@ const Layout = ({ data, isPost, children }) => {
     <div>
       <Seo seo={seo} uri={uri} />
       <Head>
-        <Link prefetch={false} rel="shortcut icon" href={header?.favicon} />
+        <link rel="shortcut icon" href={header?.favicon} />
       </Head>
       <Header header={header} headerMenus={headerMenus?.edges} />
       <div className="min-h-almost-screen dark:bg-gray-900">{children}</div>

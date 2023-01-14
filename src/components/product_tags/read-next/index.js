@@ -60,46 +60,44 @@ export default function ReadMore({ data }) {
                       key={tag.name}
                       className="text-gray-500 dark:text-gray-400 mb-3"
                     >
-                      <Link prefetch={false} href={tag.uri}>
-                        <article className="flex mb-8 gap-4">
-                          {!isEmpty(tag?.roundupFields?.roundupFeatureImage) ? (
-                            <Image
-                              src={tag?.roundupFields?.roundupFeatureImage}
-                              className="w-32 h-32 max-w-full align-middle rounded-full"
-                              alt="Image 1"
-                              width="200"
-                              height="200"
+                      <article className="flex mb-8 gap-4">
+                        {!isEmpty(tag?.roundupFields?.roundupFeatureImage) ? (
+                          <Image
+                            src={tag?.roundupFields?.roundupFeatureImage}
+                            className="w-32 h-32 max-w-full align-middle rounded-full"
+                            alt="Image 1"
+                            width="200"
+                            height="200"
+                          />
+                        ) : null}
+
+                        <div className="flex flex-col justify-center">
+                          <div
+                            className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
+                            dangerouslySetInnerHTML={{
+                              __html: sanitize(tag?.name ?? {}),
+                            }}
+                          />
+
+                          {!isEmpty(tag?.roundupFields?.hero) ? (
+                            <div
+                              className="text-gray-600 max-w-lg  text py-0.5 pb-1.5 "
+                              dangerouslySetInnerHTML={{
+                                __html: sanitize(
+                                  tag?.roundupFields?.hero ?? {}
+                                ),
+                              }}
                             />
                           ) : null}
 
-                          <div className="flex flex-col justify-center">
-                            <div
-                              className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white"
-                              dangerouslySetInnerHTML={{
-                                __html: sanitize(tag?.name ?? {}),
-                              }}
-                            />
-
-                            {!isEmpty(tag?.roundupFields?.hero) ? (
-                              <div
-                                className="text-gray-600 max-w-lg  text py-0.5 pb-1.5 "
-                                dangerouslySetInnerHTML={{
-                                  __html: sanitize(
-                                    tag?.roundupFields?.hero ?? {}
-                                  ),
-                                }}
-                              />
-                            ) : null}
-
-                            <a
-                              href="#"
-                              className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
-                            >
-                              Read Article
-                            </a>
-                          </div>
-                        </article>
-                      </Link>
+                          <a
+                            href="#"
+                            className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+                          >
+                            Read Article
+                          </a>
+                        </div>
+                      </article>
                     </li>
                   )
               )}
