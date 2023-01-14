@@ -3,9 +3,9 @@ import Image from "../../image";
 import { sanitize } from "../../../utils/miscellaneous";
 import { isEmpty } from "lodash";
 
-const Post = ({ post }) => {
+const Post = ({ post }, index) => {
   return (
-    <div className="mb-8 flex flex-col justify-center items-center">
+    <div className="mb-8 flex flex-col justify-center items-center" key={index}>
       <div>
         {!isEmpty(post?.single_product_acf?.productImageMainUrl) ? (
           <img
