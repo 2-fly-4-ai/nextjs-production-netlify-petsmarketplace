@@ -13,7 +13,7 @@ const Posts = ({ posts }) => {
         <div className="grid gap-10   lg:grid-cols-3">
           {posts.map((post, index) => {
             return (
-              <div key={`${post?.node?.id}-${index}` ?? ""} className="w-96">
+              <div key={index} className="w-96">
                 <Post post={post?.node} />
               </div>
             );

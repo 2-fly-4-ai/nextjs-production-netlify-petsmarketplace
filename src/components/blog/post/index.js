@@ -14,6 +14,7 @@ const Post = ({ post }, index) => {
               "._AC_UL320.jpg"
             )}
             className="h-60"
+            alt="post?.title"
           />
         ) : null}
       </div>
