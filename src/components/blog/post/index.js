@@ -8,7 +8,7 @@ const Post = ({ post }, index) => {
     <div className="mb-8 flex flex-col justify-center items-center" key={index}>
       <div>
         {!isEmpty(post?.single_product_acf?.productImageMainUrl) ? (
-          <Image
+          <img
             src={post?.single_product_acf?.productImageMainUrl?.replace(
               ".jpg",
               "._AC_UL320.jpg"

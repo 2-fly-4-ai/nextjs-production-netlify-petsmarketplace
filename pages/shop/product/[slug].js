@@ -25,6 +25,11 @@ const Post = ({ data }) => {
   let slides_list = [];
   let related_products = [];
 
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   function activeCategory(id) {
     setActiveId(id);
   }

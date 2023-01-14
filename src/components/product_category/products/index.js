@@ -175,6 +175,39 @@ const Products = ({ product }) => {
                   >
                     {product?.title.split(" ").slice(0, 8).join(" ")}
                   </a>
+                  <div className="flex sm:hidden flex-col">
+                    <div
+                      className="text tracking-tight py-2 px-4 text-gray-700 dark:text-gray-400 cursor-pointer normal-case"
+                      dangerouslySetInnerHTML={{
+                        __html: sanitize(
+                          product?.single_product_acf?.productAida ?? {}
+                        ),
+                      }}
+                    />
+                    <div className="flex  flex-col my-3 px-4 items-center  xs:flex-row">
+                      <a
+                        href={product?.single_product_acf?.productUrl}
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                      >
+                        <button
+                          type="button"
+                          className="py-2.5 mb-2 w-40 px-5 mr-2 text-sm focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium text-gray-900  bg-white rounded-full border-4 border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        >
+                          View On Amazon
+                        </button>
+                      </a>
+
+                      <a href={product?.uri}>
+                        <button
+                          type="button"
+                          className="py-2.5 w-40 px-5 mr-2 text-sm focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium text-gray-900  bg-white rounded-full border-4 border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        >
+                          Product Details
+                        </button>
+                      </a>
+                    </div>
+                  </div>
                 </h3>
               </div>
             );
