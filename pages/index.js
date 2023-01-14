@@ -289,7 +289,7 @@ export default function Home({ data }) {
                               objectFit="contain"
                               alt={tag?.name}
                             />
-                            <a href={post?.uri}>
+                            <a href={tag?.uri}>
                               <h5 className=" py-3 px-2 font-medium  tracking-tight text-gray-900  text-center   hover:text-blue-700">
                                 {tag?.name}
                               </h5>
