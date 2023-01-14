@@ -39,7 +39,7 @@ const Layout = ({ data, isPost, children }) => {
     <div>
       <Seo seo={seo} uri={uri} />
       <Head>
-        <link rel="shortcut icon" href={header?.favicon} />
+        <Link prefetch={false} rel="shortcut icon" href={header?.favicon} />
       </Head>
       <Header header={header} headerMenus={headerMenus?.edges} />
       <div className="min-h-almost-screen dark:bg-gray-900">{children}</div>

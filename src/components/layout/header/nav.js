@@ -17,7 +17,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
       <nav className="flex items-center justify-between dark:from-gray-800 dark:to-gray-800 dark:bg  from-green-700 to-green-400 bg-gradient-to-r flex-wrap dark:bg-gradient-to-r  p-6 overflow-hidden">
         <div className="max-w-screen-2xl w-full mx-auto flex flex-col sm:flex-row">
           <div className="flex flex-row items-center  flex-shrink-0 text-white mr-6">
-            <Link href="/">
+            <Link prefetch={false} href="/">
               <div className="flex cursor-pointer">
                 <div className="mr-2 ">
                   <Image
@@ -63,7 +63,11 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 {headerMenus?.map((menu) => {
                   if (!isCustomPageUri(menu?.node?.path)) {
                     return (
-                      <Link key={menu?.node.id} href={menu?.node?.path}>
+                      <Link
+                        prefetch={false}
+                        key={menu?.node.id}
+                        href={menu?.node?.path}
+                      >
                         <a
                           className="block mt-4 text-base font-medium lg:inline-block lg:mt-0 text-white hover:text-blue-400 mr-4"
                           data-cy="nav-item"
@@ -135,7 +139,9 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
             <div className="flex-col-reverse flex lg:flex-row">
               {"search" !== slug ? <NavSearch /> : null}
               <div className="lg:flex items-center lg:ml-2 inline-block text-sm font-medium px-4 py-3 leading-none border  text-white border-white dark:border-gray-400 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                <Link href="/shop/category/pet-supplies">Shop</Link>
+                <Link prefetch={false} href="/shop/category/pet-supplies">
+                  Shop
+                </Link>
               </div>
             </div>
           </div>
@@ -203,7 +209,9 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                   </Link>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <Link href="/shop/category/horse-supplies">Horses</Link>
+                  <Link prefetch={false} href="/shop/category/horse-supplies">
+                    Horses
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -247,7 +255,7 @@ export default Nav;
 //             {headerMenus?.map(menu => {
 //               if (!isCustomPageUri(menu?.node?.path)) {
 //                 return (
-//                   <Link key={menu?.node.id} href={menu?.node?.path}>
+//                   <Link prefetch={false} key={menu?.node.id} href={menu?.node?.path}>
 //                     <Link
 //                       classNameName="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
 //                       data-cy="nav-item"

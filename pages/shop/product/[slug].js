@@ -257,7 +257,10 @@ const Post = ({ data }) => {
                 ) : null}
 
                 {!isEmpty(data?.post?.productBrands?.nodes[0]?.name) ? (
-                  <Link href={data?.post?.productBrands?.nodes[0]?.uri}>
+                  <Link
+                    prefetch={false}
+                    href={data?.post?.productBrands?.nodes[0]?.uri}
+                  >
                     <a className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium">
                       {data?.post?.productBrands?.nodes[0]?.name}
                     </a>
@@ -308,7 +311,7 @@ const Post = ({ data }) => {
                         key={tag.name}
                         className="text-gray-500  dark:text-gray-400 mb-3"
                       >
-                        <Link href={tag.uri}>
+                        <Link prefetch={false} href={tag.uri}>
                           <a
                             className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
                             dangerouslySetInnerHTML={{
@@ -336,7 +339,11 @@ const Post = ({ data }) => {
                         key={category.name}
                         className="text-gray-500 dark:text-gray-400"
                       >
-                        <Link href={category.uri} key={category.name + 1}>
+                        <Link
+                          prefetch={false}
+                          href={category.uri}
+                          key={category.name + 1}
+                        >
                           <a
                             className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
                             dangerouslySetInnerHTML={{

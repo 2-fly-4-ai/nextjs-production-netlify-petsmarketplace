@@ -67,7 +67,9 @@ export default function Home({ data }) {
               </p>
 
               <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center mb-4 text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
-                <Link href="/shop/category/pet-supplies">Go To Shop</Link>
+                <Link prefetch={false} href="/shop/category/pet-supplies">
+                  Go To Shop
+                </Link>
               </btn>
             </div>
 
@@ -227,7 +229,9 @@ export default function Home({ data }) {
                         className="border-1 p-3  justify-center content-center flex-col flex"
                       >
                         <h2 className="my-1 text-2xl  text-center tracking-tight text-gray-900 dark:text-white capitalize">
-                          <Link href={tag?.uri}>{tag?.name}</Link>
+                          <Link prefetch={false} href={tag?.uri}>
+                            {tag?.name}
+                          </Link>
                         </h2>
                         <div
                           className="prose-headings:font-normal text-center prose-h3:text-sm text-gray-500 my-2 mb-4 max-w-none select-none"
@@ -236,7 +240,7 @@ export default function Home({ data }) {
                           }}
                         />
 
-                        <Link href={tag?.uri}>
+                        <Link prefetch={false} href={tag?.uri}>
                           <div className="py-2 cursor-pointer mt-auto my-1 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                             <a className="select-none ">Read more</a>
                             <svg

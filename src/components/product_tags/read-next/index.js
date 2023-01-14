@@ -60,7 +60,7 @@ export default function ReadMore({ data }) {
                       key={tag.name}
                       className="text-gray-500 dark:text-gray-400 mb-3"
                     >
-                      <Link href={tag.uri}>
+                      <Link prefetch={false} href={tag.uri}>
                         <article className="flex mb-8 gap-4">
                           {!isEmpty(tag?.roundupFields?.roundupFeatureImage) ? (
                             <Image

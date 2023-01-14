@@ -26,7 +26,7 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <Link href={footerMenu?.node?.path}>
+                    <Link prefetch={false} href={footerMenu?.node?.path}>
                       <a className="text-gray-100  ">
                         {footerMenu?.node?.label}
                       </a>
@@ -48,7 +48,7 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <Link href={footerMenu?.node?.path}>
+                    <Link prefetch={false} href={footerMenu?.node?.path}>
                       <a className="text-gray-100  ">
                         {footerMenu?.node?.label}
                       </a>
@@ -69,7 +69,7 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <Link href={footerMenu?.node?.path}>
+                    <Link prefetch={false} href={footerMenu?.node?.path}>
                       <a className="text-gray-100  ">
                         {footerMenu?.node?.label}
                       </a>
@@ -113,7 +113,7 @@ const Footer = ({
     // 					<ul>
     // 						{footerMenus.map(footerMenu => (
     // 							<li key={footerMenu?.node?.id}>
-    // 								<Link href={footerMenu?.node?.path}>
+    // 								<Link prefetch={false} href={footerMenu?.node?.path}>
     // 									<a>
     // 										{footerMenu?.node?.label}
     // 									</a>
@@ -133,7 +133,7 @@ const Footer = ({
     // 					<ul>
     // 						{footerMenus2.map(footerMenu => (
     // 							<li key={footerMenu?.node?.id}>
-    // 								<Link href={footerMenu?.node?.path}>
+    // 								<Link prefetch={false} href={footerMenu?.node?.path}>
     // 									<a>
     // 										{footerMenu?.node?.label}
     // 									</a>
@@ -153,7 +153,7 @@ const Footer = ({
     // 					<ul>
     // 						{footerMenus3.map(footerMenu => (
     // 							<li key={footerMenu?.node?.id}>
-    // 								<Link href={footerMenu?.node?.path}>
+    // 								<Link prefetch={false} href={footerMenu?.node?.path}>
     // 									<a>
     // 										{footerMenu?.node?.label}
     // 									</a>
