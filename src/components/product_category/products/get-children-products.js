@@ -82,7 +82,7 @@ const Products = ({ data }) => {
             return (
               <div
                 key={product?.title}
-                className="p-0 pb-3 h-68 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700"
+                className="p-0 pb-3 max-w-sm bg-white rounded-none  dark:bg-gray-800 dark:border-gray-700"
               >
                 <div className="flex flex-col relative bg-white">
                   <Image
