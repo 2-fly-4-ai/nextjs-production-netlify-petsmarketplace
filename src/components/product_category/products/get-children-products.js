@@ -73,7 +73,7 @@ const Products = ({ data }) => {
   // }
 
   return (
-    <section className="bg-white dark:bg-gray-900 max-w-screen-2xl mx-auto px-6 ">
+    <section className="bg-white dark:bg-gray-900 max-w-screen-2xl mx-auto px-6 items-center flex justify-center">
       <div className="py-4 px-0  mx-auto max-w-screen-2xl sm:py-4 xl:py-4 2xl:py-16 lg:px-0">
         <div className="grid gap-3  sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-4">
           {/* INDIVIDUAL PRODUCTS. Includes code for quickview MODAL. 
