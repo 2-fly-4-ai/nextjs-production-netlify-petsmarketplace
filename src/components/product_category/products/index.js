@@ -155,7 +155,9 @@ const Products = ({ product }) => {
                             </a>
                             <a
                               href={product?.uri}
-                              className="text-sm border border-gray-500 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 bg-yellow-300 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              target="_blank"
+                              rel="nofollow noreferrer"
+                              className="text-sm border border-gray-500 bg-green-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i>Product
                               Details
