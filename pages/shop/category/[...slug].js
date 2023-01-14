@@ -48,7 +48,9 @@ const Page = ({ data }) => {
             {/* Right-Top Hero Section */}
             <Hero data={data} />
             {!isEmpty(data?.page?.children?.nodes) ? (
-              <SubcategoryReadmore data={data} />
+              <div className="sm:hidden">
+                <SubcategoryReadmore data={data} />
+              </div>
             ) : null}
             {/* Product Grid */}
             <div className="flex-1 pb-6">
@@ -61,6 +63,9 @@ const Page = ({ data }) => {
                   slug={data?.page?.slug}
                 />
               )}
+              {!isEmpty(data?.page?.children?.nodes) ? (
+                <SubcategoryReadmore data={data} />
+              ) : null}
             </div>
           </div>
         </div>
