@@ -5,7 +5,7 @@ import Script from "next/script";
 
 // import Router from 'next/router';
 // import NProgress from 'nprogress';
-//snositemapgen
+//noautogensitemap
 // NProgress.configure({ showSpinner: false });
 // Router.events.on('routeChangeStart', () => NProgress.start());
 // Router.events.on('routeChangeComplete', () => NProgress.done());
