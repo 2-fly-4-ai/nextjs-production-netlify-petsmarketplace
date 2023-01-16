@@ -63,9 +63,6 @@ export const HeaderFooter = `
     }
   }
   
-
-  
-  
   footer: getFooter {
     copyrightText
     sidebarOne

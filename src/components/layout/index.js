@@ -45,7 +45,11 @@ const Layout = ({ data, isPost, children }) => {
         <link rel="shortcut icon" href={header?.favicon} />
       </Head>
 
-      <Header header={header} headerMenus={headerMenus?.edges} />
+      <Header
+        header={header}
+        headerMenus={headerMenus?.edges}
+        footer={footer}
+      />
       <div className="min-h-almost-screen dark:bg-gray-900">{children}</div>
       <Footer
         footer={footer}

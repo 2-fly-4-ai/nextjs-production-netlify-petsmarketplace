@@ -40,9 +40,19 @@ const Seo = ({ seo, uri }) => {
       ? process.env.NEXT_PUBLIC_NEXTJS_SITE_URL
       : currentLocation) + uri;
 
+  let test = "";
+
+  if (uri.includes("category")) {
+    test = `${breadcrumbTitle} - PetsMarketPlc`;
+  } else if (uri.includes("best")) {
+    test = `Best ${breadcrumbTitle} - PetsMarketPlc`;
+  } else if (uri.includes("brand")) {
+    test = `${breadcrumbTitle} - PetsMarketPlc`;
+  }
+
   return (
     <NextSeo
-      title={title}
+      title={title || test}
       description={metaDesc || opengraphDescription || title}
       canonical={opengraphUrl}
       index={metaRobotsNoindex}
@@ -65,8 +75,8 @@ const Seo = ({ seo, uri }) => {
         /* eslint-enable */
       }}
       twitter={{
-        handle: "@Petsmarketplc",
-        site: "@Petsmarketplc",
+        handle: "@petsmarket_plc",
+        site: "https:www.twitter.com/petsmarket_plc",
         cardType: "summary_large_image",
       }}
     />
