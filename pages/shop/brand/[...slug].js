@@ -35,7 +35,7 @@ const Page = ({ data }) => {
 
           <div className="flex-1 flex-col px-3 pb-8">
             <div className="flex flex-col md:items-start rounded-lg my-2 py-4 pb-8 justify-center content-center px-8 ">
-              <h1 className="px-2 pt-2 m-5 text-gray-500 dark:text-gray-400 text-5xl cursor-none">
+              <h1 className="px-2 pt-2 m-5 text-gray-500 dark:text-gray-400 text-5xl">
                 {data?.page?.name}
               </h1>
             </div>
