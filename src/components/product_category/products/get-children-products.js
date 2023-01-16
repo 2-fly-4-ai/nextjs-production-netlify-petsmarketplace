@@ -183,6 +183,14 @@ const Products = ({ data }) => {
                           <h3 className="font-semibold text-xl dark:text-gray-200">
                             {product?.title}
                           </h3>
+                          <div
+                            className="mt-4 text-gray-700 prose dark:text-gray-400"
+                            dangerouslySetInnerHTML={{
+                              __html: sanitize(
+                                product?.single_product_acf?.productAida ?? {}
+                              ),
+                            }}
+                          />
 
                           <div className="mt-6 flex  border-b border-gray-200 pb-6 pt-0">
                             <a
