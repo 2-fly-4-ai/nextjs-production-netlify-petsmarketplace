@@ -132,9 +132,15 @@ const Products = ({ product }) => {
                               </svg>
                             </button>
                           </div>
-                          <h3 className="font-semibold text-xl dark:text-gray-200">
-                            {product?.title}
-                          </h3>
+                          <a
+                            href={product?.single_product_acf?.productUrl}
+                            target="_blank"
+                            rel="nofollow noreferrer"
+                          >
+                            <h3 className="font-semibold text-xl dark:text-gray-200">
+                              {product?.title}
+                            </h3>
+                          </a>
                           <div
                             className="mt-4 text-gray-700 prose dark:text-gray-400"
                             dangerouslySetInnerHTML={{

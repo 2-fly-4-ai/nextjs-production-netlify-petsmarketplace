@@ -180,9 +180,16 @@ const Products = ({ data }) => {
                               </svg>
                             </button>
                           </div>
-                          <h3 className="font-semibold text-xl dark:text-gray-200">
-                            {product?.title}
-                          </h3>
+                          <a
+                            href={product?.single_product_acf?.productUrl}
+                            target="_blank"
+                            rel="nofollow noreferrer"
+                          >
+                            <h3 className="font-semibold text-xl dark:text-gray-200">
+                              {product?.title}
+                            </h3>
+                          </a>
+
                           <div
                             className="mt-4 text-gray-700 prose dark:text-gray-400"
                             dangerouslySetInnerHTML={{
@@ -192,19 +199,19 @@ const Products = ({ data }) => {
                             }}
                           />
 
-                          <div className="mt-6 flex  border-b border-gray-200 pb-6 pt-0">
+                          <div className="mt-6 flex gap-3 border-b border-gray-200 pb-6 pt-0">
                             <a
                               href={product?.single_product_acf?.productUrl}
                               target="_blank"
                               rel="nofollow noreferrer"
-                              className="text-sm border border-gray-500 bg-green-400 text-gray-600 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              className="text-sm border border-gray-500 bg-green-400 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i> View On
                               Amazon
                             </a>
                             <a
                               href={product?.uri}
-                              className="text-sm border border-gray-500 bg-yellow-300 text-gray-600 px-8 py-2 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              className="text-sm border border-gray-500 bg-green-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i>Product
                               Details
