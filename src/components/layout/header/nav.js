@@ -7,7 +7,6 @@ import Image from "next/image";
 import NavSearch from "../../search/nav-search";
 
 const Nav = ({ footer, header, headerMenus, slug }) => {
-  console.warn(footer);
   const [isMenuVisible, setMenuVisibility] = useState("");
   if (isEmpty(headerMenus)) {
     return null;
