@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import MainLink from "../../mainlink";
 import { isEmpty } from "lodash";
 import { sanitize } from "../../../utils/miscellaneous";
 import Image from "next/image";
@@ -90,12 +90,12 @@ export default function ReadMore({ data }) {
                             />
                           ) : null}
 
-                          <a
+                          <MainLink
                             href="#"
                             className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
                           >
                             Read Article
-                          </a>
+                          </MainLink>
                         </div>
                       </article>
                     </li>

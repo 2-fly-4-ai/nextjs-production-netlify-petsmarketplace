@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { FacebookIcon, TwitterIcon } from "react-share";
+import MainLink from "../../mainlink";
 
 export default function AuthorTitleShare({ data }) {
   return (
@@ -11,21 +12,21 @@ export default function AuthorTitleShare({ data }) {
           The best {data?.page?.name}
         </h1>{" "}
         By{" "}
-        <a
-          href="#"
+        <MainLink
+          href="/"
           rel="author"
           className="font-bold text-gray-900 dark:text-gray-200 no-underline hover:underline"
         >
           PetsMarketPlace
           {/* {data?.page?.roundupFields?.author} */}
-        </a>{" "}
+        </MainLink>{" "}
         in{" "}
-        <a
+        <MainLink
           href="#"
           className="font-normal text-gray-500 dark:text-gray-400 no-underline hover:underline"
         >
           Our Best Picks
-        </a>
+        </MainLink>
       </span>
 
       <aside

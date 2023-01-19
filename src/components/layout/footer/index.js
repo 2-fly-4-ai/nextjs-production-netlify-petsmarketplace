@@ -3,6 +3,7 @@ import { sanitize } from "../../../utils/miscellaneous";
 import Link from "next/link";
 import { getIconComponentByName } from "../../../utils/icons-map";
 import NewsletterSubscribe from "./NewsletterSubscribe";
+import MainLink from "../../mainlink";
 
 const Footer = ({
   footer,
@@ -26,12 +27,12 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <a
+                    <MainLink
                       className="text-gray-100  "
                       href={footerMenu?.node?.path}
                     >
                       {footerMenu?.node?.label}
-                    </a>
+                    </MainLink>
                   </li>
                 ))}
               </ul>
@@ -49,12 +50,12 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <a
+                    <MainLink
                       className="text-gray-100  "
                       href={footerMenu?.node?.path}
                     >
                       {footerMenu?.node?.label}
-                    </a>
+                    </MainLink>
                   </li>
                 ))}
               </ul>
@@ -71,12 +72,12 @@ const Footer = ({
                     key={footerMenu?.node?.id}
                     className="text-gray-500 dark:text-gray-400 mb-4"
                   >
-                    <a
+                    <MainLink
                       className="text-gray-100  "
                       href={footerMenu?.node?.path}
                     >
                       {footerMenu?.node?.label}
-                    </a>
+                    </MainLink>
                   </li>
                 ))}
               </ul>

@@ -2,6 +2,7 @@ import client from "../src/apollo/client";
 import Header from "../src/components/layout/header";
 import Footer from "../src/components/layout/footer";
 import { GET_MENUS } from "../src/queries/get-menus";
+import MainLink from "../src/components/mainlink";
 
 function Error404({ data }) {
   const {
@@ -27,7 +28,7 @@ function Error404({ data }) {
             </p>
           </div>
           <div className="grid gap-6 mt-8 lg:mt-12 sm:grid-cols-2 lg:grid-cols-4">
-            <a href="/">
+            <MainLink href="/">
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-primary-600 dark:text-primary-400 lg:w-6 lg:h-6"
@@ -41,9 +42,9 @@ function Error404({ data }) {
               <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-500 dark:text-gray-400">
                 Homepage
               </h3>
-            </a>
+            </MainLink>
 
-            <a href="/shop/category/pet-supplies">
+            <MainLink href="/shop/category/pet-supplies">
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-teal-100 rounded-lg dark:bg-teal-900 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-teal-600 lg:w-6 lg:h-6 dark:text-teal-400"
@@ -57,9 +58,9 @@ function Error404({ data }) {
               <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-500 dark:text-gray-400">
                 Shop
               </h3>
-            </a>
+            </MainLink>
 
-            <a href="/affiliate-disclosure">
+            <MainLink href="/affiliate-disclosure">
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-purple-100 rounded-lg dark:bg-purple-900 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-purple-600 dark:text-purple-400 lg:w-6 lg:h-6"
@@ -73,9 +74,9 @@ function Error404({ data }) {
               <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-500 dark:text-gray-400">
                 Affiliate Disclosure
               </h3>
-            </a>
+            </MainLink>
 
-            <a href="/blog">
+            <MainLink href="/blog">
               <div className="flex justify-center items-center mx-auto mb-4 w-10 h-10 bg-green-100 rounded-lg dark:bg-green-900 lg:h-12 lg:w-12">
                 <svg
                   className="w-5 h-5 text-green-600 dark:text-green-400 lg:w-6 lg:h-6"
@@ -94,7 +95,7 @@ function Error404({ data }) {
               <h3 className="mb-2 text-lg font-semibold tracking-tight text-gray-500 dark:text-gray-400">
                 Blog
               </h3>
-            </a>
+            </MainLink>
           </div>
         </div>
       </section>

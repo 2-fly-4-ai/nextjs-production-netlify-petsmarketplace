@@ -1,6 +1,7 @@
 import { isEmpty } from "lodash";
 import React from "react";
 import { sanitize } from "../../../utils/miscellaneous";
+import MainLink from "../../mainlink";
 
 export default function ProductTagsHeader({ data }) {
   return (
@@ -29,7 +30,7 @@ export default function ProductTagsHeader({ data }) {
             data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.parent?.node?.parent?.node?.name
           ) ? (
-            <a
+            <MainLink
               className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
@@ -40,14 +41,14 @@ export default function ProductTagsHeader({ data }) {
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.parent?.node?.parent?.node?.name
               }
-            </a>
+            </MainLink>
           ) : null}
 
           {!isEmpty(
             data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.parent?.node?.name
           ) ? (
-            <a
+            <MainLink
               className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
@@ -58,14 +59,14 @@ export default function ProductTagsHeader({ data }) {
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.parent?.node?.name
               }
-            </a>
+            </MainLink>
           ) : null}
 
           {!isEmpty(
             data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.name
           ) ? (
-            <a
+            <MainLink
               className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
               href={
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
@@ -76,19 +77,19 @@ export default function ProductTagsHeader({ data }) {
                 data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]
                   .parent?.node?.name
               }
-            </a>
+            </MainLink>
           ) : null}
 
           {!isEmpty(
             data?.page?.products?.nodes[0]?.productTaxonomies?.nodes[0]?.parent
               ?.node?.name
           ) ? (
-            <a
+            <MainLink
               className="mx-1 text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white hover:bg-gray-200 dark:bg-gray-900 dark:border-gray-700"
               href={data?.page?.uri}
             >
               {data?.page?.name}
-            </a>
+            </MainLink>
           ) : null}
         </p>
 

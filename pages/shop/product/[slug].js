@@ -16,6 +16,7 @@ import * as React from "react";
 import { useState } from "react";
 import Image from "next/image";
 import { useEffect } from "react";
+import MainLink from "../../../src/components/mainlink";
 
 //FUTURE FEATURE REQUEST. ADD LOAD MORE FOR COMMENTS COMPONENT.
 
@@ -84,7 +85,7 @@ const Post = ({ data }) => {
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.parent?.node?.parent?.node?.name
                 ) ? (
-                  <a
+                  <MainLink
                     className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
@@ -95,14 +96,14 @@ const Post = ({ data }) => {
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.parent?.node?.parent?.node?.name
                     }
-                  </a>
+                  </MainLink>
                 ) : null}
 
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.parent?.node?.name
                 ) ? (
-                  <a
+                  <MainLink
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.parent?.node?.link
@@ -113,14 +114,14 @@ const Post = ({ data }) => {
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.parent?.node?.name
                     }
-                  </a>
+                  </MainLink>
                 ) : null}
 
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.parent
                     ?.node?.name
                 ) ? (
-                  <a
+                  <MainLink
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.link
@@ -131,13 +132,13 @@ const Post = ({ data }) => {
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.parent?.node?.name
                     }
-                  </a>
+                  </MainLink>
                 ) : null}
 
                 {!isEmpty(
                   data?.post?.productTaxonomies?.nodes[0]?.parent?.node?.name
                 ) ? (
-                  <a
+                  <MainLink
                     href={
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.link
@@ -148,16 +149,16 @@ const Post = ({ data }) => {
                       data?.post?.productTaxonomies?.nodes[0]?.parent?.node
                         ?.name
                     }
-                  </a>
+                  </MainLink>
                 ) : null}
 
                 {!isEmpty(data?.post?.productTaxonomies?.nodes[0]?.name) ? (
-                  <a
+                  <MainLink
                     className="text-sm text-gray-600 dark:text-gray-400 border focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-4  py-1 pb-1.5 bg-white dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-200"
                     href={data?.post?.productTaxonomies?.nodes[0]?.uri}
                   >
                     {data?.post?.productTaxonomies?.nodes[0]?.name}
-                  </a>
+                  </MainLink>
                 ) : null}
               </p>
             </div>
@@ -259,12 +260,12 @@ const Post = ({ data }) => {
                 ) : null}
 
                 {!isEmpty(data?.post?.productBrands?.nodes[0]?.name) ? (
-                  <a
+                  <MainLink
                     href={data?.post?.productBrands?.nodes[0]?.uri}
                     className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
                   >
                     {data?.post?.productBrands?.nodes[0]?.name}
-                  </a>
+                  </MainLink>
                 ) : null}
               </p>
             </div>
@@ -311,13 +312,14 @@ const Post = ({ data }) => {
                         key={tag.name}
                         className="text-gray-500  dark:text-gray-400 mb-3"
                       >
-                        <a
-                          href={tag.uri}
-                          className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
-                          dangerouslySetInnerHTML={{
-                            __html: sanitize(tag?.name ?? {}),
-                          }}
-                        />
+                        <MainLink href={tag.uri}>
+                          <a
+                            className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
+                            dangerouslySetInnerHTML={{
+                              __html: sanitize(tag?.name ?? {}),
+                            }}
+                          />
+                        </MainLink>
                       </li>
                     ))}
                   </ul>
@@ -338,13 +340,15 @@ const Post = ({ data }) => {
                         key={category.name}
                         className="text-gray-500 dark:text-gray-400"
                       >
-                        <a
-                          href={category.uri}
-                          className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
-                          dangerouslySetInnerHTML={{
-                            __html: sanitize(category?.name ?? {}),
-                          }}
-                        />
+                        <MainLink>
+                          <a
+                            href={category.uri}
+                            className="text-gray-600 dark:text-gray-400 border-2 dark:border-gray-700 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full border-gray-300 rounded-full px-2 text-sm py-0.5 pb-1.5 bg-white dark:bg-gray-800 hover:bg-gray-600 capitalize font-medium"
+                            dangerouslySetInnerHTML={{
+                              __html: sanitize(category?.name ?? {}),
+                            }}
+                          />
+                        </MainLink>
                       </li>
                     ))}
                   </ul>

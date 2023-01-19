@@ -10,6 +10,7 @@ import {
 import { sanitize } from "../src/utils/miscellaneous";
 import Layout from "../src/components/layout";
 import Image from "next/image";
+import MainLink from "../src/components/mainlink";
 
 export default function Home({ data }) {
   return (
@@ -66,7 +67,9 @@ export default function Home({ data }) {
               </p>
 
               <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center mb-4 text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
-                <a href="/shop/category/pet-supplies/">Go To Shop</a>
+                <MainLink href="/shop/category/pet-supplies/">
+                  Go To Shop
+                </MainLink>
               </btn>
             </div>
 
@@ -94,14 +97,14 @@ export default function Home({ data }) {
                   alt="dog"
                 />
 
-                <a
-                  href="/shop/category/dog-supplies/"
+                <MainLink
                   className="mt-2 mb-4 inline-flex  p-0 bg-green-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline "
+                  href="/shop/category/dog-supplies/"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Dogs
                   </button>
-                </a>
+                </MainLink>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-yellow-300 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -111,14 +114,15 @@ export default function Home({ data }) {
                   height={200}
                   alt="cat"
                 />
-                <a
+
+                <MainLink
                   href="/shop/category/cat-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-yellow-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Cats
                   </button>
-                </a>
+                </MainLink>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-red-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -128,14 +132,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="dog"
                 />
-                <a
+                <MainLink
                   href="/shop/category/fish-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-red-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Fish
                   </button>
-                </a>
+                </MainLink>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-blue-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -145,14 +149,15 @@ export default function Home({ data }) {
                   height={200}
                   alt="bird"
                 />
-                <a
+
+                <MainLink
                   href="/shop/category/bird-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-blue-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Birds
                   </button>
-                </a>
+                </MainLink>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-orange-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -162,14 +167,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="reptile"
                 />
-                <a
+                <MainLink
                   href="/shop/category/reptile-amphibian-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 items-center bg-orange-600 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Reptiles
                   </button>
-                </a>
+                </MainLink>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full  bg-amber-300 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -179,14 +184,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="horse"
                 />
-                <a
+                <MainLink
                   href="/shop/category/horse-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 items-center bg-amber-400 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     Horses
                   </button>
-                </a>
+                </MainLink>
               </div>
               <div className="flex flex-col justify-items-center items-center shadow-lg lg:rounded-full bg-purple-400 p-2 lg:hover:-translate-y-2 duration-500">
                 <Image
@@ -196,14 +201,14 @@ export default function Home({ data }) {
                   height={200}
                   alt="small pets"
                 />
-                <a
+                <MainLink
                   href="/shop/category/small-animal-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 items-center bg-purple-600 rounded-2xl text-sm  font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-2 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                     <p className="whitespace-nowrap">Small Animals</p>
                   </button>
-                </a>
+                </MainLink>
               </div>
             </div>
           </div>
@@ -226,7 +231,7 @@ export default function Home({ data }) {
                         className="border-1 p-3  justify-center content-center flex-col flex"
                       >
                         <h2 className="my-1 text-2xl  text-center tracking-tight text-gray-900 dark:text-white capitalize">
-                          <a href={tag?.uri}>{tag?.name}</a>
+                          <MainLink href={tag?.uri}>{tag?.name}</MainLink>
                         </h2>
                         <div
                           className="prose-headings:font-normal text-center prose-h3:text-sm text-gray-500 my-2 mb-4 max-w-none select-none"
@@ -234,7 +239,8 @@ export default function Home({ data }) {
                             __html: sanitize(tag?.roundupFields?.hero),
                           }}
                         />
-                        <a className="mx-auto" href={tag.uri}>
+
+                        <MainLink className="mx-auto" href={tag.uri}>
                           <div className="py-2 cursor-pointer mt-auto my-1 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
                             Read more
                             <svg
@@ -250,7 +256,7 @@ export default function Home({ data }) {
                               ></path>
                             </svg>
                           </div>
-                        </a>
+                        </MainLink>
                       </article>
                     );
                   })
@@ -290,11 +296,11 @@ export default function Home({ data }) {
                               objectFit="contain"
                               alt={tag?.name}
                             />
-                            <a href={tag?.uri}>
+                            <MainLink href={tag?.uri}>
                               <h5 className=" py-3 px-2 font-medium  tracking-tight text-gray-900  text-center   hover:text-blue-700">
                                 {tag?.name}
                               </h5>
-                            </a>
+                            </MainLink>
                           </div>
                         ) : null}
                       </div>
