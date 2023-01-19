@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import type { HTMLAttributeAnchorTarget } from 'react';
 import React from 'react';
-
+ /* eslint-disable react/display-name */
 export interface MainLinkProps {
     href?: string;
     target?: HTMLAttributeAnchorTarget | undefined;
@@ -39,5 +39,7 @@ const MainLink: React.FC<MainLinkProps> = React.forwardRef(
         );
     },
 );
+
+MainLinK.displayName = 'MyComponent';
 
 export default MainLink;
