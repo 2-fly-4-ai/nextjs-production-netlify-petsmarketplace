@@ -40,6 +40,6 @@ const MainLink: React.FC<MainLinkProps> = React.forwardRef(
     },
 );
 
-MainLinK.displayName = 'MyComponent';
+MainLink.displayName = 'MyComponent';
 
 export default MainLink;
