@@ -13,7 +13,7 @@ import { sanitize } from "../../src/utils/miscellaneous";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { FacebookIcon, TwitterIcon } from "react-share";
 import NewsletterSubscribe from "../../src/components/layout/footer/NewsletterSubscribe";
-import Link from "next/link";
+import MainLink from "../../src/components/mainlink";
 
 // THis is just an example, we wont be using pagination in this way. (Just LOAD MORE Everything)
 
@@ -295,12 +295,12 @@ const Post = ({ data }) => {
                             {post?.excert}
                           </p>
 
-                          <a
+                          <MainLink
                             href={post?.uri}
                             className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-gray-400 hover:no-underline"
                           >
                             Read Article
-                          </a>
+                          </MainLink>
                         </div>
                       );
                     })
