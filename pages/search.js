@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLazyQuery } from "@apollo/client";
 import { isEmpty } from "lodash";
 import Router from "next/router";
-
+import Head from "next/head";
 import client from "../src/apollo/client";
 import { handleRedirectsAndReturnData } from "../src/utils/slug";
 import { GET_MENUS } from "../src/queries/get-menus";
@@ -95,6 +95,11 @@ export default function Search({ data }) {
 
   return (
     <>
+      <Head>
+        <title>PetsMarketPlc - Archive Search Page</title>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
+
       <Header
         header={header}
         headerMenus={headerMenus?.edges ?? []}

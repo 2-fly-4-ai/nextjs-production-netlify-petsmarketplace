@@ -25,8 +25,13 @@ const Seo = ({ seo, uri }) => {
     title,
   } = seo;
 
-  const metaRobotsNofollow = robots[0] ?? "";
-  const metaRobotsNoindex = robots[1] ?? "";
+  let metaRobotsNofollow = robots[0] ?? "";
+  let metaRobotsNoindex = robots[1] ?? "";
+
+  if (uri.includes("/search")) {
+    metaRobotsNoindex = "noindex";
+  }
+
   const opengraphImage = openGraph?.image ?? "";
   let opengraphDescription = openGraph?.description ?? "";
 
