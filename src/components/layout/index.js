@@ -33,7 +33,7 @@ const Layout = ({ data, isPost, children }) => {
   // if (isEmpty(page) && isEmpty(post) && isEmpty(posts) && isEmpty(product)) {
   //     return null;
   // }
-  const GTM_ID = process.env.GM_IDT;
+
   const seo = isPost ? post?.seo ?? {} : page?.seo ?? {};
   const uri = isPost ? post?.uri ?? {} : page?.uri ?? {};
 
