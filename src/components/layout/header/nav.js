@@ -135,7 +135,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
             <div className="flex-col-reverse flex lg:flex-row">
               {"search" !== slug ? <NavSearch /> : null}
               <div className="lg:flex items-center lg:ml-2 inline-block text-sm font-medium px-4 py-3 leading-none border  text-white border-white dark:border-gray-400 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                <a href="/shop/category/pet-supplies">Shop</a>
+                <a href="/shop/category/pet-supplies/">Shop</a>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
               <ul className="flex flex-row mt-0 mr-6 space-x-20 text-sm font-medium">
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <a
-                    href="/shop/category/dog-supplies"
+                    href="/shop/category/dog-supplies/"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                     aria-current="page"
                   >
@@ -164,7 +164,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <a
-                    href="/shop/category/cat-supplies"
+                    href="/shop/category/cat-supplies/"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Cats
@@ -172,7 +172,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <a
-                    href="/shop/category/bird-supplies"
+                    href="/shop/category/bird-supplies/"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Birds
@@ -180,7 +180,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <a
-                    href="/shop/category/small-animal-supplies"
+                    href="/shop/category/small-animal-supplies/"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Small Pets
@@ -188,7 +188,7 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <a
-                    href="/shop/category/fish-supplies"
+                    href="/shop/category/fish-supplies/"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Fish & Aquatic Pets
@@ -196,14 +196,14 @@ const Nav = ({ footer, header, headerMenus, slug }) => {
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
                   <a
-                    href="/shop/category/reptile-amphibian-supplies"
+                    href="/shop/category/reptile-amphibian-supplies/"
                     className="text-gray-900 dark:text-white hover:underline uppercase"
                   >
                     Reptiles & Amphibians
                   </a>
                 </li>
                 <li className="text-gray-900 dark:text-white hover:underline uppercase">
-                  <a href="/shop/category/horse-supplies">Horses</a>
+                  <a href="/shop/category/horse-supplies/">Horses</a>
                 </li>
               </ul>
             </div>

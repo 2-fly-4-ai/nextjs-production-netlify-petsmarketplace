@@ -66,7 +66,7 @@ export default function Home({ data }) {
               </p>
 
               <btn className="inline-flex rounded-full items-center justify-center px-5 mr-auto py-3 text-lg font-medium text-center mb-4 text-gray-700 border-4 border-gray-300   focus:ring-2 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800  hover:bg-gray-100 hover:text-blue-700">
-                <a href="/shop/category/pet-supplies">Go To Shop</a>
+                <a href="/shop/category/pet-supplies/">Go To Shop</a>
               </btn>
             </div>
 
@@ -95,7 +95,7 @@ export default function Home({ data }) {
                 />
 
                 <a
-                  href="/shop/category/dog-supplies"
+                  href="/shop/category/dog-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-green-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -112,7 +112,7 @@ export default function Home({ data }) {
                   alt="cat"
                 />
                 <a
-                  href="/shop/category/cat-supplies"
+                  href="/shop/category/cat-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-yellow-400 rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -129,7 +129,7 @@ export default function Home({ data }) {
                   alt="dog"
                 />
                 <a
-                  href="/shop/category/fish-supplies"
+                  href="/shop/category/fish-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-red-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -146,7 +146,7 @@ export default function Home({ data }) {
                   alt="bird"
                 />
                 <a
-                  href="/shop/category/bird-supplies"
+                  href="/shop/category/bird-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 bg-blue-600  rounded-2xl items-center text-sm font-semibold text-primary-500 hover:underline"
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -163,7 +163,7 @@ export default function Home({ data }) {
                   alt="reptile"
                 />
                 <a
-                  href="/shop/category/reptile-amphibian-supplies"
+                  href="/shop/category/reptile-amphibian-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 items-center bg-orange-600 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -180,7 +180,7 @@ export default function Home({ data }) {
                   alt="horse"
                 />
                 <a
-                  href="/shop/category/horse-supplies"
+                  href="/shop/category/horse-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 items-center bg-amber-400 rounded-2xl text-sm font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-7 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
@@ -197,7 +197,7 @@ export default function Home({ data }) {
                   alt="small pets"
                 />
                 <a
-                  href="/shop/category/small-animal-supplies"
+                  href="/shop/category/small-animal-supplies/"
                   className="mt-2 mb-4 inline-flex  p-0 items-center bg-purple-600 rounded-2xl text-sm  font-semibold text-primary-500 hover:underline "
                 >
                   <button className="py-1.5  m-2 uppercase px-2 justify-center text-sm font-medium text-gray-700 bg-white rounded-full border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700  focus:outline-none  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
