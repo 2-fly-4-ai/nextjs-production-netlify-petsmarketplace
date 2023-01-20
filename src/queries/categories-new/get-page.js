@@ -122,7 +122,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 				  name
 				  uri
 				  products(
-					first: 5
+					first: 4
 					after: $after
 					where: {taxQuery: {taxArray: {taxonomy: PRODUCTTAXONOMY}}}
 				  ) {
@@ -193,7 +193,7 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		metaDescription
 	  }
 	}
-	productBrands(where: {orderby: COUNT, order: DESC}, first: 30) {
+	productBrands(where: {orderby: COUNT, order: DESC}, first: 20) {
 	  nodes {
 		name
 		uri
