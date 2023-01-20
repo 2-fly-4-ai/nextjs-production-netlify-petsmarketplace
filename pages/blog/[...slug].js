@@ -57,7 +57,7 @@ const Post = ({ data }) => {
             <div className="px-4 flex flex-col lg:flex-row justify-between lg:items-center py-6 border-t border-b border-gray-200 dark:border-gray-700">
               <span className="text-base mb-4 lg:mb-0 font-normal text-gray-500 dark:text-gray-400">
                 By{" "}
-                <a
+                <MainLink
                   href="#"
                   rel="author"
                   className="font-bold text-gray-900 dark:text-white no-underline hover:underline capitalize"
@@ -65,14 +65,14 @@ const Post = ({ data }) => {
                   {!isEmpty(data?.post?.author?.node?.name)
                     ? data?.post?.author?.node?.name
                     : PetsMarketPlace}
-                </a>{" "}
+                </MainLink>{" "}
                 in{" "}
-                <a
+                <MainLink
                   href="#"
                   className="font-normal text-gray-500 dark:text-gray-400 no-underline hover:underline"
                 >
                   Posts
-                </a>
+                </MainLink>
               </span>
 
               <aside aria-label="Share social media" className="flex">

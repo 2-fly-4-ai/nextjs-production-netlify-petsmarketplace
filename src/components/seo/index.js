@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element}
  *
  */
-const Seo = ({ seo, uri }) => {
+const Seo = ({ seo, uri, custom_meta }) => {
   const {
     breadcrumbTitle,
     breadcrumbs,
@@ -37,7 +37,7 @@ const Seo = ({ seo, uri }) => {
 
   const opengraphTitle = title ?? "";
   const opengraphSiteName = openGraph?.siteName ?? "";
-  const metaDesc = description ?? "";
+  let metaDesc = description ?? "";
 
   const currentLocation = process.browser ? window.location.origin : "";
   const opengraphUrl =
@@ -49,10 +49,13 @@ const Seo = ({ seo, uri }) => {
 
   if (uri.includes("category")) {
     test = `${breadcrumbTitle} - PetsMarketPlc`;
+    metaDesc = custom_meta;
   } else if (uri.includes("best")) {
     test = `Best ${breadcrumbTitle} - PetsMarketPlc`;
+    metaDesc = custom_meta;
   } else if (uri.includes("brand")) {
     test = `${breadcrumbTitle} - PetsMarketPlc`;
+    metaDesc = custom_meta;
   }
 
   return (

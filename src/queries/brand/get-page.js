@@ -85,10 +85,15 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		pageInfo {
 			hasNextPage
 			endCursor
-		  }
-	  }
-	}
+		}
+    }
+    seo_component {
+      metaDescription
+    }
   }
+}
+	
+  
   ${MenuFragment}
 
 

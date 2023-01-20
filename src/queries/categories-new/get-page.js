@@ -189,6 +189,9 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		  endCursor
 		}
 	  }
+	  seo_component {
+		metaDescription
+	  }
 	}
 	productBrands(where: {orderby: COUNT, order: DESC}, first: 30) {
 	  nodes {

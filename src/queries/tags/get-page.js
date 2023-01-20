@@ -100,6 +100,9 @@ query GET_PAGE($uri: ID!) {
 		author
 		datepublished
 	  }
+	  seo_component {
+		metaDescription
+	  }
 	}
   }
 ${MenuFragment}
