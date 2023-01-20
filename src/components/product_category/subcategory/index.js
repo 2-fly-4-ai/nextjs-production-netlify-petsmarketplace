@@ -16,7 +16,7 @@ export default function subcategory({ data }) {
               {data?.page?.children?.nodes.map((child) => (
                 <li
                   key={child.name}
-                  className="text-gray-500 dark:text-gray-400 mb-3"
+                  className="text-gray-500 dark:text-gray-400 mb-1"
                 >
                   <MainLink href={child.uri}>
                     <div

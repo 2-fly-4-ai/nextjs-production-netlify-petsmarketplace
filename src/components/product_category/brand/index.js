@@ -15,7 +15,7 @@ export default function Brands({ data }) {
             brand?.seo?.robots[1] != "noindex" ? (
               <li
                 key={brand?.name}
-                className="text-gray-500 dark:text-gray-400 mb-3"
+                className="text-gray-500 dark:text-gray-400 mb-1"
               >
                 <MainLink href={brand.uri}>
                   <div

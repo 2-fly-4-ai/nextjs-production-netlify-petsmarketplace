@@ -11,6 +11,7 @@ const Products = ({ product }) => {
   const [isMenuVisible, setMenuVisibility] = useState(false);
 
   const [activeId, setActiveId] = useState();
+
   // const [open, setOpen] = React.useState(false);
   function activeCategory(id) {
     setActiveId(id);
@@ -76,101 +77,103 @@ const Products = ({ product }) => {
                 {/* Button */}
 
                 {/* modal */}
-                <div
-                  id="readProductModal"
-                  tabIndex="-1"
-                  aria-hidden="true"
-                  className={`${
-                    isMenuVisible && index == activeId ? "flex" : "hidden"
-                  } overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center bg-black bg-opacity-60 w-screen h-screen`}
-                >
-                  <div className="relative p-4 w-full max-w-4xl h-full md:h-auto">
-                    {/* <!-- Modal content --> */}
-                    <div className="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
-                      {/* <!-- Modal header --> */}
-                      <div className="flex overscroll-contain">
-                        <div className="flex justify-between mb-4 rounded-t sm:mb-5">
-                          <div className="text-lg w-80 justify-center items-center flex text-gray-900 md:text-xl dark:text-white">
-                            <Image
-                              src={product?.single_product_acf?.productImageMainUrl?.replace(
-                                ".jpg",
-                                "._AC_UL320.jpg"
-                              )}
-                              height="400"
-                              width="400"
-                              objectFit="contain"
-                              alt={product?.title}
-                            />
+                {isMenuVisible ? (
+                  <div
+                    id="readProductModal"
+                    tabIndex="-1"
+                    aria-hidden="true"
+                    className={`${
+                      isMenuVisible && index == activeId ? "flex" : "hidden"
+                    } overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center bg-black bg-opacity-60 w-screen h-screen`}
+                  >
+                    <div className="relative p-4 w-full max-w-4xl h-full md:h-auto">
+                      {/* <!-- Modal content --> */}
+                      <div className="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                        {/* <!-- Modal header --> */}
+                        <div className="flex overscroll-contain">
+                          <div className="flex justify-between mb-4 rounded-t sm:mb-5">
+                            <div className="text-lg w-80 justify-center items-center flex text-gray-900 md:text-xl dark:text-white">
+                              <Image
+                                src={product?.single_product_acf?.productImageMainUrl?.replace(
+                                  ".jpg",
+                                  "._AC_UL320.jpg"
+                                )}
+                                height="400"
+                                width="400"
+                                objectFit="contain"
+                                alt={product?.title}
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <dl className="text-left p-6">
-                          <div className="absolute right-3 top-3">
-                            <button
-                              onClick={() => {
-                                setMenuVisibility(!isMenuVisible);
-                                activeCategory(index);
-                              }}
-                              className={`${
-                                isActive(index) ? "..." : ""
-                              } text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex dark:hover:bg-gray-600 dark:hover:text-white`}
-                              type="button"
-                              data-modal-toggle="readProductModal"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                className="w-5 h-5"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
+                          <dl className="text-left p-6">
+                            <div className="absolute right-3 top-3">
+                              <button
+                                onClick={() => {
+                                  setMenuVisibility(!isMenuVisible);
+                                  activeCategory(index);
+                                }}
+                                className={`${
+                                  isActive(index) ? "..." : ""
+                                } text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex dark:hover:bg-gray-600 dark:hover:text-white`}
+                                type="button"
+                                data-modal-toggle="readProductModal"
                               >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                  clipRule="evenodd"
-                                ></path>
-                              </svg>
-                            </button>
-                          </div>
-                          <a
-                            href={product?.single_product_acf?.productUrl}
-                            target="_blank"
-                            rel="nofollow noreferrer"
-                          >
-                            <h3 className="font-semibold text-xl dark:text-gray-200">
-                              {product?.title}
-                            </h3>
-                          </a>
-                          <div
-                            className="mt-4 text-gray-700 prose dark:text-gray-400"
-                            dangerouslySetInnerHTML={{
-                              __html: sanitize(
-                                product?.single_product_acf?.productAida ?? {}
-                              ),
-                            }}
-                          />
-                          <div className="mt-6 flex gap-3 border-b border-gray-200 pb-6 pt-0">
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-5 h-5"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                  ></path>
+                                </svg>
+                              </button>
+                            </div>
                             <a
                               href={product?.single_product_acf?.productUrl}
                               target="_blank"
                               rel="nofollow noreferrer"
-                              className="text-sm border border-gray-500 bg-green-400 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
-                              <i className="fa-solid fa-heart"></i> View On
-                              Amazon
+                              <h3 className="font-semibold text-xl dark:text-gray-200">
+                                {product?.title}
+                              </h3>
                             </a>
-                            <MainLink
-                              href={product?.uri}
-                              className="text-sm border border-gray-500 bg-green-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
-                            >
-                              <i className="fa-solid fa-heart"></i>Product
-                              Details
-                            </MainLink>
-                          </div>
-                        </dl>
+                            <div
+                              className="mt-4 text-gray-700 prose dark:text-gray-400"
+                              dangerouslySetInnerHTML={{
+                                __html: sanitize(
+                                  product?.single_product_acf?.productAida ?? {}
+                                ),
+                              }}
+                            />
+                            <div className="mt-6 flex gap-3 border-b border-gray-200 pb-6 pt-0">
+                              <a
+                                href={product?.single_product_acf?.productUrl}
+                                target="_blank"
+                                rel="nofollow noreferrer"
+                                className="text-sm border border-gray-500 bg-green-400 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              >
+                                <i className="fa-solid fa-heart"></i> View On
+                                Amazon
+                              </a>
+                              <MainLink
+                                href={product?.uri}
+                                className="text-sm border border-gray-500 bg-green-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
+                              >
+                                <i className="fa-solid fa-heart"></i>Product
+                                Details
+                              </MainLink>
+                            </div>
+                          </dl>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                ) : null}
 
                 <h3 className="py-3 text px-2 w-50 overflow-hidden tracking-tight text-gray-900 font-semibold dark:text-white uppercase hover:text-blue-500">
                   <a

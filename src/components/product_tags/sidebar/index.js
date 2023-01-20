@@ -67,7 +67,7 @@ export default function SideBar({ data }) {
                     {page_tags.map((tag, index) => (
                       <li
                         key={index}
-                        className="text-gray-500 hover: dark:text-gray-400 mb-3"
+                        className="text-gray-500 hover: dark:text-gray-400 mb-1"
                       >
                         <MainLink href={tag.uri}>
                           <div
@@ -92,7 +92,7 @@ export default function SideBar({ data }) {
                       {page_brands.map((brand, index) => (
                         <li
                           key={index}
-                          className="text-gray-500 dark:text-gray-400 mb-3"
+                          className="text-gray-500 dark:text-gray-400 mb-1"
                         >
                           {!isEmpty(brand?.nodes[0]?.uri) ? (
                             <MainLink href={brand?.nodes[0]?.uri}>
