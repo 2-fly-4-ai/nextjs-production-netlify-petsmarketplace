@@ -187,7 +187,7 @@ const Products = ({ product }) => {
                 </h3>
 
                 {width < 650 ? (
-                  <div className="flex flex-col">
+                  <div className="sm:hidden flex flex-col">
                     <div
                       className="text py-2 px-4 text-gray-700 dark:text-gray-400 cursor-pointer"
                       dangerouslySetInnerHTML={{
