@@ -22,6 +22,7 @@ module.exports = {
       "i.pinimg.com",
     ],
   },
+
   async headers() {
     return [
       {

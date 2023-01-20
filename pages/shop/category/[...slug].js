@@ -1,13 +1,12 @@
 import client from "../../../src/apollo/client";
 import { GET_PAGES_URI } from "../../../src/queries/categories-new/get-pages";
-import { isEmpty, slice } from "lodash";
+import { isEmpty } from "lodash";
 import { GET_PAGE } from "../../../src/queries/categories-new/get-page";
 import { useRouter } from "next/router";
 import Layout from "../../../src/components/layout";
 import {
   FALLBACK,
   handleRedirectsAndReturnData,
-  isCustomPageUri,
 } from "../../../src/utils/slug";
 import LoadMoreProducts from "../../../src/components/product_category/load_more_products";
 import { PER_PAGE_FIRST } from "../../../src/utils/pagination";

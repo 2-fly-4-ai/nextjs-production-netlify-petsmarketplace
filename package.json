@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "svg": "svgr -d src/components/icons src/components/icons/svgs",
-    "precommit": "npm run lint:fix && npm run build"
+    "precommit": "npm run lint:fix && npm run build",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",

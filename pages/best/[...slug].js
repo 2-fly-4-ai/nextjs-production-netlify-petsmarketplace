@@ -1,6 +1,5 @@
 import client from "../../src/apollo/client";
 import { GET_PAGES_URI } from "../../src/queries/tags/get-pages";
-import { isEmpty } from "lodash";
 import { GET_PAGE } from "../../src/queries/tags/get-page";
 import Layout from "../../src/components/layout";
 import {

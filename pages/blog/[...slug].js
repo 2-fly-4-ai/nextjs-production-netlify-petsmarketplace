@@ -2,11 +2,7 @@ import client from "../../src/apollo/client";
 import { isEmpty } from "lodash";
 import { useRouter } from "next/router";
 import Layout from "../../src/components/layout";
-import {
-  FALLBACK,
-  handleRedirectsAndReturnData,
-  isCustomPageUri,
-} from "../../src/utils/slug";
+import { FALLBACK, handleRedirectsAndReturnData } from "../../src/utils/slug";
 import { GET_POST } from "../../src/queries/posts/get-post";
 import { GET_POST_SLUGS } from "../../src/queries/posts/get-posts";
 import { sanitize } from "../../src/utils/miscellaneous";

@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
 import Image from "next/image";
 import { sanitize } from "../../../../src/utils/miscellaneous";
 import MainLink from "../../mainlink";
+import useDeviceSize from "../../devicesize";
+import { useState } from "react";
 
 //No fucking idea how you deal with modals and what not with components
 // Also ask how to actually work with components and Console.warn() them as you are building them.
 
 const Products = ({ product }) => {
   const [isMenuVisible, setMenuVisibility] = useState(false);
-
+  const [width, height] = useDeviceSize();
   const [activeId, setActiveId] = useState();
 
   // const [open, setOpen] = React.useState(false);
@@ -184,39 +185,42 @@ const Products = ({ product }) => {
                     {product?.title.split(" ").slice(0, 8).join(" ")}
                   </a>
                 </h3>
-                <div className="flex sm:hidden flex-col">
-                  <div
-                    className="text py-2 px-4 text-gray-700 dark:text-gray-400 cursor-pointer"
-                    dangerouslySetInnerHTML={{
-                      __html: sanitize(
-                        product?.single_product_acf?.productAida ?? {}
-                      ),
-                    }}
-                  />
-                  <div className="flex  flex-col my-3 px-4 items-center  xs:flex-row">
-                    <a
-                      href={product?.single_product_acf?.productUrl}
-                      target="_blank"
-                      rel="nofollow noreferrer"
-                    >
-                      <button
-                        type="button"
-                        className="py-2.5 mb-2 w-40 px-5 mr-2 text-sm focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium text-gray-900  bg-white rounded-full border-4 border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                      >
-                        View On Amazon
-                      </button>
-                    </a>
 
-                    <MainLink href={product?.uri}>
-                      <button
-                        type="button"
-                        className="py-2.5 w-40 px-5 mr-2 text-sm focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium text-gray-900  bg-white rounded-full border-4 border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                {width < 650 ? (
+                  <div className="flex flex-col">
+                    <div
+                      className="text py-2 px-4 text-gray-700 dark:text-gray-400 cursor-pointer"
+                      dangerouslySetInnerHTML={{
+                        __html: sanitize(
+                          product?.single_product_acf?.productAida ?? {}
+                        ),
+                      }}
+                    />
+                    <div className="flex  flex-col my-3 px-4 items-center  xs:flex-row">
+                      <a
+                        href={product?.single_product_acf?.productUrl}
+                        target="_blank"
+                        rel="nofollow noreferrer"
                       >
-                        Product Details
-                      </button>
-                    </MainLink>
+                        <button
+                          type="button"
+                          className="py-2.5 mb-2 w-40 px-5 mr-2 text-sm focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium text-gray-900  bg-white rounded-full border-4 border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        >
+                          View On Amazon
+                        </button>
+                      </a>
+
+                      <MainLink href={product?.uri}>
+                        <button
+                          type="button"
+                          className="py-2.5 w-40 px-5 mr-2 text-sm focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full font-medium text-gray-900  bg-white rounded-full border-4 border-gray-300 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        >
+                          Product Details
+                        </button>
+                      </MainLink>
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </div>
             );
           })}
