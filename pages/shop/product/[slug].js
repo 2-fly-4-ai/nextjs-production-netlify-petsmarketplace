@@ -170,6 +170,7 @@ const Post = ({ data }) => {
               )}
               alt="product"
               className="max-h-96"
+              priority="true"
               height="640"
               width="640"
               objectFit="contain"
