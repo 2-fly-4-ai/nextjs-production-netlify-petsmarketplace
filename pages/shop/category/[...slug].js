@@ -16,7 +16,6 @@ import SubcategoryReadmore from "../../../src/components/product_category/subcat
 import Brands from "../../../src/components/product_category/brand";
 import Tags from "../../../src/components/product_category/tags";
 import ChildrenProducts from "../../../src/components/product_category/products/get-children-products";
-import ChildTags from "../../../src/components/product_category/children-tags";
 import Hero from "../../../src/components/product_category/hero";
 
 const Page = ({ data }) => {

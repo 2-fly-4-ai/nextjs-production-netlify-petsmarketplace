@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { sanitize } from "../../../utils/miscellaneous";
 import { isEmpty } from "lodash";
 import MainLink from "../../mainlink";

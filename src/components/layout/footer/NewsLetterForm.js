@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { sanitize } from "../../../utils/miscellaneous";
-import Loading from "../../loading";
 
 const NewsletterForm = ({ status, message, onValidated }) => {
   const [error, setError] = useState(null);

@@ -1,7 +1,6 @@
 import "../src/styles/index.scss";
 import { ApolloProvider } from "@apollo/client";
 import client from "../src/apollo/client";
-import Script from "next/script";
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 

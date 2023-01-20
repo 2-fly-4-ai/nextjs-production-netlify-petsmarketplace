@@ -1,6 +1,5 @@
 import { isEmpty } from "lodash";
 import { useState } from "react";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import { isCustomPageUri } from "../../../utils/slug";
 import Image from "next/image";

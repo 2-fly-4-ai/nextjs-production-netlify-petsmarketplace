@@ -1,5 +1,4 @@
 import MainLink from "../../mainlink";
-import Image from "../../image";
 import { sanitize } from "../../../utils/miscellaneous";
 import { isEmpty } from "lodash";
 
