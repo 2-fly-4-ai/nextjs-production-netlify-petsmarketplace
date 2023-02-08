@@ -32,6 +32,10 @@ const Seo = ({ seo, uri, custom_meta }) => {
     metaRobotsNoindex = "noindex";
   }
 
+  if (uri.includes("/product/")) {
+    metaRobotsNoindex = "noindex";
+  }
+
   const opengraphImage = openGraph?.image ?? "";
   let opengraphDescription = openGraph?.description ?? "";
 
