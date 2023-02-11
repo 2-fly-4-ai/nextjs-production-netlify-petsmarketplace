@@ -25,15 +25,19 @@ const Seo = ({ seo, uri, custom_meta }) => {
     title,
   } = seo;
 
-  let metaRobotsNofollow = robots[0] ?? "";
-  let metaRobotsNoindex = robots[1] ?? "";
+  let metaRobotsNoindex = false;
+  let metaRobotsNofollow = false;
 
-  if (uri.includes("/search")) {
-    metaRobotsNoindex = "noindex";
+  if (robots[0] == "nofollow") {
+    metaRobotsNoindex = true;
+  }
+  if (robots[1] == "noindex") {
+    metaRobotsNofollow = true;
   }
 
-  if (uri.includes("/product/")) {
-    metaRobotsNoindex = "noindex";
+  if (uri.includes("/search")) {
+    metaRobotsNoindex = false;
+    metaRobotsNofollow = false;
   }
 
   const opengraphImage = openGraph?.image ?? "";
@@ -65,10 +69,10 @@ const Seo = ({ seo, uri, custom_meta }) => {
   return (
     <NextSeo
       title={title || test}
-      description={metaDesc || opengraphDescription || title}
+      description={metaDesc || opengraphDescription}
       canonical={opengraphUrl}
-      index={metaRobotsNoindex}
-      follow={metaRobotsNofollow}
+      noindex={metaRobotsNoindex}
+      nofollow={metaRobotsNofollow}
       openGraph={{
         type: "website",
         locale: "en_US",
