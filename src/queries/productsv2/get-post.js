@@ -13,15 +13,40 @@ export const GET_POST = gql`
 	    content
 	    slug
 	    uri
+		seo {
+			breadcrumbs {
+			  text
+			  url
+			}
+			title
+			metaDesc
+			metaRobotsNoindex
+			metaRobotsNofollow
+			opengraphAuthor
+			opengraphDescription
+			opengraphTitle
+			schema {
+			  raw
+			}
+			opengraphImage {
+			  sourceUrl
+			}
+			opengraphSiteName
+			opengraphPublishedTime
+			opengraphModifiedTime
+			twitterTitle
+			twitterDescription
+			twitterImage {
+			  sourceUrl
+			}
+		  }
 		productBrands {
 			nodes {
 				name
 				slug
 				uri
-				seo {
-					robots
-				}
 				
+	
 			}
 			}
 			productTags {
@@ -129,25 +154,7 @@ export const GET_POST = gql`
 			productUrl
 			expertOpinion
 		  }
-		  seo {
-			openGraph {
-			  description
-			  siteName
-			  title
-			  url
-			  
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
-			breadcrumbs {
-			  text
-			  url
-			}
-			canonicalUrl
-			robots
-			title
-		  }
+		  
 		  
 
 	    
@@ -174,26 +181,6 @@ export const GET_POST_BY_ID = gql`
 	    content
 	    slug
 	    uri
-		seo {
-			openGraph {
-			  description
-			  siteName
-			  title
-			  url
-			  
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
-			breadcrumbs {
-			  text
-			  url
-			}
-			canonicalUrl
-			robots
-			title
-		  }
-		status
 	  }
 	}
 	${MenuFragment}

@@ -11,22 +11,31 @@ query GET_PAGE($uri: ID!) {
 	  slug
 	  uri
 	  seo {
-		openGraph {
-		  description
-		  siteName
-		  title
-		  url
-		}
-		breadcrumbTitle
-		description
-		focusKeywords
 		breadcrumbs {
 		  text
 		  url
 		}
-		canonicalUrl
-		robots
 		title
+		metaDesc
+		metaRobotsNoindex
+		metaRobotsNofollow
+		opengraphAuthor
+		opengraphDescription
+		opengraphTitle
+		schema {
+		  raw
+		}
+		opengraphImage {
+		  sourceUrl
+		}
+		opengraphSiteName
+		opengraphPublishedTime
+		opengraphModifiedTime
+		twitterTitle
+		twitterDescription
+		twitterImage {
+		  sourceUrl
+		}
 	  }
 	  products(first: 24) {
 		nodes {
@@ -54,9 +63,6 @@ query GET_PAGE($uri: ID!) {
 			nodes {
 			  name
 			  uri
-			  seo {
-                robots
-              }
 			}
 		  }
 		  productTaxonomies {
@@ -100,9 +106,6 @@ query GET_PAGE($uri: ID!) {
 		author
 		datepublished
 	  }
-	  seo_component {
-		metaDescription
-	  }
 	}
   }
 ${MenuFragment}
@@ -119,27 +122,8 @@ export const GET_PAGE_BY_ID = gql`
 	    slug
 	    uri
 		status
-		seo {
-			openGraph {
-			  description
-			  locale
-			  siteName
-			  title
-			  type
-			  updatedTime
-			  url
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
-			breadcrumbs {
-			  text
-			  url
-			}
-			canonicalUrl
-		  }
 	  }
 	}
 	${MenuFragment}
-	${SeoFragment}
+	
 `;

@@ -15,23 +15,31 @@ export const GET_POST = gql`
 		uri
 		date
 		seo {
-			openGraph {
-			  description
-			  siteName
-			  title
-			  url
-			  
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
 			breadcrumbs {
 			  text
 			  url
 			}
-			canonicalUrl
-			robots
 			title
+			metaDesc
+			metaRobotsNoindex
+			metaRobotsNofollow
+			opengraphAuthor
+			opengraphDescription
+			opengraphTitle
+			schema {
+			  raw
+			}
+			opengraphImage {
+			  sourceUrl
+			}
+			opengraphSiteName
+			opengraphPublishedTime
+			opengraphModifiedTime
+			twitterTitle
+			twitterDescription
+			twitterImage {
+			  sourceUrl
+			}
 		  }
 		featuredImage {
 		  node {

@@ -39,7 +39,7 @@ const Page = ({ data }) => {
             {!isEmpty(data?.page?.children?.nodes) ? null : (
               <Tags data={data} />
             )}
-            <Brands data={data?.productBrands?.nodes} />
+            {/* <Brands data={data?.productBrands?.nodes} /> */}
           </div>
           {/* Whole Right Section- Hero & Product Gallery*/}
           <div className="flex-1 flex-col px-3">

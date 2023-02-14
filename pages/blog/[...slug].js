@@ -60,7 +60,7 @@ const Post = ({ data }) => {
                 >
                   {!isEmpty(data?.post?.author?.node?.name)
                     ? data?.post?.author?.node?.name
-                    : PetsMarketPlace}
+                    : "PetsMarketPlace"}
                 </MainLink>{" "}
                 in{" "}
                 <MainLink

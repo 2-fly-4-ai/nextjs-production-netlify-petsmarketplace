@@ -11,23 +11,31 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 	  slug
 	  uri
 	  seo {
-		openGraph {
-		  description
-		  siteName
-		  title
-		  url
-		  
-		}
-		breadcrumbTitle
-		description
-		focusKeywords
 		breadcrumbs {
 		  text
 		  url
 		}
-		canonicalUrl
-		robots
 		title
+		metaDesc
+		metaRobotsNoindex
+		metaRobotsNofollow
+		opengraphAuthor
+		opengraphDescription
+		opengraphTitle
+		schema {
+		  raw
+		}
+		opengraphImage {
+		  sourceUrl
+		}
+		opengraphSiteName
+		opengraphPublishedTime
+		opengraphModifiedTime
+		twitterTitle
+		twitterDescription
+		twitterImage {
+		  sourceUrl
+		}
 	  }
 	  parent {
 		node {
@@ -189,22 +197,16 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 		  endCursor
 		}
 	  }
-	  seo_component {
-		metaDescription
-	  }
+		
 	}
 	productBrands(where: {orderby: COUNT, order: DESC}, first: 20) {
 	  nodes {
 		name
 		uri
-		seo{
-			robots
-		}
 	  }
 	}
   }
 ${MenuFragment}
-
 `;
 
 export const GET_PAGE_BY_ID = gql`
@@ -218,26 +220,10 @@ export const GET_PAGE_BY_ID = gql`
 	    uri
 		status
 		seo {
-			openGraph {
-			  description
-			  siteName
-			  title
-			  url
-			  
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
-			breadcrumbs {
-			  text
-			  url
-			}
-			canonicalUrl
-			robots
-			title
+			...SeoFragment
 		  }
 	  }
 	}
 	${MenuFragment}
-	
+	${SeoFragment}
 `;

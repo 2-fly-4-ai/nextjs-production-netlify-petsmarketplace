@@ -1,4 +1,3 @@
-import { isEmpty } from "lodash";
 import { NextSeo } from "next-seo";
 import PropTypes from "prop-types";
 
@@ -14,62 +13,39 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element}
  *
  */
-const Seo = ({ seo, uri, custom_meta }) => {
-  const {
-    breadcrumbTitle,
-    breadcrumbs,
-    canonicalUrl,
-    description,
-    openGraph,
-    robots,
-    title,
-  } = seo;
+const Seo = ({ seo, uri }) => {
+  let metaRobotsNoindex = seo.metaRobotsNoindex;
+  let metaRobotsNofollow = seo.metaRobotsNofollow;
 
-  let metaRobotsNoindex = false;
-  let metaRobotsNofollow = false;
-
-  if (robots[0] == "nofollow") {
-    metaRobotsNoindex = true;
-  }
-  if (robots[1] == "noindex") {
-    metaRobotsNofollow = true;
-  }
-
-  if (uri.includes("/search")) {
+  if (metaRobotsNoindex != "noindex") {
     metaRobotsNoindex = false;
+  }
+
+  if (metaRobotsNoindex) {
+    metaRobotsNofollow = true;
+  } else {
     metaRobotsNofollow = false;
   }
 
-  const opengraphImage = openGraph?.image ?? "";
-  let opengraphDescription = openGraph?.description ?? "";
+  const {
+    title,
+    metaDesc,
+    opengraphDescription,
+    opengraphTitle,
+    opengraphImage,
+    opengraphSiteName,
+  } = seo;
 
-  const opengraphTitle = title ?? "";
-  const opengraphSiteName = openGraph?.siteName ?? "";
-  let metaDesc = description ?? "";
-
-  const currentLocation = process.browser ? window.location.origin : "";
+  const currentLocation = process.browser ? window.location.origin : null;
   const opengraphUrl =
     (process.env.NEXT_PUBLIC_NEXTJS_SITE_URL
       ? process.env.NEXT_PUBLIC_NEXTJS_SITE_URL
       : currentLocation) + uri;
 
-  let test = "";
-
-  if (uri.includes("category")) {
-    test = `${breadcrumbTitle} - PetsMarketPlc`;
-    metaDesc = custom_meta;
-  } else if (uri.includes("best")) {
-    test = `Best ${breadcrumbTitle} - PetsMarketPlc`;
-    metaDesc = custom_meta;
-  } else if (uri.includes("brand")) {
-    test = `${breadcrumbTitle} - PetsMarketPlc`;
-    metaDesc = custom_meta;
-  }
-
   return (
     <NextSeo
-      title={title || test}
-      description={metaDesc || opengraphDescription}
+      title={title}
+      description={opengraphDescription || metaDesc}
       canonical={opengraphUrl}
       noindex={metaRobotsNoindex}
       nofollow={metaRobotsNofollow}
@@ -91,8 +67,8 @@ const Seo = ({ seo, uri, custom_meta }) => {
         /* eslint-enable */
       }}
       twitter={{
-        handle: "@petsmarket_plc",
-        site: "https:www.twitter.com/petsmarket_plc",
+        handle: "@Petsmarketplc",
+        site: "@Petsmarketplc",
         cardType: "summary_large_image",
       }}
     />

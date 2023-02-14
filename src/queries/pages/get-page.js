@@ -12,26 +12,6 @@ export const GET_PAGE = gql`
 	    content
 	    slug
 	    uri
-		seo {
-			openGraph {
-			  description
-			  siteName
-			  title
-			  url
-			  
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
-			breadcrumbs {
-			  text
-			  url
-			}
-			canonicalUrl
-			robots
-			title
-		  }
-
 	  }
 	  productTags(first: 15, where: {orderby: COUNT , order: DESC}) {
 		nodes {

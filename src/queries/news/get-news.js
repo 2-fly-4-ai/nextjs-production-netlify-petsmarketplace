@@ -18,24 +18,6 @@ export const GET_NEWS = gql`
       content
       slug
       uri
-      seo {
-        openGraph {
-          description
-          siteName
-          title
-          url
-        }
-        breadcrumbTitle
-        description
-        focusKeywords
-        breadcrumbs {
-          text
-          url
-        }
-        canonicalUrl
-        robots
-        title
-      }
     }
     posts: posts(first: $first, after: $after) {
       edges {

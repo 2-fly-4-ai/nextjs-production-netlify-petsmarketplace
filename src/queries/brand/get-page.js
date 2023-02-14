@@ -11,23 +11,32 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 	  slug
 	  uri
 	  seo {
-		openGraph {
-		  description
-		  siteName
-		  title
-		  url
-		}
-		breadcrumbTitle
-		description
-		focusKeywords
-		breadcrumbs {
-		  text
-		  url
-		}
-		canonicalUrl
-		robots
-		title
-	  }
+			breadcrumbs {
+			  text
+			  url
+			}
+			title
+			metaDesc
+			metaRobotsNoindex
+			metaRobotsNofollow
+			opengraphAuthor
+			opengraphDescription
+			opengraphTitle
+			schema {
+			  raw
+			}
+			opengraphImage {
+			  sourceUrl
+			}
+			opengraphSiteName
+			opengraphPublishedTime
+			opengraphModifiedTime
+			twitterTitle
+			twitterDescription
+			twitterImage {
+			  sourceUrl
+			}
+		  }
 	  brand_fields {
 		description
 		searchVolume
@@ -87,16 +96,9 @@ query GET_PAGE($uri: ID!, $first: Int!, $after: String) {
 			endCursor
 		}
     }
-    seo_component {
-      metaDescription
-    }
   }
 }
-	
-  
-  ${MenuFragment}
-
-
+${MenuFragment}
 `;
 
 export const GET_PAGE_BY_ID = gql`
@@ -109,22 +111,31 @@ export const GET_PAGE_BY_ID = gql`
 	    slug
 	    uri
 		seo {
-			openGraph {
-			  description
-			  siteName
-			  title
-			  url
-			}
-			breadcrumbTitle
-			description
-			focusKeywords
 			breadcrumbs {
 			  text
 			  url
 			}
-			canonicalUrl
-			robots
 			title
+			metaDesc
+			metaRobotsNoindex
+			metaRobotsNofollow
+			opengraphAuthor
+			opengraphDescription
+			opengraphTitle
+			schema {
+			  raw
+			}
+			opengraphImage {
+			  sourceUrl
+			}
+			opengraphSiteName
+			opengraphPublishedTime
+			opengraphModifiedTime
+			twitterTitle
+			twitterDescription
+			twitterImage {
+			  sourceUrl
+			}
 		  }
 		status
 	  }
