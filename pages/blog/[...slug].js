@@ -138,7 +138,7 @@ const Post = ({ data }) => {
             </div>
 
             <div
-              className="px-4 prose my-8 max-w-none dark:text-gray-400 dark:prose-headings:text-gray-200 dark:prose-p:text-gray-400  prose-headings:font-medium prose-h3:text-2xl prose-li:list-disc dark:prose-li:text-gray-400"
+              className="px-4 prose my-8 max-w-none dark:text-gray-400 dark:prose-headings:text-gray-200 dark:prose-p:text-gray-400  prose-headings:font-medium dark:prose-strong:text-gray-400 prose-h3:text-2xl prose-li:list-disc dark:prose-li:text-gray-400"
               dangerouslySetInnerHTML={{
                 __html: sanitize(data?.post?.content ?? {}),
               }}

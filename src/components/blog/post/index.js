@@ -23,8 +23,8 @@ const Post = ({ post }, index) => {
           dangerouslySetInnerHTML={{ __html: sanitize(post?.title ?? "") }}
         />
       </MainLink>
-      <div
-        className="mb-4 text-gray-700 dark:text-gray-400 prose dark:prose-a:text-blue-400"
+      <section
+        className="mb-4 text-gray-700 prose prose-strong:text-gray-400 dark:text-gray-100 prose-li:text-gray-200 dark:prose-a:text-blue-400"
         dangerouslySetInnerHTML={{
           __html: sanitize(post?.excerpt?.replace("backend.", "www.") ?? ""),
         }}

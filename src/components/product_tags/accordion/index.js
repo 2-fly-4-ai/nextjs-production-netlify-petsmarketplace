@@ -19,44 +19,11 @@ export default function ContentAccordion({ data }) {
 
   const What_to_consider_test = data?.page?.roundupFields?.whatToConsider;
 
-  // if (What_to_consider_test != null) {
-  //   const What_to_consider_heading = data?.page?.roundupFields?.whatToConsider
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  //   const What_to_consider_body = data?.page?.roundupFields?.whatToConsider
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  // }
-
-  // const types_of_test = data?.page?.roundupFields?.typesOf;
-  // if (types_of_test != null) {
-  //   const types_of_heading = data?.page?.roundupFields?.typesOf
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  //   const types_of_body = data?.page?.roundupFields?.typesOf
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  // }
 
   const howWeChose_test = data?.page?.roundupFields?.howWeChose;
-  // if (howWeChose_test != null) {
-  //   const howWeChose_heading = data?.page?.roundupFields?.howWeChose
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  //   const howWeChose_body = data?.page?.roundupFields?.howWeChose
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  // }
 
   const faqs_main_test = data?.page?.roundupFields?.faqs;
-  // if (faqs_main_test != null) {
-  //   const faqs_main_heading = data?.page?.roundupFields?.faqs
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  //   const faqs_main_body = data?.page?.roundupFields?.faqs
-  //     ?.replace("</h2>", "</h2>[split_here]")
-  //     .split("[split_here]")[0];
-  // }
+
 
   return (
     <section className="bg-white dark:bg-gray-900">
