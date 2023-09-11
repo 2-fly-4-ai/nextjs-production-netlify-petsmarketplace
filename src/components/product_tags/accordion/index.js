@@ -221,8 +221,8 @@ export default function ContentAccordion({ data }) {
                     dangerouslySetInnerHTML={{
                       __html: sanitize(
                         howWeChose_test
-                          ?.replace("</h2>", "</h2>[split_here]")
-                          .split("[split_here]")[0] ?? {}
+                          // ?.replace("</h2>", "</h2>[split_here]")
+                          // .split("[split_here]")[0] ?? {}
                       ),
                     }}
                   />
