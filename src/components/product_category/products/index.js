@@ -161,13 +161,13 @@ const Products = ({ product }) => {
                               <i className="fa-solid fa-heart"></i> View On
                               Amazon
                             </a>
-                            {/* <MainLink
+                            <MainLink
                               href={product?.uri}
                               className="text-sm border border-gray-500 bg-green-300 focus:ring-2 focus:outline-none focus:ring-primary-300 focus:rounded-full dark:focus:ring-gray-700 text-gray-600 px-8 py-2 font-medium rounded-full uppercase flex items-center gap-2 hover:text-primary transition"
                             >
                               <i className="fa-solid fa-heart"></i>Product
                               Details
-                            </MainLink> */}
+                            </MainLink>
                           </div>
                         </dl>
                       </div>
